@@ -1,7 +1,6 @@
 import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import Layout from "../../components/Layout";
+import Content, { HTMLContent } from "../../components/Content";
 
 interface Props {
   title: string;
@@ -41,29 +40,16 @@ interface Post {
   };
 }
 
-const AboutPage = ({ data }: { data: { markdownRemark: Post } }) => {
-  const { markdownRemark: post } = data;
-
+const AboutPage = () => {
   return (
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={"about"}
+        content={"안녕"}
       />
     </Layout>
   );
 };
 
 export default AboutPage;
-
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
-`;

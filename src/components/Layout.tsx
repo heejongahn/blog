@@ -1,15 +1,30 @@
 import React from "react";
 import Helmet from "react-helmet";
+import styled from "styled-components";
 
 import Navbar from "../components/Navbar";
-import "./all.sass";
+import "./all.scss";
 
 const TemplateWrapper: React.SFC = ({ children }) => (
-  <div>
+  <Wrapper>
     <Helmet title="Home | Gatsby + Netlify CMS" />
     <Navbar />
-    <div>{children}</div>
-  </div>
+    <Content>{children}</Content>
+  </Wrapper>
 );
 
 export default TemplateWrapper;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px 40px;
+`;
+
+const Content = styled.div`
+  margin-top: 80px;
+`;

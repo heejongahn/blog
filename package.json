@@ -19,6 +19,8 @@
     "gatsby-transformer-sharp": "^2.1.1",
     "netlify-cms": "^2.1.1",
     "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0",
+    "open-color": "^1.6.3",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",

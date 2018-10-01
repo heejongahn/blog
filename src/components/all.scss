@@ -1,0 +1,77 @@
+@import "~normalize.css";
+@import "~open-color/open-color.scss";
+
+$font-family: "Avenir Next", "Spoqa Han Sans", "spoqahansans",
+  "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial,
+  "Malgun Gothic", Dotum, sans-serif;
+
+$text-color: $oc-gray-8;
+$text-color-gray: $oc-gray-6;
+
+$bg-gray: $oc-gray-0;
+$bg-gray-dark: $oc-gray-1;
+
+$divider-color: $oc-gray-4;
+$border-color-dark: $oc-gray-8;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+}
+
+body,
+a,
+div,
+span,
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-color;
+}
+
+article,
+aside,
+nav,
+section {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+a {
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: red;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 18px;
+
+  li {
+    list-style-type: none;
+
+    &:before {
+      content: "\BB";
+      margin-left: -18px;
+      padding-right: 10px;
+    }
+  }
+}

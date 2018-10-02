@@ -27,6 +27,7 @@ body,
 a,
 div,
 span,
+small,
 p,
 li,
 h1,
@@ -36,19 +37,8 @@ h4,
 h5,
 h6 {
   color: $text-color;
-}
-
-article,
-aside,
-nav,
-section {
-  h1 {
-    font-size: 2em;
-  }
-}
-
-h2 {
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -60,18 +50,12 @@ a {
   }
 }
 
+ol,
 ul {
   margin: 0;
   padding: 0;
-  padding-left: 18px;
+}
 
-  li {
-    list-style-type: none;
-
-    &:before {
-      content: "\BB";
-      margin-left: -18px;
-      padding-right: 10px;
-    }
-  }
+li {
+  list-style-type: none;
 }

@@ -1,0 +1,26 @@
+article,
+aside,
+nav,
+section {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 18px;
+
+  li {
+    list-style-type: none;
+
+    &:before {
+      content: "\BB";
+      margin-left: -18px;
+      padding-right: 10px;
+    }
+  }
+}

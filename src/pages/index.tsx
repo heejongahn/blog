@@ -85,12 +85,11 @@ export const pageQuery = graphql`
   }
 `;
 
-const Title = styled.h1``;
-
 const PostList = styled.ol``;
 
 const Post = styled.li`
   padding: 24px;
+  list-style-type: none;
 
   transition: background-color 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   border-radius: 8px;
@@ -112,13 +111,14 @@ const PostTop = styled.div`
   align-items: center;
 
   margin-bottom: 24px;
+  flex-wrap: wrap;
 `;
 
-const PostTitle = styled.h2``;
-
-const PublishedDate = styled.small`
-  margin-left: 8px;
+const PostTitle = styled.h2`
+  margin-right: 8px;
 `;
+
+const PublishedDate = styled.small``;
 
 const Description = styled.div``;
 

@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 820px;
   margin: 0 auto;
-  padding: 24px 40px;
+  padding: 24px;
 `;
 
 const Content = styled.div`

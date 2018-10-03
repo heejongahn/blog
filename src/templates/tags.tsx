@@ -1,43 +1,32 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import PostItem from "../components/Post";
+import styled from "styled-components";
 
 class TagRoute extends React.Component<any> {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges;
-    const postLinks = posts.map((post: any) => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
-        </Link>
-      </li>
-    ));
+    const { site, allMarkdownRemark } = this.props.data;
+
+    const posts = allMarkdownRemark.edges;
     const tag = this.props.pageContext.tag;
-    const title = this.props.data.site.siteMetadata.title;
-    const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? "" : "s"
-    } tagged with “${tag}”`;
+    const title = site.siteMetadata.title;
+    const totalCount = allMarkdownRemark.totalCount;
 
     return (
       <Layout>
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: "6rem" }}
-              >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p>
-              </div>
-            </div>
-          </div>
+          <Header>
+            <TagName>{`“${tag}”`}</TagName>
+            {`태그가 달린 글 (총 ${totalCount}편)`}
+          </Header>
+          <PostList>
+            {posts.map(({ node: post }: any) => (
+              <PostItem key={post.frontmatter.id} post={post} />
+            ))}
+          </PostList>
         </section>
       </Layout>
     );
@@ -61,14 +50,30 @@ export const tagPageQuery = graphql`
       totalCount
       edges {
         node {
+          id
           fields {
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             title
+            description
+            tags
           }
         }
       }
     }
   }
+`;
+
+const Header = styled.h1`
+  font-weight: normal;
+`;
+
+const TagName = styled.strong`
+  margin-right: 4px;
+`;
+
+const PostList = styled.ul`
+  margin-top: 3em;
 `;

@@ -1,15 +1,14 @@
 ---
 templateKey: blog-post
-title: "play.node 2017 발표기"
-date: 2017-11-12T09:00:00+09:00
-description: "play.node 2017 에서 발표한 후기."
+title: play.node 2017 발표기
+date: 2017-11-12T00:00:00.000Z
+description: play.node 2017 에서 발표한 후기.
 tags:
   - 타입스크립트
   - 발표
   - playnode
   - 회고
 ---
-# play.node 2017 발표기
 얼마 전 한국 node.js 사용자 컨퍼런스 [play.node 2017](http://playnode.io/2017/)가 열렸다. 감사하게도 해당 컨퍼런스에 낸 **TypeScript와 Flow: 자바스크립트 개발에 정적 타이핑 도입하기** 라는 주제의 프로포절이 채택되어 이번 주 목요일(2017년 11월 9일), 인생 첫 기술 컨퍼런스 발표를 하고 왔다.
 
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/2MhzsQD3knRllf" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/HeejongAhn/typescript-flow-81799404" title="TypeScript와 Flow:  자바스크립트 개발에 정적 타이핑 도입하기" target="_blank">TypeScript와 Flow:  자바스크립트 개발에 정적 타이핑 도입하기</a> </strong> from <strong><a href="https://www.slideshare.net/HeejongAhn" target="_blank">Heejong Ahn</a></strong> </div>

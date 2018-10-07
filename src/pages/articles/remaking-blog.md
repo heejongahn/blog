@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: remaking-blog
+title: 블로그 재작성 작업기
 date: 2018-10-07T11:07:05.509Z
 description: 개인 블로그를 새롭게 만들면서 작업기를 적어보았습니다.
 tags:

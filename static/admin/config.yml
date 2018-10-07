@@ -3,7 +3,7 @@ backend:
   branch: master
 
 publish_mode: editorial_workflow
-media_folder: static/public
+media_folder: static/assets
 public_folder: /public
 
 collections:

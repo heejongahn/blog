@@ -17,13 +17,13 @@ module.exports = {
         name: "pages"
       }
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/public`,
-        name: "public"
-      }
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: `${__dirname}/src/img`,
+    //     name: "images"
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

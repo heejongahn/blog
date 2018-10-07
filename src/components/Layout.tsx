@@ -2,7 +2,9 @@ import React from "react";
 import Helmet from "react-helmet";
 import styled from "styled-components";
 
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+
 import "./all.scss";
 
 const TemplateWrapper: React.SFC = ({ children }) => (
@@ -10,6 +12,7 @@ const TemplateWrapper: React.SFC = ({ children }) => (
     <Helmet title="Home | Gatsby + Netlify CMS" />
     <Navbar />
     <Content>{children}</Content>
+    <Footer />
   </Wrapper>
 );
 

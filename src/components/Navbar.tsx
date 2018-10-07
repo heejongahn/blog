@@ -4,10 +4,10 @@ import styled from "styled-components";
 
 const Navbar = () => (
   <Wrapper>
-    <NavItem to="/" activeStyle={{ fontWeight: "bold" }}>
+    <NavItem to="/" style={{ fontWeight: "bold" }} activeClassName="nav-active">
       ahn.heejong
     </NavItem>
-    <NavItem to="/about" activeStyle={{ fontWeight: "bold" }}>
+    <NavItem to="/about" activeClassName="nav-active">
       about
     </NavItem>
   </Wrapper>
@@ -28,9 +28,22 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 800px) {
+    padding: 0 24px;
+  }
 `;
 
 const NavItem = styled(Link)`
   text-decoration: none;
   font-size: 1.25rem;
+
+  &:active,
+  &:focus {
+    color: initial;
+  }
+
+  &.nav-active:hover {
+    color: initial;
+  }
 `;

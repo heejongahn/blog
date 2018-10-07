@@ -41,7 +41,10 @@ export const BlogPostTemplate: React.SFC<Props> = ({
   );
 };
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  word-break: keep-all;
+  overflow-wrap: break-word;
+`;
 
 const Description = styled.div`
   margin-top: 1em;
@@ -54,6 +57,7 @@ const TagList = styled.ul`
 `;
 
 const Tag = styled.li`
+  list-style-type: none;
   font-size: 0.75em;
   &:nth-child(n + 2) {
     margin-left: 8px;
@@ -92,6 +96,7 @@ const StyledHTMLContent = styled(HTMLContent)`
   p,
   li {
     word-break: keep-all;
+    overflow-wrap: break-word;
     line-height: 1.8;
   }
 
@@ -169,6 +174,8 @@ const StyledHTMLContent = styled(HTMLContent)`
     margin-top: 24px;
     margin-bottom: 16px;
     line-height: 1.25;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
   h1 {
     padding-bottom: 0.3em;

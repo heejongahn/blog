@@ -28,6 +28,7 @@ const SectionTitle = styled.h2`
 
 const SectionContent = styled.div`
   word-break: keep-all;
+  overflow-wrap: break-word;
   line-height: 1.8;
 
   ul {
@@ -62,6 +63,7 @@ export class AboutPageTemplate extends React.Component<Props, State> {
         <LanguageSelectors>
           {(["KO", "EN"] as Language[]).map(lang => (
             <LanguageSelector
+              key={lang}
               onClick={() => this.setState({ language: lang })}
               selected={this.state.language === lang}
             >

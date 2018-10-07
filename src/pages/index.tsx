@@ -59,4 +59,10 @@ export const pageQuery = graphql`
   }
 `;
 
-const PostList = styled.ol``;
+const PostList = styled.ol`
+  margin: 0 -24px;
+
+  @media screen and (max-width: 800px) {
+    margin: 0 -12px;
+  }
+`;

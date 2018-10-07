@@ -7,7 +7,7 @@ const Wrapper = styled.footer`
 
   width: 100%;
   max-width: 820px;
-  margin: 40px auto 0;
+  margin: 40px auto;
 `;
 
 const Contact = styled.div`

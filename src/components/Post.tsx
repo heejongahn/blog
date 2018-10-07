@@ -54,6 +54,10 @@ const Wrapper = styled.li`
   &:nth-child(n + 2) {
     margin-top: 12px;
   }
+
+  @media screen and (max-width: 800px) {
+    padding: 12px;
+  }
 `;
 
 const PostWrapper = styled(Link)`
@@ -83,6 +87,7 @@ const TagList = styled.ul`
 `;
 
 const Tag = styled.li`
+  list-style-type: none;
   font-size: 0.75em;
   display: block;
 

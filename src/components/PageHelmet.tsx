@@ -26,11 +26,11 @@ const PageHelmet: React.SFC<Props> = ({
     <meta name="twitter:site" content="@heejongahn" />
     <meta name="twitter:url" content={url} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="http://ahnheejong.name/logo.png" />
+    <meta name="twitter:image" content="/public/og.png" />
 
     <meta name="og:title" title={title} />
     <meta name="og:description" content={description} />
-    <meta name="og:image" content="http://ahnheejong.name/logo.png" />
+    <meta name="og:image" content="/public/og.png" />
     <meta name="og:image:type" content="image/png" />
     <meta name="og:image:width" content="1200" />
     <meta name="og:image:height" content="630" />

@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/public
+public_folder: /public
 publish_mode: editorial_workflow
 
 collections:
@@ -11,7 +11,7 @@ collections:
     label: "Article"
     folder: "src/pages/articles"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {
           label: "Template Key",

@@ -1,5 +1,4 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
@@ -12,7 +11,6 @@ interface Props {
   description: string;
   title: string;
   tags: string[];
-  helmet: React.ReactElement<any>;
 }
 
 export const BlogPostTemplate: React.SFC<Props> = ({
@@ -20,14 +18,12 @@ export const BlogPostTemplate: React.SFC<Props> = ({
   contentComponent,
   description,
   tags,
-  title,
-  helmet
+  title
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
     <section className="section">
-      {helmet || ""}
       <Title>{title}</Title>
       <Description>{description}</Description>
       <TagList>
@@ -89,7 +85,6 @@ const BlogPost: React.SFC<{ data: { markdownRemark: Post } }> = ({ data }) => {
         content={post.html}
         contentComponent={StyledHTMLContent}
         description={post.frontmatter.description}
-        helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />

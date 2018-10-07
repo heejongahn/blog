@@ -1,8 +1,8 @@
 import React from "react";
-import { push } from "gatsby";
+import { navigateTo } from "gatsby";
 
 const ArticlesMain: React.SFC = () => {
-  push("/");
+  navigateTo("/");
   return null;
 };
 

@@ -2,7 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import Layout from "../components/Layout";
-import PostItem, { Post } from "../components/Post";
+import PostItem, { Post, PostList } from "../components/Post";
+import PageHelmet from "../components/PageHelmet";
 
 interface Props {
   data: {
@@ -21,6 +22,11 @@ export default class IndexPage extends React.Component<Props> {
 
     return (
       <Layout>
+        <PageHelmet
+          title="ahn.heejong"
+          description="서울에 살며 웹사이트를 만드는 안희종입니다."
+          url="https://ahnheejong.name/"
+        />
         <section className="section">
           {/* TODO: 카테고리 */}
           <PostList>
@@ -56,13 +62,5 @@ export const pageQuery = graphql`
         }
       }
     }
-  }
-`;
-
-const PostList = styled.ol`
-  margin: 0 -24px;
-
-  @media screen and (max-width: 800px) {
-    margin: 0 -12px;
   }
 `;

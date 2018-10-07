@@ -1,30 +1,33 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import PostItem from "../components/Post";
+import PostItem, { PostList } from "../components/Post";
 import styled from "styled-components";
+import PageHelmet from "../components/PageHelmet";
 
 class TagRoute extends React.Component<any> {
   render() {
-    const { site, allMarkdownRemark } = this.props.data;
+    const { allMarkdownRemark } = this.props.data;
 
     const posts = allMarkdownRemark.edges;
     const tag = this.props.pageContext.tag;
-    const title = site.siteMetadata.title;
     const totalCount = allMarkdownRemark.totalCount;
 
     return (
       <Layout>
+        <PageHelmet
+          title={`“${tag}” 태그 검색 결과`}
+          description={`ahnheejong.name에서 “${tag}” 태그로 검색한 결과입니다.`}
+          url={`https://ahnheejong.name/tags/${tag}`}
+        />
         <section className="section">
-          <Helmet title={`${tag} | ${title}`} />
           <Header>
             <TagName>{`“${tag}”`}</TagName>
             {`태그가 달린 글 (총 ${totalCount}편)`}
           </Header>
           <PostList>
             {posts.map(({ node: post }: any) => (
-              <PostItem key={post.frontmatter.id} post={post} />
+              <PostItem key={post.id} post={post} />
             ))}
           </PostList>
         </section>
@@ -37,11 +40,6 @@ export default TagRoute;
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -68,12 +66,9 @@ export const tagPageQuery = graphql`
 
 const Header = styled.h1`
   font-weight: normal;
+  margin-bottom: 2em;
 `;
 
 const TagName = styled.strong`
   margin-right: 4px;
-`;
-
-const PostList = styled.ul`
-  margin-top: 3em;
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import styled from "styled-components";
+import PageHelmet from "../../components/PageHelmet";
 
 const LanguageSelectors = styled.div`
   display: flex;
@@ -51,7 +52,7 @@ interface State {
   language: Language;
 }
 
-export class AboutPageTemplate extends React.Component<Props, State> {
+export class AboutPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { language: "KO" };
@@ -59,7 +60,12 @@ export class AboutPageTemplate extends React.Component<Props, State> {
 
   render() {
     return (
-      <>
+      <Layout>
+        <PageHelmet
+          title="ahn.heejong"
+          description="서울에 살며 웹사이트를 만드는 안희종입니다."
+          url="https://ahnheejong.name/about/"
+        />
         <LanguageSelectors>
           {(["KO", "EN"] as Language[]).map(lang => (
             <LanguageSelector
@@ -177,17 +183,9 @@ export class AboutPageTemplate extends React.Component<Props, State> {
             </Section>
           </Main>
         )}
-      </>
+      </Layout>
     );
   }
 }
-
-const AboutPage = () => {
-  return (
-    <Layout>
-      <AboutPageTemplate />
-    </Layout>
-  );
-};
 
 export default AboutPage;

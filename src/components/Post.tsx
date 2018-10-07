@@ -95,3 +95,11 @@ const Tag = styled.li`
     margin-left: 0.5em;
   }
 `;
+
+export const PostList = styled.ol`
+  margin: 0 -24px;
+
+  @media screen and (max-width: 800px) {
+    margin: 0 -12px;
+  }
+`;

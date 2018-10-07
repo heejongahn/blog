@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import styled from "styled-components";
+import PageHelmet from "../components/PageHelmet";
 
 interface Props {
   content: any;
@@ -66,6 +67,9 @@ const Tag = styled.li`
 
 interface Post {
   html: string;
+  fields: {
+    slug: string;
+  };
   frontmatter: {
     [key: string]: any;
   };
@@ -76,6 +80,11 @@ const BlogPost: React.SFC<{ data: { markdownRemark: Post } }> = ({ data }) => {
 
   return (
     <Layout>
+      <PageHelmet
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        url={`https://ahnheejong.name${post.fields.slug}`}
+      />
       <BlogPostTemplate
         content={post.html}
         contentComponent={StyledHTMLContent}
@@ -346,6 +355,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

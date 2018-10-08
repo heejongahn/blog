@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 블로그 재작성 작업기
 date: 2018-10-07T11:07:05.509Z
-description: 개인 블로그를 새롭게 만들면서 작업기를 적어보았습니다.
+description: '개인 블로그를 새롭게 만든 이유와 과정, 만들며 느낀 점을 적어보았습니다.'
 tags:
   - 타입스크립트
   - React

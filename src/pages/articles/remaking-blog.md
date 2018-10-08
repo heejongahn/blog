@@ -49,25 +49,26 @@ tags:
 
 스타터 템플릿은 [bulma](https://bulma.io/)를 사용하고 있었는데, 나는 이 정도 규모에선 프레임워크 없이 직접 스타일을 짜는 것을 선호한다. 스타터에 있는 스타일과 필요없는 라이브러리를 걷어내고, 추가로 사용하지 않을 컴포넌트들도 삭제했다.
 
+#### 스타일을 걷어낸 페이지의 모습
 ![스타일을 걷어낸 페이지의 모습](/assets/remaking_blog_without_style.png)
 
 ### 스타일링 추가
 
 밑바탕이 준비가 되었으니, 중요하고 큰 페이지/컴포넌트부터 작업을 시작했다. 기존 블로그를 레퍼런스로 삼되 완전히 똑같이 옮기겠다는 강박은 없이 진행했다.
 
-글 목록 페이지 비포/애프
+#### 글 목록 페이지 비포/애프터
 
 ![글 목록 페이지에 스타일을 입히기 시작](/assets/remaking_blog_basic_style.png)
 
 ![글 목록 페이지에 스타일을 입힌 모습](/assets/remaking_blog_basic_style_2.png)
 
-글 본문 페이지 비포/애프
+#### 글 본문 페이지 비포/애프터
 
 ![스타일을 입히기 전의 글 본문 페이지](/assets/remaking_blog_post_before_style.png)
 
 ![스타일을 입힌 후의 본문 페이지](/assets/remaking_blog_post_after_style.png)
 
-소개 페이지 비포/애프
+#### 소개 페이지 비포/애프터
 
 ![처음에 임시로 넣어둔 소개 페이지](/assets/remaking_blog_about_before.png)
 

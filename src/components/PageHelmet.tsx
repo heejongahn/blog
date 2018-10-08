@@ -15,9 +15,6 @@ const PageHelmet: React.SFC<Props> = ({
   <Helmet title={title}>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <meta name="og:locale" content="ko_kR" />
-    <meta name="og:site_name" content="ahn.heejong" />
-
     <meta name="description" content={description} />
 
     <meta name="twitter:title" content={title} />
@@ -31,13 +28,15 @@ const PageHelmet: React.SFC<Props> = ({
       content="https://ahnheejong.name/assets/og.png"
     />
 
-    <meta name="og:title" title={title} />
-    <meta name="og:description" content={description} />
-    <meta name="og:image" content="https://ahnheejong.name/assets/og.png" />
-    <meta name="og:image:type" content="image/png" />
-    <meta name="og:image:width" content="1200" />
-    <meta name="og:image:height" content="630" />
-    <meta name="og:url" content={url} />
+    <meta property="og:locale" content="ko_kR" />
+    <meta property="og:site_name" content="ahn.heejong" />
+    <meta property="og:title" title={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://ahnheejong.name/assets/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={url} />
   </Helmet>
 );
 

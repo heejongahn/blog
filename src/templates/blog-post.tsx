@@ -1,4 +1,5 @@
 import React from "react";
+import { DiscussionEmbed } from "disqus-react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
@@ -23,7 +24,7 @@ export const BlogPostTemplate: React.SFC<Props> = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <Wrapper>
       <Title>{title}</Title>
       <Description>{description}</Description>
       <TagList>
@@ -34,9 +35,13 @@ export const BlogPostTemplate: React.SFC<Props> = ({
         ))}
       </TagList>
       <PostContent content={content} />
-    </section>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.article`
+  margin-bottom: 40px;
+`;
 
 const Title = styled.h1`
   word-break: keep-all;
@@ -62,6 +67,7 @@ const Tag = styled.li`
 `;
 
 interface Post {
+  id: string;
   html: string;
   fields: {
     slug: string;
@@ -73,13 +79,19 @@ interface Post {
 
 const BlogPost: React.SFC<{ data: { markdownRemark: Post } }> = ({ data }) => {
   const { markdownRemark: post } = data;
+  const url = `https://ahnheejong.name${post.fields.slug}`;
+  const disqusConfig = {
+    url,
+    identifier: post.id,
+    title: post.frontmatter.title
+  };
 
   return (
     <Layout>
       <PageHelmet
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        url={`https://ahnheejong.name${post.fields.slug}`}
+        url={url}
       />
       <BlogPostTemplate
         content={post.html}
@@ -88,6 +100,7 @@ const BlogPost: React.SFC<{ data: { markdownRemark: Post } }> = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
+      <DiscussionEmbed shortname="ahnheejong" disqusConfig={disqusConfig} />
     </Layout>
   );
 };

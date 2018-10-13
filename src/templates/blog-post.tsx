@@ -129,7 +129,13 @@ const BlogPost: React.SFC<{
 export default BlogPost;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!, $previousId: String!, $nextId: String!) {
+  query BlogPostByID(
+    $id: String!
+    $previousId: String
+    $hasPrevious: Boolean!
+    $nextId: String
+    $hasNext: Boolean!
+  ) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -144,7 +150,8 @@ export const pageQuery = graphql`
       }
     }
 
-    previous: markdownRemark(id: { eq: $previousId }) {
+    previous: markdownRemark(id: { eq: $previousId })
+      @include(if: $hasPrevious) {
       fields {
         slug
       }
@@ -153,7 +160,7 @@ export const pageQuery = graphql`
       }
     }
 
-    next: markdownRemark(id: { eq: $nextId }) {
+    next: markdownRemark(id: { eq: $nextId }) @include(if: $hasNext) {
       fields {
         slug
       }

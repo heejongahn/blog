@@ -51,8 +51,10 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
-          previousId: previous != null ? previous.id : "",
-          nextId: next != null ? next.id : ""
+          previousId: previous != null ? previous.id : null,
+          hasPrevious: previous != null,
+          nextId: next != null ? next.id : null,
+          hasNext: next != null
         }
       });
     });

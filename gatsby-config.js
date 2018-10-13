@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "ahn.heejong",
-    description: "한국에 살며며 웹사이트를 만드는 안희종입니다.",
+    description: "한국에 살며 웹사이트를 만드는 안희종입니다.",
     siteUrl: "https://ahnheejong.name"
   },
   plugins: [

@@ -68,7 +68,7 @@ export class AboutPage extends React.Component<Props, State> {
       <Layout>
         <PageHelmet
           title="ahn.heejong"
-          description="서울에 살며 웹사이트를 만드는 안희종입니다."
+          description="한국에 살며 웹사이트를 만드는 안희종입니다."
           url="https://ahnheejong.name/about/"
         />
         <LanguageSelectors>
@@ -87,7 +87,7 @@ export class AboutPage extends React.Component<Props, State> {
             <Section>
               <SectionTitle>반갑습니다</SectionTitle>
               <SectionContent>
-                서울에 살며 웹사이트를 만드는 안희종입니다.
+                한국에 살며 웹사이트를 만드는 안희종입니다.
                 {lineBreak}
                 아름다운 것에 반하는 이들에게 반합니다.
                 {lineBreak}
@@ -143,8 +143,8 @@ export class AboutPage extends React.Component<Props, State> {
             <Section>
               <SectionTitle>welcome</SectionTitle>
               <SectionContent>
-                good to see you! i'm ahn heejong. {lineBreak}i live in seoul and
-                i make websites. i am:
+                good to see you! i'm ahn heejong. {lineBreak}i live in south
+                korea and i make websites. i am:
                 <ul>
                   <li>admirer of those who admire beautiful things.</li>
                   <li>beer, book and triple double u enthusiast.</li>

@@ -1,11 +1,67 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter"
+    title: "ahn.heejong",
+    description: "한국에 살며며 웹사이트를 만드는 안희종입니다.",
+    siteUrl: "https://ahnheejong.name"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-typescript",
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                const articleUrl = `${site.siteMetadata.siteUrl}${
+                  edge.node.fields.slug
+                }`;
+
+                return {
+                  ...edge.node.frontmatter,
+                  url: articleUrl,
+                  guid: articleUrl
+                };
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      fields { slug }
+                      frontmatter {
+                        title
+                        description
+                        date
+                        tags
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/feed.xml",
+            title: "ahn.heejong blog RSS feed"
+          }
+        ]
+      }
+    },
     {
       resolve: "gatsby-plugin-styled-components",
       options: {}

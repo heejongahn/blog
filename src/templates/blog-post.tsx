@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import styled from "styled-components";
 import PageHelmet from "../components/PageHelmet";
+import GatsbyLink from "gatsby-link";
 
 interface Props {
   content: any;
@@ -40,7 +41,7 @@ export const BlogPostTemplate: React.SFC<Props> = ({
 };
 
 const Wrapper = styled.article`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;
 
 const Title = styled.h1`
@@ -77,8 +78,10 @@ interface Post {
   };
 }
 
-const BlogPost: React.SFC<{ data: { markdownRemark: Post } }> = ({ data }) => {
-  const { markdownRemark: post } = data;
+const BlogPost: React.SFC<{
+  data: { markdownRemark: Post; previous: Post | null; next: Post | null };
+}> = ({ data }) => {
+  const { markdownRemark: post, previous, next } = data;
   const url = `https://ahnheejong.name${post.fields.slug}`;
   const disqusConfig = {
     url,
@@ -100,12 +103,112 @@ const BlogPost: React.SFC<{ data: { markdownRemark: Post } }> = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
+      <AdjacentArticles>
+        {[previous, next].map(
+          (adjacentArticle, i) =>
+            adjacentArticle != null ? (
+              <AdjacentArticle
+                key={adjacentArticle.fields.slug}
+                to={adjacentArticle.fields.slug}
+              >
+                <AdjacentArticleLabel>
+                  {i === 0 ? "이전 글" : "다음 글"}
+                </AdjacentArticleLabel>
+                <AdjacentArticleTitle>
+                  {adjacentArticle.frontmatter.title}
+                </AdjacentArticleTitle>
+              </AdjacentArticle>
+            ) : null
+        )}
+      </AdjacentArticles>
       <DiscussionEmbed shortname="ahnheejong" disqusConfig={disqusConfig} />
     </Layout>
   );
 };
 
 export default BlogPost;
+
+export const pageQuery = graphql`
+  query BlogPostByID($id: String!, $previousId: String!, $nextId: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      fields {
+        slug
+      }
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        description
+        tags
+      }
+    }
+
+    previous: markdownRemark(id: { eq: $previousId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+
+    next: markdownRemark(id: { eq: $nextId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+  }
+`;
+
+const AdjacentArticles = styled.div`
+  display: flex;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+  }
+`;
+
+const AdjacentArticle = styled(GatsbyLink)`
+  flex: 1 1 50%;
+
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #eaebec;
+
+  text-decoration: none;
+
+  &:first-child {
+    margin-right: 8px;
+  }
+
+  &:last-child {
+    margin-left: 8px;
+    text-align: right;
+  }
+
+  &:first-child:last-child {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-basis: 100%;
+    margin: 6px 0;
+  }
+`;
+
+const AdjacentArticleLabel = styled.div`
+  font-size: 0.825em;
+  margin-bottom: 8px;
+`;
+
+const AdjacentArticleTitle = styled.strong``;
 
 const StyledHTMLContent = styled(HTMLContent)`
   margin-top: 3em;
@@ -353,24 +456,6 @@ const StyledHTMLContent = styled(HTMLContent)`
         content: "\\BB";
         left: -18px;
         top: 0;
-      }
-    }
-  }
-`;
-
-export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      fields {
-        slug
-      }
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        description
-        tags
       }
     }
   }

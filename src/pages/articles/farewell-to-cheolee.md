@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: farewell-to-cheolee
+title: 마지막 그 아쉬움은 기나긴 시간 속에 묻어둔 채
 date: 2018-10-14T12:18:07.354Z
 description: 안녕은 영원한 헤어짐은 아니겠지요
 tags:

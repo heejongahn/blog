@@ -271,6 +271,11 @@ const StyledHTMLContent = styled(HTMLContent)`
     margin-bottom: 0 !important;
   }
 
+  iframe {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
   p,
   blockquote,
   ul,

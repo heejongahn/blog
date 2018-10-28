@@ -85,19 +85,33 @@ will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 �
 ## object-fit: 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정
 `src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 HTML 문서의 바깥에 존재하는 엘리먼트를 대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 외부에 존재하는 내용물의 크기가 컨테이너의 그것과 차이날 때, 화면에는 어떻게 나타나야 할지에 대한 문제가 발생한다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
 
-이런 상황에서 대체되는 엘리먼트의 내용물이 컨테이너를 어떻게 채울지를 지정하는 데에 사용되는 것이 `object-fit` 속성이다. 이 속성의 동작방식을 설명하는 데에는 말보다 [mdn 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)가 훨씬 효과적일 것이다. 링크를 타고 가기 귀찮다면 아래 예제를 참고하라.
+이런 상황에서 대체되는 엘리먼트의 내용물이 컨테이너를 어떻게 채울지를 지정하는 데에 사용되는 것이 `object-fit` 속성이다. 이 속성의 동작방식을 설명하는 데에는 말보다 [MDN 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)가 훨씬 효과적일 것이다. 링크를 타고 가기 귀찮은 분들을 위해 MDN의 예제도 아래에 (약간의 설명과 함께) 옮겨두었.
+
+### 가능한 속성 값과 예시
+#### fill
+내용물의 가로세로비를 무시하고 컨테이너의 크기에 맞추도록 늘리고 줄인다. 원래 비율이 유지되지 않으므로, 컨테이너의 크기에 따라 내용물이 가로 혹은 세로로 늘어날 수 있다.
 
 ```html
 <div>
-  <h2>object-fit: fill (내용물의 가로세로비를 무시하고 컨테이너의 크기에 맞추도록 늘리고 줄임)</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: fill;" />
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: fill;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"  />
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: fill;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"  />
+</div>
+```
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: fill;" />
+<div>
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: fill;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"  />
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: fill;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"  />
+</div>
 
-  <h2>object-fit: contain</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: contain;" />
+### contain
+내용물의 가로세로비를 유지하는 채로, *내용물이 컨테이너에 포함되도록*
+```html
+<div>
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: contain;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: contain;" />
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: contain;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
+</div>
+```
 
   <h2>object-fit: cover</h2>
   <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: cover;"/>

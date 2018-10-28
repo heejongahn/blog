@@ -80,9 +80,43 @@ will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 �
 
 ### 참고 자료
 * [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
+* [Silky Smooth Animation with CSS](https://speakerdeck.com/lonekorean/silky-smooth-animation-with-css)
 
-## object-fit: 
-`object-fit` 속성을 사용해 이미지, 비디오와 같은 [대체 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)(외부 소스로 대체되는 엘리먼트)가 해당 엘리먼트를 감싸는 엘리먼트(컨테이너 엘리먼트)를 어떻게 채울지를 지정할 수 있다. 이 속성은 말로 설명하는 것보다 [mdn 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)를 보는 것이 빠를 것이다.
+## object-fit: 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정
+`src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 문서의 바깥에 존재하는 엘리먼트 [대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 내용물이 엘리먼트를 어떻게 채워야 할지에 대한 문제가 발생한다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
+
+`object-fit` 속성은 이런 상황에서 대체되는 엘리먼트의 내용물이 컨테이너를 어떻게 채울지를 지정하는 데에 사용된다. 이 속성의 동작방식을 설명하는 데에는 말보다 [mdn 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)가 훨씬 효과적일 것이다. 혹은 아래 예제를 참고하라.
+
+```html
+<div>
+  <h2>object-fit: fill</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
+
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
+
+  <h2>object-fit: contain</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
+
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
+
+  <h2>object-fit: cover</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
+
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
+
+  <h2>object-fit: none</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
+
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
+
+  <h2>object-fit: scale-down</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
+
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
+
+</div>
+```
+
 
 ### 가능한 속성 값
 ```css

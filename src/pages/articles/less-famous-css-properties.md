@@ -45,8 +45,7 @@ tags:
   <li>3</li>
 </ul>
 
-`list-style-position` 속성에 허용되는 값은 다음과 같다.
-
+### 가능한 속성 값
 ```css
 list-style-position: inside;  /* 마커가 `li` 태그 안에 위치 */
 list-style-position: outside; /* 마커가 `li` 태그 바깥에 위치 */
@@ -64,8 +63,7 @@ list-style-position: outside; /* 마커가 `li` 태그 바깥에 위치 */
 }
 ```
 
-`will-change` 속성으로 허용되는 값은 다음과 같다.
-
+### 가능한 속성 값
 ```css
 /* 키워드  */
 will-change: auto;             /* 기본값 */
@@ -80,11 +78,21 @@ will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 �
 
 당연하지만, 이렇게 미리 변경에 대비하는 준비 작업은 공짜가 아니다. `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 어떤 속성이 동적으로 바뀌는 상황이 성능 문제 없이 잘 동작한다면 `will-change` 를 직접 건드리지 않는 것이 좋다.
 
-### 참고
+### 참고 자료
 * [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
 
-## object-fit
-`object-fit`
+## object-fit: 
+`object-fit` 속성을 사용해 이미지, 비디오와 같은 [대체 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)(외부 소스로 대체되는 엘리먼트)가 해당 엘리먼트를 감싸는 엘리먼트(컨테이너 엘리먼트)를 어떻게 채울지를 지정할 수 있다. 이 속성은 말로 설명하는 것보다 [mdn 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)를 보는 것이 빠를 것이다.
+
+### 가능한 속성 값
+```css
+object-fit: contain;           /* 기본값 */
+object-fit: cover;             /* 기본값 */
+object-fit: fill;              /* 기본값 */
+object-fit: none;              /* 기본값 */
+object-fit: scale-down;        /* 기본값 */
+```
+
 
 ## overflow-wrap
 `word-break: keep-all` 속성은 CJK 문자에서 유용하다.

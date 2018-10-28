@@ -45,6 +45,13 @@ tags:
   <li>3</li>
 </ul>
 
+`list-style-position` 속성에 허용되는 값은 다음과 같다.
+
+```css
+list-style-position: inside;  /* 마커가 `li` 태그 안에 위치 */
+list-style-position: outside; /* 마커가 `li` 태그 바깥에 위치 */
+```
+
 
 ## [will-change](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change): 값이 변경될 속성에 대한 힌트
 웹이 정적 문서만을 보여주던 플랫폼에서 동적으로 상호작용하는 복잡한 어플리케이션을 위한 플랫폼으로 진화함에 따라, 유저 인터랙션 등의 이유로 `opacity`, `transform` 등의 CSS 속성 값이 동적으로 변화는 상황은 갈수록 자주 발생하고 있다.
@@ -57,29 +64,22 @@ tags:
 }
 ```
 
-`will-change` 속성은 다음 값을 가질 수 있다.
+`will-change` 속성으로 허용되는 값은 다음과 같다.
 
-```
+```css
 /* 키워드  */
 will-change: auto;             /* 기본값 */
 will-change: scroll-position;  /* 엘리먼트의 스크롤 위치가 바뀔 것 */
 will-change: contents;         /* 엘리먼트의 컨텐츠 중 일부가 바뀔 것 */
 
 /* 혹은 특정 CSS 속성을 명시할 수 있다. */
-/* 허용되는 값은 
+/* transform, opacity, top, left, right, bottom 정도가 자주 사용된다. */
 will-change: transform;        
-will-change: left, top;        /* Example of two <animateable-feature> */
-
-/* Global values */
-will-change: inherit;
-will-change: initial;
-will-change: unset;
+will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 있다. */
 ```
 
+당연하지만, 이렇게 미리 변경에 대비하는 준비 작업은 공짜가 아니다. `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 어떤 속성이 동적으로 바뀌는 상황이 성능 문제 없이 잘 동작한다면 `will-change` 를 직접 건드릴 필요는 없다.
 
- 다만 당연하게도 이러한 준비 작업은 공짜가 아니고, `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라.
-
-### 참고 링크
 - [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
 
 ## object-fit

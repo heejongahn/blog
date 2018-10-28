@@ -83,37 +83,36 @@ will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 �
 * [Silky Smooth Animation with CSS](https://speakerdeck.com/lonekorean/silky-smooth-animation-with-css)
 
 ## object-fit: 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정
-`src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 문서의 바깥에 존재하는 엘리먼트 [대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 내용물이 엘리먼트를 어떻게 채워야 할지에 대한 문제가 발생한다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
+`src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 HTML 문서의 바깥에 존재하는 엘리먼트를 대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 외부에 존재하는 내용물의 크기가 컨테이너의 그것과 차이날 때, 화면에는 어떻게 나타나야 할지에 대한 문제가 발생한다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
 
-`object-fit` 속성은 이런 상황에서 대체되는 엘리먼트의 내용물이 컨테이너를 어떻게 채울지를 지정하는 데에 사용된다. 이 속성의 동작방식을 설명하는 데에는 말보다 [mdn 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)가 훨씬 효과적일 것이다. 혹은 아래 예제를 참고하라.
+이런 상황에서 대체되는 엘리먼트의 내용물이 컨테이너를 어떻게 채울지를 지정하는 데에 사용되는 것이 `object-fit` 속성이다. 이 속성의 동작방식을 설명하는 데에는 말보다 [mdn 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)가 훨씬 효과적일 것이다. 링크를 타고 가기 귀찮다면 아래 예제를 참고하라.
 
 ```html
 <div>
-  <h2>object-fit: fill</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
+  <h2>object-fit: fill (내용물의 가로세로비를 무시하고 컨테이너의 크기에 맞추도록 늘리고 줄임)</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: fill;" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: fill;" />
 
   <h2>object-fit: contain</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: contain;" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: contain;" />
 
   <h2>object-fit: cover</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: cover;"/>
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: cover;" />
 
   <h2>object-fit: none</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: none;" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: none;" "/>
 
   <h2>object-fit: scale-down</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: scale-down;" />
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
-
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: scale-down;" />
 </div>
 ```
 
@@ -131,9 +130,7 @@ object-fit: scale-down;        /* 기본값 */
 ## overflow-wrap
 `word-break: keep-all` 속성은 CJK 문자에서 유용하다.
 
-## CSS counter
-
-## :empty
+## counter: 
 
 ## viewport-fit
 

@@ -157,7 +157,7 @@ will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 �
 </div>
 ```
 
-## overflow-wrap
+## overflow-wrap: 오버플로우가 일어날 때 단어 내 줄바꿈 처리
 
 CJK 언어로 된 사이트를 자주 만드는 개발자라면 `word-break: keep-all;` 속성을 아주 유용하게 사용하고 있을 것이다. `keep-all` 속성값을 사용하면 CJK에서도 단어 단위로 줄바꿈을 끊어줄 수 있다. 그런데 만약 한 단어의 길이 컨테이너의 너비보다 더 긴 경우에는 어떻게 해야할까?
 
@@ -170,7 +170,7 @@ CJK 언어로 된 사이트를 자주 만드는 개발자라면 `word-break: kee
   굉장히길고엄청나게길면서굉장히길고엄청나게길면서굉장히길고엄청나게길면서굉장히길고엄청나게길면서의미는없는문자열
 </div>
 
-이런 경우를 대비해, `overflow-wrap` 속성을 사용해 어절  수 있다. 
+이런 경우, `overflow-wrap` 속성에 `break-word` 값을 주어서 적절하게 단어를 끊고 줄바꿈이 일어나도록 설정할 수 있다. 
 
 ```html
 <div style="width: 200px; border: 1px solid black; word-break: keep-all; overflow-wrap: break-word;">
@@ -181,10 +181,13 @@ CJK 언어로 된 사이트를 자주 만드는 개발자라면 `word-break: kee
   굉장히길고엄청나게길면서굉장히길고엄청나게길면서굉장히길고엄청나게길면서굉장히길고엄청나게길면서의미는없는문자열
 </div>
 
+### 가능한 속성 값
+```css
+overflow-wrap: normal;        /* 기본 */
+overflow-wrap: break-word;    /* 오버플로우가 일어나면 단어를 쪼개서 줄바꿈 */
+```
 
-`word-break: keep-all` 속성은 CJK 문자에서 유용하다.
-
-## counter: 
+## counter
 
 ## viewport-fit
 

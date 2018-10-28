@@ -12,75 +12,8 @@ tags:
 
 이 글에서는 
 
-## [list-style-position](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position): 리스트 마커 위치 지정
-리스트 아이템 앞에 따라오는 리스트 마커는 기본적으로 `li` 태그 바깥에 위치한다.
 
-```html
-<ul style="padding-left: 20px;">
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-</ul>
-```
-
-<ul style="padding-left: 20px;">
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-</ul>
-
-`list-style-position` 속성의 값으로 `inside`를 줘서 마커가 `li` 태그 안오로 들어오도록 설정할 수 있다.
-
-```html
-<ul style="padding-left: 20px; list-style-position: inside;">
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-</ul>
-```
-
-<ul style="padding-left: 20px; list-style-position: inside;">
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-</ul>
-
-### 가능한 속성 값
-```css
-list-style-position: inside;  /* 마커가 `li` 태그 안에 위치 */
-list-style-position: outside; /* 마커가 `li` 태그 바깥에 위치 */
-```
-
-
-## [will-change](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change): 값이 변경될 속성에 대한 힌트
-웹이 정적 문서를 위한 플랫폼에서 동적으로 상호작용하는 복잡한 어플리케이션을 위한 플랫폼으로 진화함에 따라, `opacity`, `transform` 등의 CSS 속성 값이 동적으로 변화는 상황이 갈수록 자주 생긴다.
-
-이 때, `will-change` 속성을 사용해 브라우저에게 엘리먼트의 어떤 속성이 높은 확률로 변할 것인지 힌트를 줄 수 있다. 브라우저는 이 힌트를 사용해 앞으로 일어날 변화에 미리 대비해 더 매끄러운 트랜지션을 구사할 수 있다. 예를 들어, 다음 스타일시트는 `.sidebar` 엘리먼트의 `transform` 속성 값이 변할 것임을 나타낸다.
-
-```css
-.sidebar {
-  will-change: transform;
-}
-```
-
-### 가능한 속성 값
-```css
-/* 키워드  */
-will-change: auto;             /* 기본값 */
-will-change: scroll-position;  /* 엘리먼트의 스크롤 위치가 바뀔 것 */
-will-change: contents;         /* 엘리먼트의 컨텐츠 중 일부가 바뀔 것 */
-
-/* 혹은 특정 CSS 속성을 명시할 수 있다. */
-/* transform, opacity, top, left, right, bottom 정도가 자주 사용된다. */
-will-change: transform;        
-will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 있다. */
-```
-
-당연하지만, 이렇게 미리 변경에 대비하는 준비 작업은 공짜가 아니다. `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 어떤 속성이 동적으로 바뀌는 상황이 성능 문제 없이 잘 동작한다면 `will-change` 를 직접 건드리지 않는 것이 좋다.
-
-### 참고 자료
-* [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
-* [Silky Smooth Animation with CSS](https://speakerdeck.com/lonekorean/silky-smooth-animation-with-css)
+## [pointer-events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events), [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 클릭/터치와 선택 상호작용
 
 ## [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit): 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정
 `src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 HTML 문서의 바깥에 존재하는 엘리먼트를 대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 외부에 존재하는 내용물의 크기가 컨테이너의 그것과 차이날 때, 화면에는 어떻게 나타나야 할지에 대한 문제가 발생한다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
@@ -167,7 +100,7 @@ CJK 언어로 된 사이트를 자주 만드는 개발자라면 `word-break: kee
   굉장히길고엄청나게길면서굉장히길고엄청나게길면서굉장히길고엄청나게길면서굉장히길고엄청나게길면서의미는없는문자열
 </div>
 
-이런 경우, `overflow-wrap` 속성에 `break-word` 값을 주어서 적절하게 단어를 끊고 줄바꿈이 일어나도록 설정할 수 있다. 
+이런 경우, `overflow-wrap` 속성에 `break-word` 값을 주어서 만약 오버플로우가 일어날 경우 적절하게 단어를 끊고 줄바꿈이 일어나도록 설정할 수 있다. 
 
 ```html
 <div style="width: 200px; border: 1px solid black; word-break: keep-all; overflow-wrap: break-word;">
@@ -184,8 +117,78 @@ overflow-wrap: normal;        /* 기본 */
 overflow-wrap: break-word;    /* 오버플로우가 일어나면 단어를 쪼개서 줄바꿈 */
 ```
 
-## counter
 
-## viewport-fit
+## [list-style-position](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position): 리스트 마커 위치 지정
+리스트 아이템 앞에 따라오는 리스트 마커는 기본적으로 `li` 태그 바깥에 위치한다.
 
-## pointer-events, user-select
+```html
+<ul style="padding-left: 20px;">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+```
+
+<ul style="padding-left: 20px;">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+
+`list-style-position` 속성의 값으로 `inside`를 줘서 마커가 `li` 태그 안오로 들어오도록 설정할 수 있다.
+
+```html
+<ul style="padding-left: 20px; list-style-position: inside;">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+```
+
+<ul style="padding-left: 20px; list-style-position: inside;">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+
+### 가능한 속성 값
+```css
+list-style-position: inside;  /* 마커가 `li` 태그 안에 위치 */
+list-style-position: outside; /* 마커가 `li` 태그 바깥에 위치 */
+```
+
+
+## [will-change](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change): 값이 변경될 속성에 대한 힌트
+웹이 정적 문서를 위한 플랫폼에서 동적으로 상호작용하는 복잡한 어플리케이션을 위한 플랫폼으로 진화함에 따라, `opacity`, `transform` 등의 CSS 속성 값이 동적으로 변화는 상황이 갈수록 자주 생긴다.
+
+이 때, `will-change` 속성을 사용해 브라우저에게 엘리먼트의 어떤 속성이 높은 확률로 변할 것인지 힌트를 줄 수 있다. 브라우저는 이 힌트를 사용해 앞으로 일어날 변화에 미리 대비해 더 매끄러운 트랜지션을 구사할 수 있다. 예를 들어, 다음 스타일시트는 `.sidebar` 엘리먼트의 `transform` 속성 값이 변할 것임을 나타낸다.
+
+```css
+.sidebar {
+  will-change: transform;
+}
+```
+
+### 가능한 속성 값
+```css
+/* 키워드  */
+will-change: auto;             /* 기본값 */
+will-change: scroll-position;  /* 엘리먼트의 스크롤 위치가 바뀔 것 */
+will-change: contents;         /* 엘리먼트의 컨텐츠 중 일부가 바뀔 것 */
+
+/* 혹은 특정 CSS 속성을 명시할 수 있다. */
+/* transform, opacity, top, left, right, bottom 정도가 자주 사용된다. */
+will-change: transform;        
+will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 있다. */
+```
+
+당연하지만, 이렇게 미리 변경에 대비하는 준비 작업은 공짜가 아니다. `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 어떤 속성이 동적으로 바뀌는 상황이 성능 문제 없이 잘 동작한다면 `will-change` 를 직접 건드리지 않는 것이 좋다.
+
+### 참고 자료
+* [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
+* [Silky Smooth Animation with CSS](https://speakerdeck.com/lonekorean/silky-smooth-animation-with-css)
+
+## [counter](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+
+마지막으로 살펴볼 속성은 `counter` 이다. 앞에서 보았던 속성들과 다르게, `counter`는 단순히 해당 속성이 정의된 엘리먼트 뿐만이 아닌 문서 전체와 엮어 동작하는, 다소 특이한 성질을 갖는 속성이다.
+

@@ -54,9 +54,9 @@ list-style-position: outside; /* 마커가 `li` 태그 바깥에 위치 */
 
 
 ## [will-change](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change): 값이 변경될 속성에 대한 힌트
-웹이 정적 문서만을 보여주던 플랫폼에서 동적으로 상호작용하는 복잡한 어플리케이션을 위한 플랫폼으로 진화함에 따라, 유저 인터랙션 등의 이유로 `opacity`, `transform` 등의 CSS 속성 값이 동적으로 변화는 상황은 갈수록 자주 발생하고 있다.
+웹이 정적 문서를 위한 플랫폼에서 동적으로 상호작용하는 복잡한 어플리케이션을 위한 플랫폼으로 진화함에 따라, `opacity`, `transform` 등의 CSS 속성 값이 동적으로 변화는 상황이 갈수록 자주 생긴다.
 
-`will-change` 속성을 사용해 브라우저에게 엘리먼트의 어떤 속성이 높은 확률로 변할 것인지 힌트를 줄 수 있다. 예를 들어, 다음 스타일시트는 `.sidebar` 엘리먼트의 `transform` 속성 값이 변할 것임을 브라우저에게 알려주고 있다. 브라우저는 이 힌트를 사용해 앞으로 일어날 변화에 미리 대비해 더 매끄러운 트랜지션을 구사할 수 있다.
+이 때, `will-change` 속성을 사용해 브라우저에게 엘리먼트의 어떤 속성이 높은 확률로 변할 것인지 힌트를 줄 수 있다. 브라우저는 이 힌트를 사용해 앞으로 일어날 변화에 미리 대비해 더 매끄러운 트랜지션을 구사할 수 있다. 예를 들어, 다음 스타일시트는 `.sidebar` 엘리먼트의 `transform` 속성 값이 변할 것임을 나타낸다.
 
 ```css
 .sidebar {
@@ -78,11 +78,13 @@ will-change: transform;
 will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 있다. */
 ```
 
-당연하지만, 이렇게 미리 변경에 대비하는 준비 작업은 공짜가 아니다. `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 어떤 속성이 동적으로 바뀌는 상황이 성능 문제 없이 잘 동작한다면 `will-change` 를 직접 건드릴 필요는 없다.
+당연하지만, 이렇게 미리 변경에 대비하는 준비 작업은 공짜가 아니다. `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 어떤 속성이 동적으로 바뀌는 상황이 성능 문제 없이 잘 동작한다면 `will-change` 를 직접 건드리지 않는 것이 좋다.
 
-- [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
+### 참고
+* [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
 
 ## object-fit
+`object-fit`
 
 ## overflow-wrap
 

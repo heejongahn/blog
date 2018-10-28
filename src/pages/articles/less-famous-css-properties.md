@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: less-famous-css-properties
+title: 잘 알려지지 않은 유용한 CSS 속성들
 date: 2018-10-28T07:37:26.643Z
 description: 상대적으로 덜 알려졌지만 알아두면 유용한 CSS 속성들에 대해 소개합니다.
 tags:
@@ -87,14 +87,11 @@ will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 �
 `object-fit`
 
 ## overflow-wrap
+`word-break: keep-all` 속성은 CJK 문자에서 유용하다.
 
 ## CSS counter
 
-## :nth-child(n+2)
-
 ## :empty
-
-## currentColor
 
 ## viewport-fit
 

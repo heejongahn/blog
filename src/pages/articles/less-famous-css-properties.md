@@ -89,7 +89,7 @@ will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 �
 
 ### 가능한 속성 값과 예시
 #### fill
-내용물의 가로세로비를 무시하고 컨테이너의 크기에 맞추도록 늘리고 줄인다. 원래 비율이 유지되지 않으므로, 컨테이너의 크기에 따라 내용물이 가로 혹은 세로로 늘어날 수 있다.
+**내용물의 가로세로비를 무시하고 컨테이너의 크기에 맞추어** 늘리거나 줄인다. 원래 비율이 유지되지 않으므로, 컨테이너의 크기에 따라 내용물이 가로 혹은 세로로 늘어날 수 있다.
 
 ```html
 <div>
@@ -103,41 +103,58 @@ will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 �
   <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: fill;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"  />
 </div>
 
-### contain
-내용물의 가로세로비를 유지하는 채로, *내용물이 컨테이너에 포함되도록*
+#### contain
+내용물의 가로세로비를 유지하는 채로, **내용물이 컨테이너에 포함되는 최대 크기가 되도록** 늘리거나 줄인다.
+
 ```html
 <div>
   <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: contain;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
-
   <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: contain;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
 </div>
 ```
+<div>
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: contain;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: contain;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
+</div>
 
-  <h2>object-fit: cover</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: cover;"/>
+#### cover
+내용물의 가로세로비를 유지하는 채로, **내용물이 컨테이너 전체를 덮는 최소 크기가 되도록** 늘리거나 줄인다.
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: cover;" />
-
-  <h2>object-fit: none</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: none;" />
-
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: none;" "/>
-
-  <h2>object-fit: scale-down</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 150px; height: 100px; border: 1px solid #000; object-fit: scale-down;" />
-
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: scale-down;" />
+```html
+<div>
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: cover;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/>
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: cover;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
 </div>
 ```
+<div>
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: cover;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/>
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: cover;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
 
+#### none
+내용물이 전혀 리사이징 되지 않는다.
 
-### 가능한 속성 값
-```css
-object-fit: contain;           /* 기본값 */
-object-fit: cover;             /* 기본값 */
-object-fit: fill;              /* 기본값 */
-object-fit: none;              /* 기본값 */
-object-fit: scale-down;        /* 기본값 */
+```html
+<div>
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: none;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
+
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: none;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
+</div>
+```
+<div>
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: none;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
+
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: none;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
+</div>
+
+#### scale-down
+`none` 과 `contain` 중 내용물의 크기가 더 적은 쪽과 동일하게 동작한다.
+
+```html
+<div>
+  <img style="width: 150px; height: 100px; border: 1px solid #000; object-fit: scale-down;" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" />
+
+  <img style="width: 100px; height: 150px; border: 1px solid #000; margin-top: 10px; object-fit: scale-down;"src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"  />
+</div>
 ```
 
 

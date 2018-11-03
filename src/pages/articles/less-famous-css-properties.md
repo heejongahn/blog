@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 잘 알려지지 않은 유용한 CSS 속성들
-date: 2018-10-28T07:37:26.643Z
+date: 2018-11-03T12:15:26.643Z
 description: >-
   pointer-events, object-fit, will-change 등 상대적으로 덜 알려졌지만 알아두면 언젠가 유용하게 써먹을 CSS
   속성을 소개합니다.

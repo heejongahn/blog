@@ -62,10 +62,10 @@ pointer-events: none;
 ### 가능한 속성 값
 
 ```css
-user-select: auto;                    /* 기본값 (::after, ::before 는 선택되지 않고, 부모의 속성을 따름) */
-user-select: text;                    /* 선택 가능 */
-user-select: none;                    /* 선택 불가능 */
-user-select: all;                     /* 엘리먼트 내에서 선택이 일어나면 해당 엘리먼트 전체가 선택된다 */
+user-select: auto;          /* 기본값 (::after, ::before 는 선택되지 않고, 부모의 속성을 따름) */
+user-select: text;          /* 선택 가능 */
+user-select: none;          /* 선택 불가능 */
+user-select: all;           /* 엘리먼트 내에서 선택이 일어나면 해당 엘리먼트 전체가 선택된다 */
 ```
 
 ## [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit): 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정

@@ -8,7 +8,13 @@ description: >-
 tags:
   - 프론트엔드
   - CSS
-  - ''
+  - pointer-events
+  - touch-action
+  - user-select
+  - object-fit
+  - overflow-wrap
+  - list-style-position
+  - will-change
 ---
 ## 들어가며
 

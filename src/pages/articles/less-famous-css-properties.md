@@ -18,7 +18,7 @@ tags:
 
 ## [pointer-events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events): 클릭 이벤트
 
-`pointer-event` 속성을 통해 엘리먼트가 마우스 이벤트(호버, 클릭, 드래그 등)에 어떻게 반응할지를 지정할 수 있다. 대부분의 속성 값은 SVG 전용이고, `pointer-events: none`을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 할 수 있다는 점만 기억하자.
+`pointer-event` 속성을 통해 엘리먼트가 마우스 이벤트(호버, 클릭, 드래그 등)에 어떻게 반응할지를 지정할 수 있다. 대부분의 속성 값은 SVG 전용이므로, `pointer-events: none`을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 할 수 있다는 점만 기억하자.
 
 해당 속성이 지정되었더라도 반드시 마우스 이벤트의 이벤트 리스너가 호출되지 않을 거라 보장되지 않는다는 점은 주의해야 한다. 예를 들어, 부모 엘리먼트가 `pointer-events: none` 속성을 갖고 있어도 자식 중`pointer-events: auto`를 가진 엘리먼트가 있다면, 해당 자식 엘리먼트에 트리거 된 이벤트가 [버블링 또는 캡쳐링](https://javascript.info/bubbling-and-capturing) 되는 과정에서 부모 엘리먼트의 이벤트 리스너가 호출될 수 있다.
 
@@ -42,9 +42,26 @@ pointer-events: none;
 /* 이하 SVG 전용 값 생략 */
 ```
 
-## [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action)
+## [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action): 브라우저에게 맡길 터치 액션 지정
 
+기본적으로, 더블 탭, 두 점을 잡고 늘리거나 줄이기 등의 터치 이벤트가 어떻게 처리될지는 브라우저가 담당하는 영역이다. 이 때, `touch-action` 속성을 통해 어떤 요소 내에서 브라우저가 처리할 터치 액션의 리스트를 지정할 수 있다. `auto` 이외
 
+### 가능한 속성 값
+
+```css
+touch-action: auto;          /* 기본 값 */
+touch-action: none;          /* 브라우저가 모든 터치 이벤트를 무시하도록 설정 */
+
+touch-action: pan-x;         
+touch-action: pan-y;
+
+touch-action: pan-left;
+touch-action: pan-right;
+touch-action: pan-up;
+touch-action: pan-down;
+touch-action: pinch-zoom;
+touch-action: manipulation;
+```
 
 ## [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 선택 상호작용
 

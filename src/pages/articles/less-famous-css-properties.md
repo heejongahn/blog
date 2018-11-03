@@ -203,9 +203,18 @@ overflow-wrap: normal;        /* 기본 */
 overflow-wrap: break-word;    /* 오버플로우가 일어나면 단어를 쪼개서 줄바꿈 */
 ```
 
-
 ## [list-style-position](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position): 리스트 마커 위치 지정
 리스트 아이템 앞에 따라오는 리스트 마커는 기본적으로 `li` 태그 바깥에 위치한다.
+
+<style>
+.example::before {
+  display: none;
+}
+
+.example {
+  list-style-type: disc;
+}
+</style>
 
 ```html
 <ul style="padding-left: 20px;">
@@ -215,7 +224,7 @@ overflow-wrap: break-word;    /* 오버플로우가 일어나면 단어를 쪼�
 </ul>
 ```
 
-<ul style="padding-left: 20px;">
+<ul class="example" style="padding-left: 20px;">
   <li>1</li>
   <li>2</li>
   <li>3</li>
@@ -231,7 +240,7 @@ overflow-wrap: break-word;    /* 오버플로우가 일어나면 단어를 쪼�
 </ul>
 ```
 
-<ul style="padding-left: 20px; list-style-position: inside;">
+<ul class="example" style="padding-left: 20px; list-style-position: inside;">
   <li>1</li>
   <li>2</li>
   <li>3</li>
@@ -242,7 +251,6 @@ overflow-wrap: break-word;    /* 오버플로우가 일어나면 단어를 쪼�
 list-style-position: inside;  /* 마커가 `li` 태그 안에 위치 */
 list-style-position: outside; /* 마커가 `li` 태그 바깥에 위치 */
 ```
-
 
 ## [will-change](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change): 값이 변경될 속성에 대한 힌트
 웹이 정적 문서를 위한 플랫폼에서 동적으로 상호작용하는 복잡한 어플리케이션을 위한 플랫폼으로 진화함에 따라, `opacity`, `transform` 등의 CSS 속성 값이 동적으로 변화는 상황이 갈수록 자주 생긴다.

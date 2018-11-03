@@ -14,13 +14,13 @@ tags:
 
 웹 개발자로 일하다 보면 CSS의 세계는 참 무궁무진하다는 사실을 자주 느낀다. 매일같이 다루는 몇 가지 속성만으로도 대부분의 상황을 충분히 커버할 수 있지만, 오히려 그래서인지 여러 흔치 않은 용례를 고려하여 만들어진 속성들을 맞닥뜨릴때면 더더욱 즐거운 마음으로 놀라게 된다.
 
-이 글에서는 잘 알려지지 않은, 하지만 알아두면 분명 유용하게 써먹을 일이 생길 CSS 속성들에 대해 소개한다. 하나씩 찾아보면 사실 이미 잘 정리된 자료들이 많은 만큼, 해당 속성에 관한 모든 세부 내용을 최대한 세세히 다루기보단 이런 속성이 존재하며 대략 어떤 용도로 사용된다는 점 정도를 소개하는 데에 초점을 맞추었다.
+이 글에서는 잘 알려지지 않은, 하지만 알아두면 분명 유용하게 써먹을 일이 생길 CSS 속성 몇 가지를 소개한다. 하나씩 찾아보면 사실 이미 잘 정리된 자료들이 많은 만큼, 해당 속성에 관한 모든 세부 내용을 최대한 세세히 다루기보단 이런 속성이 존재하며 대략 어떤 용도로 사용된다는 점 정도를 소개하는 데에 초점을 맞추었다.
 
 ## [pointer-events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events), [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action): 클릭/터치 이벤트
 
 `pointer-event` 속성을 통해 엘리먼트가 마우스 이벤트(호버, 클릭, 드래그 등)에 어떻게 반응할지를 지정할 수 있다. 대부분의 속성 값은 SVG 전용이고, `pointer-events: none`을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 할 수 있다는 점만 기억하자.
 
-해당 속성이 지정되었다고 해서 반드시 마우스 이벤트의 이벤트 리스너가 호출되지 않음이 보장되지는 않는다는 점은 주의해야 한다. 예를 들어, `pointer-events: none`인 부모 엘리먼트의 자식 중 `pointer-events: auto`를 가진 요소가 있다면, 해당 자식 엘리먼트에 트리거 된 이벤트가 [버블링 또는 캡쳐링](https://javascript.info/bubbling-and-capturing) 되는 과정에서 부모 엘리먼트의 이벤트 리스너가 호출될 수 있다.
+해당 속성이 지정되었더라도 반드시 마우스 이벤트의 이벤트 리스너가 호출되지 않을 거라 보장되지 않는다는 점은 주의해야 한다. 예를 들어, 부모 엘리먼트가 `pointer-events: none` 속성을 갖고 있어도 자식 중`pointer-events: auto`를 가진 엘리먼트가 있다면, 해당 자식 엘리먼트에 트리거 된 이벤트가 [버블링 또는 캡쳐링](https://javascript.info/bubbling-and-capturing) 되는 과정에서 부모 엘리먼트의 이벤트 리스너가 호출될 수 있다.
 
 ```html
 <ul>
@@ -43,6 +43,18 @@ pointer-events: none;
 ```
 
 ## [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 선택 상호작용
+
+`user-select` 속성을 사용해 사용자가 텍스트를 선택할 수 있는지 여부를 설정할 수 있다.
+
+### 가능한 속성 값
+
+```css
+user-select: auto;                    /* 기본값 */
+user-select: none;                    /* 선택 불가능 */
+user-select: text;                    /*
+user-select: contain;                 /*
+user-select: all;                     /*
+```
 
 ## [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit): 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정
 `src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 HTML 문서의 바깥에 존재하는 엘리먼트를 대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 외부에 존재하는 내용물의 크기가 컨테이너의 그것과 차이날 때, 화면에는 어떻게 나타나야 할지에 대한 문제가 발생한다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?

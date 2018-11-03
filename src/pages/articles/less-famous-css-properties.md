@@ -207,7 +207,7 @@ overflow-wrap: break-word;    /* 오버플로우가 일어나면 단어를 쪼�
 리스트 아이템 앞에 따라오는 리스트 마커는 기본적으로 `li` 태그 바깥에 위치한다.
 
 <style>
-.example::before {
+.example li::before {
   content: "" !important;
   display: none !important;
 }

@@ -44,7 +44,7 @@ pointer-events: none;
 
 ## [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 선택 상호작용
 
-`user-select` 속성을 사용해 엘리먼트 내부에서 텍스트 선택이 일어났을 때의 동작을 설정할 수 있다. 선택이 불가능하게 지정하거나, 엘리먼트 내에서 선택이 일어나면 무조건 엘리먼트 전체가 선택되도록 설정할 수 있다.
+`user-select` 속성은 엘리먼트 내부에서 텍스트 선택이 일어났을 때의 동작을 설정하기 위해 사용된다. 기본 동작 이외에 선택이 불가능하게 지정 할 수도 있고, 엘리먼트 내에서 선택이 일어나면 무조건 엘리먼트 전체가 선택되는 동작이 가능하다.
 
 ```html
 <div style="user-select: auto; border: 1px solid black; padding: 12px; margin: 12px;">user-select: auto;</div>

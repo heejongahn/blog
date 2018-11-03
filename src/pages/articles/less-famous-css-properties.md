@@ -12,9 +12,9 @@ tags:
 ---
 ## 들어가며
 
-웹 개발자로 일하다 보면 CSS의 세계는 참 무궁무진하다는 사실을 자주 느낀다. 매일같이 다루는 몇 가지 속성만으로도 대부분의 상황을 충분히 커버할 수 있지만, 오히려 그래서인지 여러 흔치 않은 용례를 고려하여 만들어진 속성들을 맞닥뜨릴때면 더더욱 즐거운 마음으로 놀라게 된다.
+웹 개발자로 일하다 보면 CSS의 세계는 참 무궁무진하다는 사실을 자주 느낀다. 매일같이 다루는 몇 가지 속성만으로도 대부분의 상황을 충분히 커버할 수 있지만, 오히려 그래서인지 여러 흔치 않은 용례를 커버하는 속성을 맞닥뜨릴때면 더더욱 즐겁게 놀라게 된다.
 
-이 글에서는 잘 알려지지 않은, 하지만 알아두면 분명 유용하게 써먹을 일이 생길 CSS 속성 몇 가지를 소개한다. 하나씩 찾아보면 사실 이미 잘 정리된 자료들이 많은 만큼, 해당 속성에 관한 모든 세부 내용을 최대한 세세히 다루기보단 이런 속성이 존재하며 대략 어떤 용도로 사용된다는 점 정도를 소개하는 데에 초점을 맞추었다.
+이 글에서는 잘 알려지지 않은, 하지만 알아두면 분명 유용하게 써먹을 일이 생길 CSS 속성 몇 가지를 소개하려 한다. 하나씩 찾아보면 이미 잘 정리된 자료들이 많은 만큼, 해당 속성의 모든 내용을 세세히 다루기보단 이런 속성이 존재하며 대략 어떤 용도로 사용된다는 점 정도를 소개하는 데에 초점을 맞추었다.
 
 ## [pointer-events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events): 클릭 이벤트 허용 여부
 
@@ -44,7 +44,9 @@ pointer-events: none;
 
 ## [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action): 브라우저에게 맡길 터치 액션 지정
 
-기본적으로, 더블 탭, 핀치 줌(여러 손가락을 사용한 확대/축소) 등의 터치 이벤트가 어떻게 처리될지는 브라우저가 담당한다. `touch-action` 속성을 통해 어떤 요소 내에서 브라우저가 처리할 터치 액션의 목록을 지정할 수 있다. `auto` 이외의 옵션을 사용할 경우, 브라우저는 명시해준 동작만 처리한다. 
+기본적으로 터치 이벤트의 처리는 브라우저가 담당하는 영역이다. `touch-action` 속성을 통해 어떤 요소 내에서 브라우저가 처리할 터치 액션의 목록을 지정할 수 있다. 표준 터치 제스쳐로는 터치를 사용한 스크롤(panning)과 여러 손가락을 사용한 확대/축소(pinch zoom)이 존재하며, 브라우저에 따라 더블 탭으로 확대 등 표준이 아닌 여러 제스쳐를 지원하는 경우도 있다.
+
+`touch-action` 속성의 값으로 `auto` 이외의 값을 줄 경우, 해당 속성에 명시해준 터치 액션만이 브라우저에 의해 처리된다. 예를 들어, `touch-action: pinch-zoom` 속성을 갖는 엘리먼트에서는 터치를 사용한 스크롤이 (자바스크립트로 별도로 처리를 해 주지 않는 이상) 무시된다.
 
 ### 가능한 속성 값
 
@@ -69,7 +71,7 @@ touch-action: pan-y pinch-zoom; /* 동시에 여러 값 지정 가능 */
 
 ## [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 선택 상호작용
 
-`user-select` 속성을 사용해 엘리먼트 내부에서 텍스트 선택이 일어났을 때의 동작을 설정할 수 있다. 기본 동작 이외에 선택이 불가능하게 지정할 수도 있고, 엘리먼트 내에서 선택이 일어나면 무조건 엘리먼트 전체가 선택되는 동작도 설정 가능하다.
+`user-select` 속성을 사용해 엘리먼트 내부에서 텍스트 선택이 일어났을 때의 동작을 설정할 수 있다. 기본 동작 이외에 선택이 불가능하게 지정할 수도 있고, 엘리먼트 내에서 선택이 일어나면 무조건 엘리먼트 전체가 선택되는 식의 동작도 설정 가능하다.
 
 ```html
 <div style="user-select: auto; border: 1px solid black; padding: 12px; margin: 12px;">user-select: auto;</div>
@@ -94,7 +96,7 @@ user-select: all;           /* 엘리먼트 내에서 선택이 일어나면 해
 ```
 
 ## [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit): 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정
-`src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 HTML 문서의 바깥에 존재하는 엘리먼트를 대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 외부에 존재하는 내용물의 크기가 컨테이너의 그것과 차이날 때, 화면에는 어떻게 나타나야 할지 지정할 필요가 생긴다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
+`img`, `video` 등과 같이, 내용물이 HTML 문서의 바깥에 존재하는 엘리먼트를 [대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 외부에 존재하는 내용물의 크기가 컨테이너의 그것과 차이날 때, 화면에는 어떻게 나타나야 할지 지정할 필요가 생긴다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
 
 이런 상황에서 대체되는 엘리먼트의 내용물이 컨테이너를 어떻게 채울지를 지정하는 데에 사용되는 것이 `object-fit` 속성이다. 이 속성의 동작방식을 설명하는 데에는 말보다 [MDN 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)가 훨씬 효과적일 것이다. 링크를 타고 가기 귀찮은 독자를 위해 MDN의 예제도 아래에 (약간의 설명과 함께) 옮겨두었다.
 
@@ -167,7 +169,7 @@ user-select: all;           /* 엘리먼트 내에서 선택이 일어나면 해
 
 ## [overflow-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap): 오버플로우가 일어날 때 단어 내 줄바꿈 처리
 
-CJK 언어로 된 사이트를 자주 만드는 개발자라면 `word-break: keep-all;` 속성을 아주 유용하게 사용하고 있을 것이다. `keep-all` 속성값을 사용하면 CJK에서도 단어 단위로 줄바꿈을 끊어줄 수 있다. 그런데 만약 한 단어의 길이 컨테이너의 너비보다 더 긴 경우에는 어떻게 해야할까?
+CJK 언어로 된 사이트를 자주 만드는 개발자라면 `word-break: keep-all;` 속성을 아주 유용하게 사용하고 있을 것이다. `keep-all` 속성값을 사용하면 CJK에서도 단어 단위로 줄바꿈을 끊어줄 수 있다. 그런데 만약 한 단어의 길이가 컨테이너의 너비보다 더 긴 경우에는 어떤 일이 생길까?
 
 ```html
 <div style="width: 200px; border: 1px solid black; word-break: keep-all;">
@@ -178,7 +180,7 @@ CJK 언어로 된 사이트를 자주 만드는 개발자라면 `word-break: kee
   굉장히길고엄청나게길면서굉장히길고엄청나게길면서굉장히길고엄청나게길면서굉장히길고엄청나게길면서의미는없는문자열
 </div>
 
-이런 경우, `overflow-wrap` 속성에 `break-word` 값을 주어서 만약 오버플로우가 일어날 경우 적절하게 단어를 끊고 줄바꿈이 일어나도록 설정할 수 있다. 
+위에서 보이듯, 단어 단위로 끊기로 설정할 경우 단어의 길이에 따라 오버플로우가 컨테이너를 넘쳐버릴 수 있다. 이런 경우 `overflow-wrap` 속성에 `break-word` 값을 주어서 오버플로우가 일어나는 경우 적절하게 단어 사이에서 줄바꿈이 일어나도록 설정할 수 있다. 
 
 ```html
 <div style="width: 200px; border: 1px solid black; word-break: keep-all; overflow-wrap: break-word;">
@@ -259,8 +261,12 @@ will-change: transform;
 will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 있다. */
 ```
 
-당연하지만, 이런 준비 작업에는 비용이 든다. 필요하지 않을 때에도 `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 기본적으로 CSS 속성 값 변경이 성능 문제 없이 잘 동작할 때는 `will-change` 를 직접 건드리지 않는 것이 좋다.
+당연하지만, 이런 준비 작업에는 비용이 든다. 필요하지 않은 상황에서도 `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 기본적으로 CSS 속성 값 변경이 성능 문제 없이 잘 동작할 때는 `will-change` 를 직접 건드리지 않는 것이 좋다.
 
 ### 참고 자료
 * [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
 * [Silky Smooth Animation with CSS](https://speakerdeck.com/lonekorean/silky-smooth-animation-with-css)
+
+## 맺으며
+
+이상 몇 가지 (상대적으로) 덜 유명한 CSS 속성에 대해 알아보았다. 확실히 다른 속성에 비해 자주 사용될 만한 속성은 아니지만, 이 글에서 소개한 지식이 언젠가 도움이 되는 일이 있으리라 생각하고, 그러길 바란다. 생각보다 글이 길어져, 원래 처음 글을 쓰기로 마음먹은 이유인 CSS 카운터에 대해서는 나중에 다른 글에서 다루어보려 한다.

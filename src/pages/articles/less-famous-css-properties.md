@@ -44,7 +44,7 @@ pointer-events: none;
 
 ## [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action): 브라우저에게 맡길 터치 액션 지정
 
-기본적으로, 더블 탭, 두 점을 잡고 늘리거나 줄이기 등의 터치 이벤트가 어떻게 처리될지는 브라우저가 담당하는 영역이다. 이 때, `touch-action` 속성을 통해 어떤 요소 내에서 브라우저가 처리할 터치 액션의 리스트를 지정할 수 있다. `auto` 이외
+기본적으로, 더블 탭, 핀치 줌(여러 손가락을 사용한 확대/축소) 등의 터치 이벤트가 어떻게 처리될지는 브라우저가 담당하는 영역이다. 이 때, `touch-action` 속성을 통해 어떤 요소 내에서 브라우저가 처리할 터치 액션의 리스트를 지정할 수 있다. `auto` 이외의 옵션을 사용할 경우, 브라우저는 명시해준 동작들만 처리한다.
 
 ### 가능한 속성 값
 
@@ -52,15 +52,17 @@ pointer-events: none;
 touch-action: auto;          /* 기본 값 */
 touch-action: none;          /* 브라우저가 모든 터치 이벤트를 무시하도록 설정 */
 
-touch-action: pan-x;         
+touch-action: pan-x;         /* 특정 축으로의 터치를 사용한 스크롤 */
 touch-action: pan-y;
 
-touch-action: pan-left;
+touch-action: pan-left;      /* 특정 방향으로의 터치를 사용한 스크롤 허용 */
 touch-action: pan-right;
 touch-action: pan-up;
 touch-action: pan-down;
-touch-action: pinch-zoom;
-touch-action: manipulation;
+
+touch-action: pinch-zoom;    /* 핀치 줌(여러 손가락을 사용한 확대/축소) 허용 */
+
+touch-action: manipulation;  /* 터치를 사용한 */
 ```
 
 ## [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 선택 상호작용

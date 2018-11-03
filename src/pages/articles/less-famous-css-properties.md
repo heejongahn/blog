@@ -44,16 +44,28 @@ pointer-events: none;
 
 ## [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 선택 상호작용
 
-`user-select` 속성을 사용해 사용자가 텍스트를 선택할 수 있는지 여부를 설정할 수 있다.
+`user-select` 속성을 사용해 엘리먼트 내부에서 텍스트 선택이 일어났을 때의 동작을 설정할 수 있다. 선택이 불가능하게 지정하거나, 엘리먼트 내에서 선택이 일어나면 무조건 엘리먼트 전체가 선택되도록 설정할 수 있다.
+
+```html
+<div style="user-select: auto; border: 1px solid black; padding: 12px; margin: 12px;">user-select: auto;</div>
+<div style="user-select: none; border: 1px solid black; padding: 12px; margin: 12px;">user-select: none;</div>
+<div style="user-select: all; border: 1px solid black; padding: 12px; margin: 12px;">all <span style="border: 1px solid black;">child</span></div>
+<div style="user-select: text; border: 1px solid black; padding: 12px; margin: 12px;">user-select: text</div>
+```
+
+<div style="user-select: auto; border: 1px solid black; padding: 12px; margin: 12px;">user-select: auto;</div>
+<div style="user-select: none; border: 1px solid black; padding: 12px; margin: 12px;">user-select: none;</div>
+<div style="user-select: all; border: 1px solid black; padding: 12px; margin: 12px;">all <span style="border: 1px solid black;">child</span></div>
+<div style="user-select: text; border: 1px solid black; padding: 12px; margin: 12px;">user-select: text</div>
+
 
 ### 가능한 속성 값
 
 ```css
-user-select: auto;                    /* 기본값 */
+user-select: auto;                    /* 기본값 (::after, ::before 는 선택되지 않고, 부모의 속성을 따름) */
+user-select: text;                    /* 선택 가능 */
 user-select: none;                    /* 선택 불가능 */
-user-select: text;                    /*
-user-select: contain;                 /*
-user-select: all;                     /*
+user-select: all;                     /* 엘리먼트 내에서 선택이 일어나면 해당 엘리먼트 전체가 선택된다 */
 ```
 
 ## [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit): 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정

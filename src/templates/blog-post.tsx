@@ -50,6 +50,8 @@ const Title = styled.h1`
 `;
 
 const Description = styled.div`
+  word-break: keep-all;
+  overflow-wrap: break-word;
   margin-top: 1em;
 `;
 

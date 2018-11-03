@@ -74,11 +74,16 @@ const PostTop = styled.div`
 
 const PostTitle = styled.h2`
   margin-right: 8px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 `;
 
 const PublishedDate = styled.small``;
 
-const Description = styled.div``;
+const Description = styled.div`
+  word-break: keep-all;
+  overflow-wrap: break-word;
+`;
 
 const TagList = styled.ul`
   display: flex;

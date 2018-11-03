@@ -16,7 +16,7 @@ tags:
 
 이 글에서는 잘 알려지지 않은, 하지만 알아두면 분명 유용하게 써먹을 일이 생길 CSS 속성 몇 가지를 소개한다. 하나씩 찾아보면 사실 이미 잘 정리된 자료들이 많은 만큼, 해당 속성에 관한 모든 세부 내용을 최대한 세세히 다루기보단 이런 속성이 존재하며 대략 어떤 용도로 사용된다는 점 정도를 소개하는 데에 초점을 맞추었다.
 
-## [pointer-events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events), [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action): 클릭/터치 이벤트
+## [pointer-events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events): 클릭 이벤트
 
 `pointer-event` 속성을 통해 엘리먼트가 마우스 이벤트(호버, 클릭, 드래그 등)에 어떻게 반응할지를 지정할 수 있다. 대부분의 속성 값은 SVG 전용이고, `pointer-events: none`을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 할 수 있다는 점만 기억하자.
 
@@ -41,6 +41,10 @@ pointer-events: auto;
 pointer-events: none;
 /* 이하 SVG 전용 값 생략 */
 ```
+
+## [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action)
+
+
 
 ## [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 선택 상호작용
 

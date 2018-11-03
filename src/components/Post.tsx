@@ -84,6 +84,7 @@ const TagList = styled.ul`
   display: flex;
   align-items: center;
   margin-top: 12px;
+  flex-wrap: wrap;
 `;
 
 const Tag = styled.li`
@@ -91,8 +92,9 @@ const Tag = styled.li`
   font-size: 0.75em;
   display: block;
 
-  &:nth-child(n + 2) {
-    margin-left: 0.5em;
+  margin-bottom: 4px;
+  &:not(:last-child) {
+    margin-right: 0.5em;
   }
 `;
 

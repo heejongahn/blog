@@ -3,8 +3,8 @@ templateKey: blog-post
 title: 잘 알려지지 않은 유용한 CSS 속성들
 date: 2018-10-28T07:37:26.643Z
 description: >-
-  pointer-events, object-fit, will-change, counter 등 상대적으로 덜 알려졌지만 알아두면 언젠가 유용하게
-  써먹을 CSS 속성을 소개합니다.
+  pointer-events, object-fit, will-change 등 상대적으로 덜 알려졌지만 알아두면 언젠가 유용하게 써먹을 CSS
+  속성을 소개합니다.
 tags:
   - 프론트엔드
   - CSS
@@ -16,7 +16,7 @@ tags:
 
 이 글에서는 잘 알려지지 않은, 하지만 알아두면 분명 유용하게 써먹을 일이 생길 CSS 속성 몇 가지를 소개한다. 하나씩 찾아보면 사실 이미 잘 정리된 자료들이 많은 만큼, 해당 속성에 관한 모든 세부 내용을 최대한 세세히 다루기보단 이런 속성이 존재하며 대략 어떤 용도로 사용된다는 점 정도를 소개하는 데에 초점을 맞추었다.
 
-## [pointer-events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events): 클릭 이벤트
+## [pointer-events](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events): 클릭 이벤트 허용 여부
 
 `pointer-event` 속성을 통해 엘리먼트가 마우스 이벤트(호버, 클릭, 드래그 등)에 어떻게 반응할지를 지정할 수 있다. 대부분의 속성 값은 SVG 전용이므로, `pointer-events: none`을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 할 수 있다는 점만 기억하자.
 
@@ -44,7 +44,7 @@ pointer-events: none;
 
 ## [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action): 브라우저에게 맡길 터치 액션 지정
 
-기본적으로, 더블 탭, 핀치 줌(여러 손가락을 사용한 확대/축소) 등의 터치 이벤트가 어떻게 처리될지는 브라우저가 담당하는 영역이다. 이 때, `touch-action` 속성을 통해 어떤 요소 내에서 브라우저가 처리할 터치 액션의 목록을 지정할 수 있다. `auto` 이외의 옵션을 사용할 경우, 브라우저는 명시해준 동작만 처리한다. 
+기본적으로, 더블 탭, 핀치 줌(여러 손가락을 사용한 확대/축소) 등의 터치 이벤트가 어떻게 처리될지는 브라우저가 담당한다. `touch-action` 속성을 통해 어떤 요소 내에서 브라우저가 처리할 터치 액션의 목록을 지정할 수 있다. `auto` 이외의 옵션을 사용할 경우, 브라우저는 명시해준 동작만 처리한다. 
 
 ### 가능한 속성 값
 
@@ -69,7 +69,7 @@ touch-action: pan-y pinch-zoom; /* 동시에 여러 값 지정 가능 */
 
 ## [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select): 선택 상호작용
 
-`user-select` 속성은 엘리먼트 내부에서 텍스트 선택이 일어났을 때의 동작을 설정하기 위해 사용된다. 기본 동작 이외에 선택이 불가능하게 지정 할 수도 있고, 엘리먼트 내에서 선택이 일어나면 무조건 엘리먼트 전체가 선택되는 동작이 가능하다.
+`user-select` 속성을 사용해 엘리먼트 내부에서 텍스트 선택이 일어났을 때의 동작을 설정할 수 있다. 기본 동작 이외에 선택이 불가능하게 지정할 수도 있고, 엘리먼트 내에서 선택이 일어나면 무조건 엘리먼트 전체가 선택되는 동작도 설정 가능하다.
 
 ```html
 <div style="user-select: auto; border: 1px solid black; padding: 12px; margin: 12px;">user-select: auto;</div>
@@ -94,7 +94,7 @@ user-select: all;           /* 엘리먼트 내에서 선택이 일어나면 해
 ```
 
 ## [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit): 대체되는 엘리먼트의 내용물과 컨테이너 사이 관계 지정
-`src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 HTML 문서의 바깥에 존재하는 엘리먼트를 대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 외부에 존재하는 내용물의 크기가 컨테이너의 그것과 차이날 때, 화면에는 어떻게 나타나야 할지에 대한 문제가 발생한다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
+`src` 속성을 사용하는 `img`, `video` 등과 같이, 내용물이 HTML 문서의 바깥에 존재하는 엘리먼트를 대체되는 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)라 부른다. 이 때, 외부에 존재하는 내용물의 크기가 컨테이너의 그것과 차이날 때, 화면에는 어떻게 나타나야 할지 지정할 필요가 생긴다. 예를 들어, 너비 150px, 높이 200px 짜리 `img` 엘리먼트의 `src`로 너비 50px, 높이 600px의 이미지가 지정되었다면, 이 이미지는 어떻게 보여야 할까?
 
 이런 상황에서 대체되는 엘리먼트의 내용물이 컨테이너를 어떻게 채울지를 지정하는 데에 사용되는 것이 `object-fit` 속성이다. 이 속성의 동작방식을 설명하는 데에는 말보다 [MDN 페이지의 CSS 데모](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)가 훨씬 효과적일 것이다. 링크를 타고 가기 귀찮은 독자를 위해 MDN의 예제도 아래에 (약간의 설명과 함께) 옮겨두었다.
 
@@ -259,13 +259,8 @@ will-change: transform;
 will-change: left, top;        /* 여러 속성을 동시에 명시할 수도 있다. */
 ```
 
-당연하지만, 이렇게 미리 변경에 대비하는 준비 작업은 공짜가 아니다. `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 어떤 속성이 동적으로 바뀌는 상황이 성능 문제 없이 잘 동작한다면 `will-change` 를 직접 건드리지 않는 것이 좋다.
+당연하지만, 이런 준비 작업에는 비용이 든다. 필요하지 않을 때에도 `will-change` 속성을 너무 남발한다면 오히려 성능 저하가 일어날 수 있음을 유의하라. 이런 속성이 존재함은 알아두되, 기본적으로 CSS 속성 값 변경이 성능 문제 없이 잘 동작할 때는 `will-change` 를 직접 건드리지 않는 것이 좋다.
 
 ### 참고 자료
 * [CSS will-change 프로퍼티에 관해 알아둬야 할 것](https://dev.opera.com/articles/ko/css-will-change-property/)
 * [Silky Smooth Animation with CSS](https://speakerdeck.com/lonekorean/silky-smooth-animation-with-css)
-
-## [counter](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
-
-마지막으로 살펴볼 속성은 `counter` 이다. 앞에서 보았던 속성들과 다르게, `counter`는 단순히 해당 속성이 정의된 엘리먼트 뿐만이 아닌 문서 전체와 엮어 동작하는, 다소 특이한 성질을 갖는 속성이다.
-

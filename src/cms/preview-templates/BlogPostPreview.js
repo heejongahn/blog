@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { BlogPostTemplate } from "../../templates/blog-post.tsx";
+import "../../components/all.scss";
 
 const BlogPostPreview = ({ entry, widgetFor }) => (
   <BlogPostTemplate

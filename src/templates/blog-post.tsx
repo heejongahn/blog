@@ -56,14 +56,17 @@ const Description = styled.div`
 const TagList = styled.ul`
   margin-top: 0.5em;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 `;
 
 const Tag = styled.li`
   list-style-type: none;
   font-size: 0.75em;
-  &:nth-child(n + 2) {
-    margin-left: 8px;
+  margin-bottom: 4px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
   }
 `;
 

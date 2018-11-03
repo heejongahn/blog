@@ -208,11 +208,12 @@ overflow-wrap: break-word;    /* 오버플로우가 일어나면 단어를 쪼�
 
 <style>
 .example::before {
-  display: none;
+  content: "" !important;
+  display: none !important;
 }
 
-.example {
-  list-style-type: disc;
+.example li {
+  list-style-type: disc !important;
 }
 </style>
 

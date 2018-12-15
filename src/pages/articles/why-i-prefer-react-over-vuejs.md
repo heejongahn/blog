@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: "React를 Vue.js보다 선호하는 이유"
-date: 2018-03-03T09:00:00+09:00
-description: "가장 뜨거운 두 프론트엔드 라이브러리 중 React를 더 선호하는 이유를 정리 해 보았습니다."
+title: React를 Vue.js보다 선호하는 이유
+date: 2018-03-03T00:00:00.000Z
+description: 가장 뜨거운 두 프론트엔드 라이브러리 중 React를 더 선호하는 이유를 정리 해 보았습니다.
 tags:
   - 자바스크립트
   - React
@@ -34,7 +34,7 @@ TS의 필요성에 공감하지 못하거나 도입이 너무 어렵고 귀찮�
 # 단순한 컴포넌트 정의의 용이함
 Vue.js는 컴포넌트에 관한 템플릿, 스타일과 스크립트를 `.vue` 확장자를 갖는 한 파일 내에 모두 작성할 수 있는 [단일 파일 컴포넌트(Single File Component)](https://vuejs.org/v2/guide/single-file-components.html)를 제공한다. 이를 사용해 허구의 `UserList` 컴포넌트를 작성하는 경우를 생각해보자.
 
-```
+```html
 <template>
   <ul :id="$style.userList">
     <li
@@ -65,7 +65,7 @@ export default {
 
 React를 사용한다면 이 컴포넌트를 대략 아래와 같이 작성할 것이다.
 
-```
+```jsx
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import * as styles from './UserList.css'
@@ -109,7 +109,7 @@ export default class UserList extends Component {
 
 Vue.js에서는 두 가지 선택지가 있다. 하나는 별도의 `UserItem.vue`를 만드는 것이다.
 
-```
+```html
 <template>
   <ul :id="$style.userList">
     <user-item
@@ -142,7 +142,7 @@ export default {
 
 또는 파일 내에서  `ComponentOption` 객체를 정의 할 수 있다.
 
-```
+```html
 <template>
   <ul :id="$style.userList">
     <user-item
@@ -189,7 +189,7 @@ export default {
 
 React의 무상태 함수 컴포넌트(Stateless Functional Component)를 사용하면 같은 작업을 아래와 같이 우아하게 해낼 수 있다.
 
-```
+```jsx
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import * as styles from './UserList.css'

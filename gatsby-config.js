@@ -73,6 +73,16 @@ module.exports = {
         name: "pages"
       }
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-prismjs"
+          }
+        ]
+      }
+    },
     // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {
@@ -90,12 +100,6 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: []
-      }
-    },
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {

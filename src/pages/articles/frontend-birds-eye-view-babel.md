@@ -44,35 +44,35 @@ Babel이 소스 코드를 ES5 코드(타겟 코드)로 변환하는 과정은 �
 
 이 과정을 의사 코드로 표현하면 다음과 같다.
 
-```ts
+```
 import { AST, Rule } from './model';
 import rules from './rules';
 
 function parse(sourceCode: string): AST {
   /* 소스 코드를 AST로 변환 */
   /* ... */
-	return sourceAST;
+  return sourceAST;
 }
 
 function transform(sourceAST: SourceAST, rules: Rule[]): AST {
   /* rules 에 들어있는 규칙에 기반해 AST 수준에서 코드 변환 */
   /* ... */
-	return transformedAST;
+  return transformedAST;
 }
 
 function print(transformedAST: AST): string {
-	/* 변환된 AST를 다시 코드로 변환 */
+  /* 변환된 AST를 다시 코드로 변환 */
   /* ... */
-	return outputCode;
+  return outputCode;
 }
 
 function babel(sourceCode: string, rules: Rule[]) {
   return print(
-		trasnform(
-			parse(sourceCode),
-			rules
-		)
-	);
+    transform(
+      parse(sourceCode),
+      rules
+    )
+  );
 }
 ```
 

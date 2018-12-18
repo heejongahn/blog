@@ -44,7 +44,7 @@ Babel이 소스 코드를 ES5 코드(타겟 코드)로 변환하는 과정은 �
 
 이 과정을 의사 코드로 표현하면 다음과 같다.
 
-```
+```typescript
 import { AST, Rule } from './model';
 import rules from './rules';
 

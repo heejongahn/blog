@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: frontend-birds-eye-view-babel
 date: 2018-12-18T07:58:37.037Z
-description: 자바스크립트 컴파일러 Babel을 구성하는 개념에 대해 소개합니다.
+description: '자바스크립트 컴파일러 Babel에 관련된 플러그인, 프리셋, 폴리필 등의 개념에 대해 소개합니다.'
 tags:
   - 프론트엔드
   - 자바스크립트
@@ -13,12 +13,12 @@ tags:
 
 이 글은 Babel과 관련된 큰 단위의 개념에 대해 소개한다. 설정 옵션이나 주의할 점 등, 각 항목별로 알아야 할 자세한 내용은 공식 문서가 이미 충분히 잘 설명하고 있어 굳이 다루지 않았다.
 
-> NOTE: 이 글은 Babel v7.1.0 기준으로 작성되었습니다.  
+> NOTE: 이 글은 Babel v7.1.0 기준으로 작성되었습니다.
 
 ## Babel?
 **Babel은 최신 스펙 및 프로포절 등을 포함하는 자바스크립트 코드를 ES5 환경에서 잘 동작하도록 컴파일하는 자바스크립트 컴파일러다.**
 
-Babel의 전신은 [6to5](https://github.com/6to5) 라는 프로젝트다. 이름에서 드러나듯, 당시 최신 ECMAScript 스펙이던 ECMAScript2015(ES6) 코드를 ES5로 컴파일하는 도구였던 6to5가 2015년,[50만 다운로드를 앞두고 작성한 블로그 글](https://babeljs.io/blog/2015/02/15/not-born-to-die)에서 발표한 새 이름이 바로 Babel이다. 
+Babel의 전신은 [6to5](https://github.com/6to5) 라는 프로젝트다. 이름에서 드러나듯, 당시 최신 ECMAScript 스펙이던 ECMAScript2015(ES6) 코드를 ES5로 컴파일하는 도구였던 6to5가 2015년,[50만 다운로드를 앞두고 작성한 블로그 글](https://babeljs.io/blog/2015/02/15/not-born-to-die)에서 발표한 새 이름이 바로 Babel이다.
 
 > 6to5 is now Babel.  
 
@@ -75,15 +75,17 @@ function babel(sourceCode: string, rules: Rule[]) {
 }
 ```
 
-아무런 설정이 없이 Babel을 실행한다면 은 위 코드에서 `rules` 변수가  `[]` 인 상황처럼 동작한다. 즉, 아무런 변경이 가해지지 않은 소스 코드를 그대로의 결과물을 얻게 된다. Babel이 실제로 쓸모를 갖기 위해선 `transform` 단계에서 사용할 코드 변환 규칙(`Rule`)이 추가되어야 한다. 
+아무런 설정 없이 실행한다면 Babel은 위 코드에서 `rules` 변수가  `[]` 인 상황처럼 동작한다. 즉, 아무런 변경이 가해지지 않은 소스 코드를 그대로의 결과물을 내뱉는다. Babel이 실제로 쓸모를 갖기 위해선 `transform` 단계에서 사용할 코드 변환 규칙(`Rule`)이 추가되어야 한다. 
 
-이 규칙의 역할을 하는 것이 Babel 플러그인이다. 모든 플러그인은 **어떤 조건을 만족하는 코드를 만나면 그 코드를 이렇게 해석하고 변환하라**는 규칙을 담고 있다. [몇 가지](https://babeljs.io/docs/en/babel-plugin-transform-spread) [예시 문서](https://babeljs.io/docs/en/babel-plugin-transform-exponentiation-operator)를 보면 플러그인의 역할이 무엇인지 쉽게 감을 잡을 수 있을 것이다.
+Babel 플러그인은 바로 이 규칙의 역할을 한다. 모든 플러그인은 **어떤 조건을 만족하는 코드를 만나면 그 코드를 이렇게 해석하고 변환하라**는 규칙을 담고 있다. [몇 가지](https://babeljs.io/docs/en/babel-plugin-transform-spread) [예시 문서](https://babeljs.io/docs/en/babel-plugin-transform-exponentiation-operator)를 보면 플러그인의 역할이 무엇인지 쉽게 감을 잡을 수 있을 것이다.
 
 ### 플러그인의 종류
 Babel 플러그인은 크게 두 종류로 나뉜다.
 
 * **변환 플러그인**은 Babel에게 코드에 특정 표현/문법이 나타나면 특정 방식으로 변환하도록 한다.
 * **문법 플러그인**은 Babel이 코드의 특정 표현/문법을 이해(파싱)할 수 있게 한다. 어떤 문법과 연관된 변환 플러그인은 문법 플러그인을 자동으로 포함한다.
+
+어떤 플러그인이 어느 경우에 해당하는지는 플러그인 이름의 prefix (`plugin-transform-...` 또는 `plugin-syntax-...`) 유추할 수 있는 경우가 많다.
 
 ### 참고자료
 * [Plugins · Babel](https://babeljs.io/docs/en/plugins)
@@ -94,10 +96,10 @@ Babel 플러그인은 크게 두 종류로 나뉜다.
 
 함께 자주 쓰이는 (쓰여야 하는) 특정 플러그인의 조합을 생각해보자. 매번 프로그래머가 플러그인을 일일이 더해주는 일은 번거롭고 쉽게 실수를 유발할 것이다. 때문에 Babel은 프리셋이라는 개념을 통해 여러 플러그인을 묶어서 다루는 방법을 제공한다.
 
-Babel 팀이 공식적으로 지원하는 프리셋으로는 [`preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript), [`preset-minify`](https://babeljs.io/docs/en/babel-preset-minify), [`preset-react`](https://babeljs.io/docs/en/babel-preset-react) 등이 존재하며, 프리셋은 기본적으로 플러그인의 조합에 불과한 만큼 그 외에도 수많은 [커뮤니티 기반 프리셋](https://www.npmjs.com/search?q=babel-preset)이 존재한다. ,
+Babel 팀이 공식적으로 지원하는 프리셋으로는 [`preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript), [`preset-minify`](https://babeljs.io/docs/en/babel-preset-minify), [`preset-react`](https://babeljs.io/docs/en/babel-preset-react) 등이 존재하며, 프리셋은 기본적으로 플러그인의 조합에 불과한 만큼 그 외에도 수많은 [커뮤니티 기반 프리셋](https://www.npmjs.com/search?q=babel-preset)이 존재한다.
 
 ### `preset-env`
-여러 플러그인의 정적인 집합인 여타 프리셋과 달리, `preset-env`는 필요한 플러그인을 **프로젝트가 지원하고자 하는 환경에 기반해 빌드 타임에 동적으로 결정**하는 ✨ 특별한 ✨ 프리셋이다.
+여러 플러그인의 정적인 집합인 여타 프리셋과 달리, `preset-env`는 필요한 플러그인을 **프로젝트가 지원하고자 하는 환경에 기반해 빌드 타임에 동적으로 결정**하는 ✨특별한✨ 프리셋이다.
 
 `preset-env`를 사용하는 프로그래머는 지원하고자 하는 환경을 [`browserslist`  설정]([) 형식으로 명시할 수 있다. `preset-env`는 이렇게 명시된 환경에 필요한 플러그인을 [`compat-table`](https://github.com/kangax/compat-table)의 정보를 활용해 결정하고, 빌드 과정에 포함시킨다.
 

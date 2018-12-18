@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: frontend-birds-eye-view-babel
+title: '프론트엔드 기술 조감도 : Babel'
 date: 2018-12-18T07:58:37.037Z
 description: '자바스크립트 컴파일러 Babel과 관련된 플러그인, 프리셋, 폴리필 등의 개념에 대해 소개합니다.'
 tags:

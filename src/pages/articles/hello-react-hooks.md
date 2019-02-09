@@ -11,4 +11,4 @@ tags:
 ---
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/7CnBb3ijCdClzr" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"></div>
 
-[지금 다니는 회사](https://toss.im)의 프론트엔드 챕터 위클리 미팅에서 발표하기 위해 React Hooks API를 소개하는 자료를 만들었습니다. 아주 간단하게 소개하는 정도로만 준비하겠다는 생각으로 시작했는데, 만들다보니 시간과 정성이 꽤 많이 들어가 욕심이 생겼습니다. 다른 분들께도 도움이 될 수 있을 것 같다는 생각에 조금 더 다듬어 공개합니다.
+[지금 다니는 회사](https://toss.im)의 프론트엔드 챕터 위클리 미팅에서 발표하기 위해 React Hooks API를 소개하는 자료를 만들었습니다. 아주 간단하게 소개하는 정도로만 준비하겠다는 생각으로 시작했는데, 만들다보니 시간과 정성이 꽤 많이 들어가 욕심이 생겼습니다. 다른 분들께도 도움이 될 수 있을 것 같다는 생각에 조금 더 다듬어 공개합니다. ([SlideShare 링크](https://www.slideshare.net/HeejongAhn/hello-react-hooks)) 

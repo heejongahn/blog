@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Hello, React Hooks!'
+title: '「Hello, React Hooks!」 발표자료 공개'
 date: 2019-02-09T09:21:03.797Z
 description: 'React 16.8 버전에 들어온 Hooks API의 만들어진 동기, 사용법, 그리고 내부 동작 방식에 대해 소개하는 발표 자료.'
 tags:

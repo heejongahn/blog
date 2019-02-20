@@ -12,7 +12,7 @@ tags:
 ---
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/3QUEBeQ7n6Pll" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"></div>
 
-어쩌다보니 연속 두 편 째 발표자료를 공개하는 글을 올리게 되었습니다. ([SlideShare 링크](www.slideshare.net/HeejongAhn/being-a-multiplier))
+어쩌다보니 연속 두 편 째 발표자료를 공개하는 글을 올리게 되었습니다. ([SlideShare 링크](https://www.slideshare.net/HeejongAhn/being-a-multiplier))
 
 이 주 전쯤이었나, [GDG Korea WebTech Lightning Talk](https://festa.io/events/202)라는 행사가 열린다는 것을 우연히 알게 되었습니다. 회사 옆자리에 계신 [현섭님](https://hyunseob.github.io/)께서 평소 몸 담고 계신 조직으로 알고 있기도 하고, 5분에서 7분 정도라면 큰 부담 없이 할 수 있을 것 같다는 가벼운 마음으로 발표를 신청했습니다. 요새 많이 고민 중인 “어떻게 하면 일을 더 잘 할까”라는 주제를 잡고, 어찌어찌 준비해서 발표를 마쳤습니다.
 

@@ -24,6 +24,14 @@ module.exports = {
         `,
         feeds: [
           {
+            setup: locals => {
+              return {
+                ...locals,
+                ...locals.query.site.siteMetadata,
+                site_url: "https://ahnheejong.name/",
+                feed_url: "https://ahnheejong.name/feed.xml"
+              };
+            },
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 const articleUrl = `${site.siteMetadata.siteUrl}${
@@ -56,10 +64,7 @@ module.exports = {
                 }
               }
             `,
-            output: "/feed.xml",
-            title: "ahn.heejong blog RSS feed",
-            feed_url: 'https://ahnheejong.name/feed.xml',
-            site_url: 'https://ahnheejong.name/'
+            output: "/feed.xml"
           }
         ]
       }

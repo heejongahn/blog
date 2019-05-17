@@ -57,7 +57,9 @@ module.exports = {
               }
             `,
             output: "/feed.xml",
-            title: "ahn.heejong blog RSS feed"
+            title: "ahn.heejong blog RSS feed",
+            feed_url: 'https://ahnheejong.name/feed.xml',
+            site_url: 'https://ahnheejong.name/'
           }
         ]
       }

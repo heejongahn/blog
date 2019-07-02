@@ -40,8 +40,7 @@ export default class IndexPage extends React.Component<Props> {
               <small>
                 <i>ahn heejong</i>
               </small>
-              의 블로그에 잘 오셨습니다. 프로그래밍과 삶에 대한 때로는 정제된,
-              때로는 두서없는 생각을 이 곳에 기록으로 남기고 있습니다. {today}{" "}
+              의 블로그에 잘 오셨습니다. 프로그래밍과 삶에 대한 생각을 이 곳에 기록으로 남기고 있습니다. {today}{" "}
               총 {posts.length}
               편의 글이 올라와 있습니다.
               <LineBreak />

@@ -57,6 +57,30 @@ interface State {
 
 const lineBreak = `\n`;
 
+const previousCompanies = [
+  {
+    href: "https://toss.im/",
+    title: {
+      ko: "비바리퍼블리카",
+      en: "Viva Republica"
+    }
+  },
+  {
+    href: "https://hyperconnect.com/",
+    title: {
+      ko: "하이퍼커넥트",
+      en: "HyperConnect"
+    }
+  },
+  {
+    href: "https://www.spoqa.com",
+    title: {
+      ko: "스포카",
+      en: "Spoqa"
+    }
+  }
+];
+
 export class AboutPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -114,10 +138,19 @@ export class AboutPage extends React.Component<Props, State> {
             <Section>
               <SectionTitle>일</SectionTitle>
               <SectionContent>
-                <Anchor target="_blank" href="https://toss.im/">
-                  Toss
-                </Anchor>
-                를 만드는 비바리퍼블리카에서 UI 프로그래머로 일하고 있습니다.
+                {previousCompanies
+                  .map(({ href, title }) => (
+                    <Anchor key={title.ko} target="_blank" href={href}>
+                      {title.ko}
+                    </Anchor>
+                  ))
+                  .reduce((accm, curr) => {
+                    const pre = accm.length === 0 ? [] : [...accm, ", "];
+                    return [...pre, curr];
+                  }, [])}
+                에서 프론트엔드 프로그래머로 일했습니다.
+                {lineBreak}
+                2019년 가을은 졸업을 위해 학교에서 마지막 학기를 보냅니다.
                 {lineBreak}
                 강력한 타입 시스템을 가진 언어로 작업하는 것을 선호합니다.
                 {lineBreak}
@@ -167,11 +200,30 @@ export class AboutPage extends React.Component<Props, State> {
             <Section>
               <SectionTitle>work</SectionTitle>
               <SectionContent>
-                i'm working at Viva Republica as a UI developer, making{" "}
-                <Anchor target="_blank" href="https://toss.im/">
-                  Toss
-                </Anchor>
-                .{lineBreak}i prefer languages which are powered by a smart type
+                i worked at{" "}
+                {previousCompanies
+                  .map(({ href, title }) => (
+                    <Anchor key={title.en} target="_blank" href={href}>
+                      {title.en}
+                    </Anchor>
+                  ))
+                  .reduce((accm, curr) => {
+                    const pre =
+                      accm.length === 0
+                        ? []
+                        : [
+                            ...accm,
+                            accm.length + 1 === previousCompanies.length
+                              ? ", and "
+                              : ", "
+                          ];
+                    return [...pre, curr];
+                  }, [])}{" "}
+                as a web frontend developer.
+                {lineBreak}
+                i'm spending 2019 fall at KAIST, which will be my final
+                semester.
+                {lineBreak}i prefer languages which are powered by a smart type
                 system.
                 {lineBreak}
                 nowadays, i'm deeply into bridging two worlds: programming and

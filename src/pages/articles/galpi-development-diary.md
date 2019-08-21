@@ -12,7 +12,9 @@ tags:
 ---
 # tl; dr
 
-인생 첫 앱을 만들었습니다. 독후감 앱입니다. Flutter를 사용했고 [오픈소스입니다.](https://github.com/heejongahn/galpi) [앱스토어에 올라가 있습니다.](https://apps.apple.com/us/app/%EA%B0%88%ED%94%BC/id1470817706?ign-mpt=uo%3D2) 플레이 스토어에는 아직 없어요. 금방 올리겠습니다.
+인생 첫 앱을 만들었습니다. 독후감 앱입니다. Flutter를 사용했고 [오픈소스입니다.](https://github.com/heejongahn/galpi) [앱스토어에 올라가 있습니다.](https://apps.apple.com/us/app/%EA%B0%88%ED%94%BC/id1470817706?ign-mpt=uo%3D2) 플레이 스토어에는 아직 없어요. 금방 올리겠습니다. (2019-08-22 수정: [플레이 스토어에도 올라갔습니다](https://play.google.com/store/apps/details?id=name.ahnheejong.galpi) 😊)
+
+
 
 
 

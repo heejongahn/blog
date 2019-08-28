@@ -391,6 +391,8 @@ const StyledHTMLContent = styled(HTMLContent)`
     font-size: 85%;
     background-color: rgba(27, 31, 35, 0.05);
     border-radius: 3px;
+    white-space: normal;
+    overflow-wrap: break-word;
   }
   code::before,
   code::after {

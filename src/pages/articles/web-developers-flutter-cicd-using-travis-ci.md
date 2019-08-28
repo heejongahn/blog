@@ -46,7 +46,7 @@ tags:
     * Dart version 2.5.0
 ```
 
-또한, _이 글은 독자가 웹 인터페이스를 이용해 Play Store 내부 테스트 트랙 / TestFlight 에 각각 빌드를 최소 한 번 이상 올려봤다고 가정합니다_. 아직 수동 빌드 및 배포를 경험해 본 적이 없다면 이 글을 읽기 전에 먼저 공식 문서(  [Android](https://flutter.dev/docs/deployment/android) ,  [iOS](https://flutter.dev/docs/deployment/ios))를 참고해 해당 과정을 밟아보세요. 
+또한, **이 글은 독자가 웹 인터페이스를 이용해 Play Store 내부 테스트 트랙 / TestFlight 에 각각 빌드를 최소 한 번 이상 올려봤다고 가정합니다.** 아직 수동 빌드 및 배포를 경험해 본 적이 없다면 이 글을 읽기 전에 먼저 공식 문서(  [Android](https://flutter.dev/docs/deployment/android) ,  [iOS](https://flutter.dev/docs/deployment/ios))를 참고해 해당 과정을 밟아보세요. 
 
 이 글에서 사용한 자동화 도구 fastlane은 [공식적으로 macOS만을 지원합니다](https://docs.fastlane.tools/#system-requirements). Linux와 Windows 환경에서도 (제한된 버전의) CLI는 사용가능하다고 쓰여 있지만, 제가 개발 환경으로 맥북을 사용하고 있어서 다른 환경에서는 테스트 해 보지 못했습니다.
 
@@ -120,7 +120,7 @@ script:
 
 Travis CI를 설정해, 코드가 푸시될 때마다 저장소의 의존성을 내려받을 수 있게 되었다!
 
-하지만 안타깝게도 이런 스크립트는 CI 머신의 탄소 발자국을 늘려 지구 온난화를 가속화할 뿐, 아무런 실질적인 도움을 제공하지 않는다. 우리의 최종 목표는 _GitHub에서 코드가 푸시되면 자동으로 Android, iOS 두 플랫폼 대상의 빌드가 각각 만들어지는 것_이다.
+하지만 안타깝게도 이런 스크립트는 CI 머신의 탄소 발자국을 늘려 지구 온난화를 가속화할 뿐, 아무런 실질적인 도움을 제공하지 않는다. 우리의 최종 목표는 **GitHub에서 코드가 푸시되면 자동으로 Android, iOS 두 플랫폼 대상의 빌드가 각각 만들어지는 것**이다.
 
 이 목표를 달성하기 위해  [fastlane](https://fastlane.tools/)을 사용할 것이다. fastlane은 앱 자동화를 위한 오픈소스 툴체인으로, Android 및 iOS 앱 빌드, 릴리즈, 자동 스크립샷 등을 비롯한 다양한 작업의 자동화를 도와준다. 게다가 별도의 과금 없이 사용할 수 있다. 와우!
 
@@ -138,11 +138,11 @@ fastlane을 설치한 후 Flutter 프로젝트의 `android`, `ios` 폴더에 각
 
 ### lane
 
-lane([공식 문서](https://docs.fastlane.tools/advanced/lanes/))은 `fastlane [lane_name]` 커맨드를 이용해 CLI에서, 또는 다른 lane에서, 실행할 수 있는 Ruby _스크립트_다. 예를 들어, 베타 릴리즈를 위한 `beta` lane을 정의한 뒤 `fastlane beta`  커맨드로 실행할 수 있다.
+lane([공식 문서](https://docs.fastlane.tools/advanced/lanes/))은 `fastlane [lane_name]` 커맨드를 이용해 CLI에서, 또는 다른 lane에서, 실행할 수 있는 Ruby 스크립트다. 예를 들어, 베타 릴리즈를 위한 `beta` lane을 정의한 뒤 `fastlane beta`  커맨드로 실행할 수 있다.
 
 ### action
 
-lane은 0개 이상의 (보통은 1개 이상의) action([공식 문서](https://docs.fastlane.tools/actions/))을 호출한다. action은 말 그대로 앱 자동화에 필요한 여러 _행동_을 정의한 Ruby 함수다. 대표적인 예로는 다음과 같은 동작이 있다.
+lane은 0개 이상의 (보통은 1개 이상의) action([공식 문서](https://docs.fastlane.tools/actions/))을 호출한다. action은 말 그대로 앱 자동화에 필요한 여러 **행동**을 정의한 Ruby 함수다. 대표적인 예로는 다음과 같은 동작이 있다.
 
 * 빌드 관련: `build_ios_app`, `gradle`
 * 배포 관련: `upload_to_testflight`, `upload_to_play_store`, `upload_to_app_store`
@@ -225,7 +225,7 @@ match를 사용하기 위해 가장 먼저 GitHub에 프라이빗 저장소를 �
 
 `match init` 은 실행시 `ios/fastlane/Matchfile`를 생성한다. 이 파일은 (당연하게도) `match` 커맨드가 필요로 하는 정보 – 인증서 저장소의 URL, 인증서 타겟, 깃 브랜치 등 – 를 저장한다.
 
-`Matchfile`이 생성된 것을 확인했으면 App Store 및 TestFlight 배포를 위해 `appstore` 타겟 인증서를 생성해보자. 최초로 `bundle exec fastlane match appstore`  커맨드를 실행하면 인증서가 생성된 뒤 `match init`에서 제공한 저장소에 암호화되어 업로드된다. _이 때 입력하는 패스프레이즈는 반드시 안전한 장소에 보관해야 한다_.
+`Matchfile`이 생성된 것을 확인했으면 App Store 및 TestFlight 배포를 위해 `appstore` 타겟 인증서를 생성해보자. 최초로 `bundle exec fastlane match appstore`  커맨드를 실행하면 인증서가 생성된 뒤 `match init`에서 제공한 저장소에 암호화되어 업로드된다. **이 때 입력하는 패스프레이즈는 나중에 필요하니 반드시 안전한 장소에 보관해야 한다**.
 
 암호회된 인증서를 업로드했으면, Travis CI 빌드 머신이 해당 인증서를 복호화할 수 있도록 `MATCH_PASSWORD`  환경 변수에 앞서 설정한 패스프레이즈 값을 설정해준다.
 
@@ -287,7 +287,7 @@ platform :ios do
 
 match를 사용해서 생성한 인증서에 Travis CI가 접근하기 위해선 해당 private GitHub 저장소에 접근할 수 있어야 한다. Travis 문서에서 추천하는 [User Key](https://docs.travis-ci.com/user/private-dependencies/#user-key) 방식은 travis-ci.com의 private 저장소에만 사용 가능하다. 갈피는 공개되어 있는 오픈 소스 프로젝트이므로, 대신 [API Token](https://docs.travis-ci.com/user/private-dependencies/#api-token)을 사용한 인증을 사용했다. 
 
-먼저 CI 머신에서 사용할 GitHub 토큰을 발급한다. “Setting > Developer Settings > Personal access tokens” 페이지의 “Generate new token” 버튼을 눌러 `repo`  권한을 갖는 토큰을 생성할 수 있다. 토큰은 최초 생성시를 제외하고는 다시 읽을 수 없으니 생성 직후 안전한 장소에 보관한다.
+먼저 CI 머신에서 사용할 GitHub 토큰을 발급한다. “Setting > Developer Settings > Personal access tokens” 페이지의 “Generate new token” 버튼을 눌러 `repo`  권한을 갖는 토큰을 생성할 수 있다. 토큰은 최초 생성 시를 제외하고는 다시 읽을 수 없으니 생성 직후 안전한 장소에 보관한다.
 
 > **NOTE: 이 때 생성한 GitHub 토큰은 절대 외부에 평문으로 노출되어선 안 된다!**
 
@@ -409,7 +409,7 @@ platform :ios do
 end
 ```
 
-이 때, `setup_travis` 액션을 사용하려면 앞서 설정한 `MATCH_KEYCHAIN_NAME` 환경 변수를 제거해야 함에 유의하라. (그러지 않으면 `match`가 **똑똑하게** 환경 변수에 설정된 이름의 키체인을 읽어오려 시도해서 빌드가 실패한다.)
+이 때, `setup_travis` 액션을 사용하려면 앞서 설정한 `MATCH_KEYCHAIN_NAME` 환경 변수를 제거해야 함에 유의하라. (그러지 않으면 `match`가 _똑똑하게_ 환경 변수에 설정된 이름의 키체인을 읽어오려 시도해서 빌드가 실패한다.)
 
 ## 🍎 Travis CI에서 TestFlight 배포
 
@@ -474,7 +474,7 @@ fastlane을 이용해 Android 앱을 배포하기 위해선 [Google 서비스 �
 
 ![Google 서비스 계정 생성을 위한 절차를 설명하는 스크린샷](/assets/flutter_cicd_google_service_account.png)
 
-안내대로 Google API 콘솔로 들어가면 서비스 계정을 만들 수 있다. 생성시 _JSON 타입의 키를 선택하고, 해당 JSON 파일을 내려받아 `android/app/serviceAccount.json` 경로에 저장하자_. 다시 Play Console로 돌아오면 방금 생성한 서비스 계정이 목록에 나타날 것이다. 파란색 “액세스 권한 부여” 버튼을 눌러 “제품 출시 관리자” 권한을 주면 모든 준비가 끝났다.
+안내대로 Google API 콘솔로 들어가면 서비스 계정을 만들 수 있다. 생성시 **JSON 타입의 키를 선택하고, 해당 JSON 파일을 내려받아 `android/app/serviceAccount.json` 경로에 저장하자**. 다시 Play Console로 돌아오면 방금 생성한 서비스 계정이 목록에 나타날 것이다. 파란색 “액세스 권한 부여” 버튼을 눌러 “제품 출시 관리자” 권한을 주면 모든 준비가 끝난다.
 
 > **NOTE: 이때 내려받은 서비스 계정 파일은 절대 Git 등의 VCS에 체크인 되어선 안 된다! 서비스 계정 파일을 프로젝트 내에 추가한 후엔 꼭 `.gitignore` 등에 추가하자.**
 
@@ -550,7 +550,7 @@ end
 
 ## 🤖 CI 머신에서의 코드 사이닝을 위한 파일 업로드
 
-iOS에서와 마찬가지로, Android 앱 배포에도 코드 사이닝이 필요하다.  [Flutter의 공식 Android 배포 가이드](https://flutter.dev/docs/deployment/android#signing-the-app) 를 따라 Play Store에 앱을 올려본 적이 있다면, `.jks` 확장자를 갖는 키스토어를 로컬 어딘가에 받아둔 뒤, `android/key.properties` 파일의 `storeFile` 필드로 참조하고 있을 것이다.
+iOS에서와 마찬가지로, Android 앱 배포에도 코드 사이닝이 필요하다. [Flutter의 공식 Android 배포 가이드](https://flutter.dev/docs/deployment/android#signing-the-app) 를 따라 Play Store에 앱을 올려본 적이 있다면, `.jks` 확장자를 갖는 키스토어를 로컬 어딘가에 받아둔 뒤, `android/key.properties` 파일의 `storeFile` 필드로 참조하고 있을 것이다.
 
 이제 코드 사이닝이 CI 머신에서도 가능하도록 만들 차례다. fastlane match를 사용했던 iOS와 달리, Android에서는 관련된 파일을 암호화한 뒤 Travis에 직접 업로드하는 방식으로 코드 사이닝을 풀어낼 것이다.
 
@@ -572,13 +572,13 @@ CI 머신에서의 코드 사이닝을 위해 필요한 파일은 세 개다.
 
 그 뒤, `travis encrypt-file secrets.tar` 커맨드를 실행해 이 압축 파일을 암호화한다. 이 커맨드는 다음과 같은 일을 한다.
 
-1. [OpenSSL](https://www.openssl.org)을 이용해 `secrets.tar` 파일을 `secrets.tar.enc` 파일로 암호화한다. 이 암호화된 파일은 VCS에 _체크인 되어야 한다_.
+1. [OpenSSL](https://www.openssl.org)을 이용해 `secrets.tar` 파일을 `secrets.tar.enc` 파일로 암호화한다. **이 암호화된 파일은 VCS에 체크인 되어야 한다.**
 2. 복호화에 사용할 키와  [초기화 벡터](https://ko.wikipedia.org/wiki/%EC%B4%88%EA%B8%B0%ED%99%94_%EB%B2%A1%ED%84%B0)  값을 Travis CI 저장소의 환경변수로 설정한다.
 3. 해당 환경변수를 사용해 파일을 복호화하는 커맨드를 출력한다.
 
 성공적으로 암호화 작업이 끝났다면 터미널에 `openssl aes-256-cbc -K $[키_환경변수_이름] -iv $[초기화_벡터_환경변수_이름] -in secrets.tar.enc -out secrets.tar -d` 형태의 커맨드가 출력되었을 것이다. 해당 커맨드를 Travis CI의 Android 빌드 잡에서 실행해주면 `secrets.tar.enc` 파일을 다시 `secrets.tar`로 복호화할 수 있다. 
 
-## Pitfall: `buildToolsVersion`과 Travis android component 버전
+## 🤖 Pitfall: `buildToolsVersion`과 Travis android component 버전
 
 Android 에서도 최종 Travis CI 설정으로 넘어가기 전 밟을 수 있는 문제를 먼저 소개한다. 로컬에서 잘 되던 Android 빌드가 Travis CI에서 아래와 같은 로그와 함께 실패하는 경우가 있다.
 
@@ -699,12 +699,12 @@ Android와 iOS 두 플랫폼 모두에서, 각 어플리케이션 빌드는 크�
 
 > Android에서는 version code, iOS에서는 build number 라는 용어를 사용한다.
 
-빌드 번호는 임의의 숫자로, 어떤 빌드 이름의 _특정 빌드 파일_을 가리키는 식별자다. 즉, 같은 빌드 이름을 갖는 다섯 개의 빌드 파일이 존재한다면, 다섯 개의 서로 다른 빌드 번호가 존재한다. 이 숫자는 사용자에게 노출되지 않으며, 내부 관리용으로만 사용된다. 
+빌드 번호는 임의의 숫자로, 어떤 빌드 이름의 **특정 빌드 파일**을 가리키는 식별자다. 즉, 같은 빌드 이름을 갖는 다섯 개의 빌드 파일이 존재한다면, 다섯 개의 서로 다른 빌드 번호가 존재한다. 이 숫자는 사용자에게 노출되지 않으며, 내부 관리용으로만 사용된다. 
 
 플랫폼 별 빌드 번호는 아래와 같은 제약 사항을 갖는다.
 
 * iOS: 같은 빌드 이름을 갖는 빌드는 서로 다른 빌드 번호를 가져야 한다. 다른 빌드 이름을 갖는 빌드 사이에는 빌드 번호가 겹칠 수 있다. 즉, `(빌드 이름, 빌드 번호)` 페어가 특정 빌드의 식별자로 사용된다.
-* Android: 모든 빌드는 서로 다른 빌드 번호를 가져야 한다. 추가적으로, 새로 업로드 되는 빌드는 _기존에 존재하는 모든 빌드보다 큰 빌드 번호를 가져야 한다_. 또한, 빌드 번호의 최대값은 2100000000이다.
+* Android: 모든 빌드는 서로 다른 빌드 번호를 가져야 한다. **추가적으로, 새로 업로드 되는 빌드는 기존에 존재하는 모든 빌드보다 큰 빌드 번호를 가져야 한다.** 또한, 빌드 번호의 최대값은 2100000000이다.
 
 ## Flutter 빌드에 빌드 이름과 빌드 번호 넘기기
 

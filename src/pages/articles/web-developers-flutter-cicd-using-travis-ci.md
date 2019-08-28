@@ -40,13 +40,9 @@ tags:
 
 ```
 [✓] Flutter (Channel dev, v1.9.2-pre.34, on Mac OS X 10.14.4 18E226, locale en-US)
-445
     * Flutter version 1.9.2-pre.34 at /Users/travis/build/heejongahn/galpi/flutter
-446
     * Framework revision e833a5820e (12 hours ago), 2019-08-20 11:00:21 -0700
-447
     * Engine revision 10167db433
-448
     * Dart version 2.5.0
 ```
 

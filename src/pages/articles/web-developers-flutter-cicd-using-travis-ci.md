@@ -14,7 +14,7 @@ tags:
   - Travis CI
   - DevOps
 ---
-\# 들어가며
+# 들어가며
 
 얼마 전, 구글의 크로스 플랫폼 UI 프레임워크 [Flutter](https://flutter.dev/)를 사용해 [인생 첫 앱을 만들어 배포했다.](https://ahnheejong.name/articles/galpi-development-diary/)  앱 개발에 대한 지식은 전무하다시피 했지만, Flutter 덕에 생각보다 짧은 시간 안에 만족할 만한 앱을 iOS, Android 두 플랫폼에 배포할 수 있었다. 처음 써보는 언어와 프레임워크지만 선언적 렌더링 기반인 덕에 적응하기도 쉬웠다. 문서도 잘 되어 있고 전반적인 개발 경험도 훌륭했다.
 

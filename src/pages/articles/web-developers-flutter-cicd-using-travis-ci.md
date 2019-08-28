@@ -564,7 +564,7 @@ CI 머신에서의 코드 사이닝을 위해 필요한 파일은 세 개다.
 * `android/app/serviceAccount.json`: Google Play로의 바이너리 및 메타데이터 업로드에 필요한 계정 정보
 * `android/app/upload.keystore`:  키스토어 파일
 
-[Travic CI CLI 클라이언트](https://github.com/travis-ci/travis.rb) 를 사용해 이 파일들을 안전하게 업로드 및 암복호화 할 것이다. 먼저 `gem install travis`로 CLI 클라이언트를 설치한 뒤, 이후 모든 요청이 올바른 엔드포인트를 바라보도록 `travis endpoint --pro --set-defaul` 커맨드를 실행해준다. 만약 기본값을 변경하기 싫다면, 앞으로의 커맨드에 모두 `—pro` 인자를 넘겨주면 된다.
+[Travic CI CLI 클라이언트](https://github.com/travis-ci/travis.rb) 를 사용해 이 파일들을 안전하게 업로드 및 암복호화 할 것이다. 먼저 `gem install travis`로 CLI 클라이언트를 설치한 뒤, 이후 모든 요청이 올바른 엔드포인트를 바라보도록 `travis endpoint --pro --set-default` 커맨드를 실행해준다. 만약 기본값을 변경하기 싫다면, 앞으로의 커맨드에 모두 `—pro` 인자를 넘겨주면 된다.
 
 엔드포인트 설정이 끝났으면 `tar cvf secrets.tar android/key.properties android/app/serviceAccount.json android/app/upload.keystore` 커맨드로 코드 사이닝에 필요한 세 파일을 `secrets.tar`  파일로 묶어준다.
 

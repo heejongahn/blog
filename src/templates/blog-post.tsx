@@ -393,6 +393,7 @@ const StyledHTMLContent = styled(HTMLContent)`
     border-radius: 3px;
     white-space: normal;
     overflow-wrap: break-word;
+    word-wrap: break-word;
   }
   code::before,
   code::after {

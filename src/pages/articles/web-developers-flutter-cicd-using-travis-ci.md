@@ -91,7 +91,7 @@ script:
 
 구체적으로 갈피의 예를 들면, 책 검색에 사용하는 카카오 REST API 키를 불러오기 위해 Travis CI 의 `KAKAO_REST_API_KEY` 환경 변수에 해당 시크릿 키를 추가한 뒤, 아래와 같은 bash 스크립트를 저장소에 추가했다.
 
-```sh
+```bash
 # scripts/populate_secret.sh
 
 touch secrets/keys.json

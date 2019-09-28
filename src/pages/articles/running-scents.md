@@ -7,7 +7,7 @@ tags:
   - 단상
   - 달리기
 ---
-<iframe width="560" height="315" src="https://www.youtube.com/embed/B5xnDhifQ2o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UznGdNT5bPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 달리는 습관을 들이는 중이다. 올 여름, 졸업을 위해 좋아하던 회사에서 나와 학교로 돌아왔다. 마지막 학기를 앞두고 [여러 목표](https://twitter.com/heejongahn/status/1168521222688133121)를 세웠다. 무엇보다도 지금까지의 인생동안 꾸준히 함부로 다루며 망쳐놓은 몸을 다시 건강하게 만들고픈 마음이 간절했다. 술을 끊고 인생 첫 PT를 등록했다.
 

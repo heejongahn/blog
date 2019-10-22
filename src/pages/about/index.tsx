@@ -1,4 +1,5 @@
 import React from "react";
+import { parse } from "query-string";
 import Layout from "../../components/Layout";
 import styled from "styled-components";
 import PageHelmet from "../../components/PageHelmet";
@@ -47,9 +48,12 @@ const SectionContent = styled.div`
   }
 `;
 
-interface Props {}
+interface Props {
+  location: Location;
+}
 
-type Language = "KO" | "EN";
+type Language = "ko" | "en";
+const languages: Language[] = ["ko", "en"];
 
 interface State {
   language: Language;
@@ -84,10 +88,21 @@ const previousCompanies = [
 export class AboutPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { language: "KO" };
+    this.state = {
+      language: "ko"
+    };
+  }
+
+  componentDidMount() {
+    const lang = (parse(this.props.location.search).lang || "").toLowerCase();
+    this.setState({
+      language: languages.indexOf(lang) !== -1 ? lang : "ko"
+    });
   }
 
   render() {
+    const { language } = this.state;
+
     return (
       <Layout>
         <PageHelmet
@@ -96,17 +111,17 @@ export class AboutPage extends React.Component<Props, State> {
           url="https://ahnheejong.name/about/"
         />
         <LanguageSelectors>
-          {(["KO", "EN"] as Language[]).map(lang => (
+          {languages.map(lang => (
             <LanguageSelector
               key={lang}
               onClick={() => this.setState({ language: lang })}
-              selected={this.state.language === lang}
+              selected={language === lang}
             >
               {lang}
             </LanguageSelector>
           ))}
         </LanguageSelectors>
-        {this.state.language === "KO" ? (
+        {this.state.language === "ko" ? (
           <Main id="main-ko">
             <Section>
               <SectionTitle>반갑습니다</SectionTitle>

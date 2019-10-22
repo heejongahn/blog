@@ -28,6 +28,7 @@
     "parcel-bundler": "^1.9.4",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.0",
+    "query-string": "5",
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
@@ -49,6 +50,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@types/query-string": "5",
     "@types/react-helmet": "^5.0.7",
     "axios": "^0.18.0",
     "mz": "^2.7.0",

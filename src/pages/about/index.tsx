@@ -121,7 +121,7 @@ export class AboutPage extends React.Component<Props, State> {
             </LanguageSelector>
           ))}
         </LanguageSelectors>
-        {this.state.language === "ko" ? (
+        {language === "ko" ? (
           <Main id="main-ko">
             <Section>
               <SectionTitle>반갑습니다</SectionTitle>

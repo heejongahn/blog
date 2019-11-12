@@ -13,6 +13,8 @@ tags:
 
 ![메일로 부동산 매물을 받아보는 스크린샷](/assets/tinkerbell-result.png)
 
+2019-11-12 수정: [양성민](https://ysm.sh/) 님께서 [GitHub Action의 타임존 관련 수정이 필요한 부분](https://twitter.com/ysm0622_/status/1194173951678668805)을 알려주셔서 수정했습니다. 감사합니다!
+
 # 문제의식
 
 이번 여름, 학부 졸업을 위해 다니던 회사를 나와 학교로 돌아왔다. 다음으로 갈 회사가 정해지고 출근 일자가 다가오면서 슬슬 서울에 살 집을 구할 날짜가 다가왔다. 주중에는 대전에서 학교를 다녀 부동산에서 집을 볼 수 있는 시간이 한정적이다보니 직방, 다방 등의 앱과 더불어 [피터팬의 좋은방 구하기](https://www.peterpanz.com/)(이하 "피터팬") 등의 직거래 사이트에서 사전 조사를 열심히 하기로 했다.
@@ -140,12 +142,16 @@ export class House {
   roomCount: RoomCount;
 
   get isNew() {
-    return (
-      differenceInCalendarDays(
-        Date.now(),
-        parse(this.info.createdAt.split(" ")[0], "yyyy-MM-dd", Date.now()),
-      ) < 2
+    // GitHub Action은 UTC 시간대에서 실행됨
+    const now = addHours(Date.now(), 9);
+    const createdAt = parse(
+      this.info.createdAt.split(" ")[0],
+      "yyyy-MM-dd",
+      Date.now(),
     );
+
+    const diff = differenceInCalendarDays(now, createdAt);
+    return diff < 2;
   }
 
   constructor(payload: HousePayload) {
@@ -514,7 +520,8 @@ on:
     branches:
       - master
   schedule:
-    - cron: "0 11 * * *"
+    # 오전 11시 (GitHub Action은 UTC 타임존)
+    - cron: "0 2 * * *"
 jobs:
   fetch:
     name: Fetch

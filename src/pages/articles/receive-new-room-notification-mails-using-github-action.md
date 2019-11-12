@@ -1,14 +1,12 @@
 ---
 templateKey: blog-post
-title: receive-new-room-notification-mails-using-github-action
+title: GitHub Action을 사용해 새로 올라온 전월세 방 목록 받아보기
 date: 2019-11-12T08:02:58.726Z
 description: 부동산 앱에 새로 올라오는 방을 매번 직접 체크하는 대신 편하게 받아볼 수 없을까?
 tags:
   - 라이프해킹
   - 일상
 ---
-# GitHub Action을 사용해 새로 올라온 전월세 매물 받아보기
-
 # 들어가며
 
 매일 아침 11시,  [피터팬의 좋은방 구하기](https://www.peterpanz.com/)라는 부동산 거래 사이트에 새로 올라온 특정 조건(가격대, 지역 등)을 만족하는 매물을 아래와 같이 정리해서 보내주는 프로그램을 만들었다. ([저장소](https://github.com/heejongahn/tinkerbell-template)) 요새 블로깅이 너무 뜸하기도 했고, 재밌는 작업이라 과정을 기록으로 남겨보았다.

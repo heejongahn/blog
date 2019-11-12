@@ -170,7 +170,11 @@ export class AboutPage extends React.Component<Props, State> {
                 강력한 타입 시스템을 가진 언어로 작업하는 것을 선호합니다.
                 {lineBreak}
                 요즘은 개발과 디자인, 두 세계를 잇는 데에 관심이 많습니다.
-                {lineBreak}
+                {lineBreak}더 자세한 내용은{" "}
+                <Anchor href="/resume" target="_blank">
+                  이력서
+                </Anchor>
+                를 참고하세요.
               </SectionContent>
             </Section>
             <Section>
@@ -243,6 +247,12 @@ export class AboutPage extends React.Component<Props, State> {
                 {lineBreak}
                 nowadays, i'm deeply into bridging two worlds: programming and
                 design.
+                {lineBreak}
+                See{" "}
+                <Anchor href="/resume" target="_blank">
+                  resume
+                </Anchor>{" "}
+                for further details.
               </SectionContent>
             </Section>
             <Section>

@@ -211,10 +211,11 @@ const rentBudget = 100;
  */
 const depositBudget = 100;
 
-const commonFilter = {
+const commonFilter: Omit<Filter, "id" | "bounds"> = {
   priceRange: {
     rent: { max: rentBudget * 10000 },
     deposit: { max: depositBudget * 10000 },
+    shouldIncludeMaintenance: true,
   },
   roomFloors: [RoomFloor.lower, RoomFloor.higher],
   roomCounts: [RoomCount.twoRooms, RoomCount.threeAndMoreRooms],

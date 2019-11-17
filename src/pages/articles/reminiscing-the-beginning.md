@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: reminiscing-the-beginning
+title: 시작을 떠올리며
 date: 2019-11-17T13:47:50.718Z
 description: 프로그래밍을 시작할 때의 그 너무 너무 막막했던 기분이 지금도 종종 떠오른다.
 tags:

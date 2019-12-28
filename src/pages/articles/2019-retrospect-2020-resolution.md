@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 2019-retrospect-2020-resolution
+title: '2019 회고, 2020 다짐'
 date: 2019-12-28T06:06:00.301Z
 description: 한 해를 돌아보고 다음 해를 준비합니다.
 tags:

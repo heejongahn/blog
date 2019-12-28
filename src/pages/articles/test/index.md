@@ -6,6 +6,8 @@ description: test
 tags:
   - test
 ---
+![](/assets/640.png)
+
 test
 
 ![]()

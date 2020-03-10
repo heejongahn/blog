@@ -109,21 +109,20 @@ const BlogPost: React.SFC<{
         title={post.frontmatter.title}
       />
       <AdjacentArticles>
-        {[previous, next].map(
-          (adjacentArticle, i) =>
-            adjacentArticle != null ? (
-              <AdjacentArticle
-                key={adjacentArticle.fields.slug}
-                to={adjacentArticle.fields.slug}
-              >
-                <AdjacentArticleLabel>
-                  {i === 0 ? "이전 글" : "다음 글"}
-                </AdjacentArticleLabel>
-                <AdjacentArticleTitle>
-                  {adjacentArticle.frontmatter.title}
-                </AdjacentArticleTitle>
-              </AdjacentArticle>
-            ) : null
+        {[previous, next].map((adjacentArticle, i) =>
+          adjacentArticle != null ? (
+            <AdjacentArticle
+              key={adjacentArticle.fields.slug}
+              to={adjacentArticle.fields.slug}
+            >
+              <AdjacentArticleLabel>
+                {i === 0 ? "이전 글" : "다음 글"}
+              </AdjacentArticleLabel>
+              <AdjacentArticleTitle>
+                {adjacentArticle.frontmatter.title}
+              </AdjacentArticleTitle>
+            </AdjacentArticle>
+          ) : null
         )}
       </AdjacentArticles>
       <DiscussionEmbed shortname="ahnheejong" disqusConfig={disqusConfig} />
@@ -265,7 +264,8 @@ const StyledHTMLContent = styled(HTMLContent)`
   pre {
     margin-top: 0;
     margin-bottom: 0;
-    font: 12px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    font-size: 12px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
       monospace;
   }
 
@@ -387,7 +387,7 @@ const StyledHTMLContent = styled(HTMLContent)`
     padding: 0;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
-    margin: 0;
+    margin: 0 4px;
     font-size: 85%;
     background-color: rgba(27, 31, 35, 0.05);
     border-radius: 3px;
@@ -395,14 +395,11 @@ const StyledHTMLContent = styled(HTMLContent)`
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
-  code::before,
-  code::after {
-    letter-spacing: -0.2em;
-    content: "\00a0";
-  }
+
   pre {
     word-wrap: normal;
   }
+
   pre > code {
     padding: 0;
     margin: 0;

@@ -34,9 +34,7 @@ module.exports = {
             },
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                const articleUrl = `${site.siteMetadata.siteUrl}${
-                  edge.node.fields.slug
-                }`;
+                const articleUrl = `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`;
 
                 return {
                   ...edge.node.frontmatter,
@@ -84,6 +82,7 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: "gatsby-remark-prismjs"
           }

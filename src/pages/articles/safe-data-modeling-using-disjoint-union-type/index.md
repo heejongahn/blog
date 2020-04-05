@@ -182,7 +182,7 @@ type TossPaymentMethod = {
 // 계좌이체 결제수단이거나
 // 토스 결제수단이다.
 type PaymentMethod =
-	| CardPaymentMethod
+  | CardPaymentMethod
   | BankPaymentMethod
   | TossPaymentMethod;
 ```
@@ -214,7 +214,7 @@ const bankAccountPaymentMethod: PaymentMethod = {
 };
 ```
 
-하지만, 첫 번째 시도와는 달리, **이제 `PaymentMethod`에 올바르지 않은 값을 할당할 수 없다**. 만약 이상한 값을 할당하려 하면, TypeScript 컴파일러가 빨간펜을 들고 아래와 같이 경고해 줄 것이다.
+하지만, 첫 번째 시도와는 달리, **이제 `PaymentMethod` 타입 변에 올바르지 않은 값을 할당할 수 없다**. 만약 이상한 값을 할당하려 하면, TypeScript 컴파일러가 빨간펜을 들고 아래와 같이 경고해 줄 것이다.
 
 ```ts
 // 해석: `type` 필드를 보니 `CardPaymentMethod` 가지일 수 밖에 없는데,
@@ -339,7 +339,7 @@ type Coupon =
 
 이 글에서는 리터럴 타입과 유니온 타입을 사용했지만, 이는 TypeScript의 언어적 제약일 뿐, 언어에 따라 서로소 유니온 타입을 구현하는 방법은 다양하다. [Haskell](https://www.haskell.org/) 이나 [Rust](https://www.rust-lang.org/) 등 보다 강력한 타입 시스템을 갖춘 언어는 대부분 서로소 유니온 타입을 정의하는, 그리고 손쉽게 사용할 수 있게 하는 문법(패턴 매칭)을 언어 수준에서 제공한다.
 
-핵심은 **“둘 이상의 경우의 수를 갖는 타입을[상호배제와 전체포괄](https://ko.wikipedia.org/wiki/MECE)을 만족하는 가지들로 나누고, 각 가지의 타입을 정확히 정의한 뒤, 전체를 가지들의 합으로 나타내기”**라 볼 수 있다. 이 원리를 이해한다면 (이 글에서 그랬듯) 언어 수준의 직접적인 지원이 없는 환경에서도 비슷한 접근을 얼마든 구현할 수 있다.
+핵심은 **“둘 이상의 경우의 수를 갖는 타입을 [상호배제와 전체포괄](https://ko.wikipedia.org/wiki/MECE)을 만족하는 가지들로 나누고, 각 가지의 타입을 정확히 정의한 뒤, 전체를 가지들의 합으로 나타내기”**라 볼 수 있다. 이 원리를 이해한다면 (이 글에서 그랬듯) 언어 수준의 직접적인 지원이 없는 환경에서도 비슷한 접근을 얼마든 구현할 수 있다.
 
 서로소 유니온 타입을 이용해 프로그래머의 의도를 명확히 타입으로 표현하고, 타입 시스템으로부터 더 많은 안정성을 보장받고, 사용의 편리함까지 얻을 수 있다. 지금껏 그런 적이 없다면, 앞으로 만나는 문제 또는 지금 고민하는 문제를 한 번쯤 서로소 유니온 타입의 렌즈를 통해 바라보길 추천한다. 분명 도움이 될 것이다.
 
@@ -348,6 +348,7 @@ type Programmer =
   | { type: ‘lovesDisjointUnion }
   | { type: ‘willLoveDisjointUnion, from: Date };
 ```
+
 
 뱀발: 글을 적기 시작할 무렵, 문득 ‘서로소 유니온 타입이 상속과 어떻게 다르지?’ 라는 궁금증이 들어 트위터에 올렸다. 친절하게 답변해주신 분들이 계셔서 어느정도 정리가 되었는데, 궁금한 분들은 [타래](https://twitter.com/heejongahn/status/1234444534471221248)를 보시길.
 
@@ -382,4 +383,4 @@ type Programmer =
 # 부록 2: 읽을거리
 * [서로소 유니온 타입(태그된 유니온)의 위키피디아 항목](https://en.wikipedia.org/wiki/Tagged_union)
 *  [서로소 유니온 타입(합 타입)을 포함하는 대수 타입의 위키피디아 항목](https://en.wikipedia.org/wiki/Algebraic_data_type)
-* [서로소 유니온 타입의 사용을 훨씬 편리하게 만들어 줄 pattern matching 프로포절](https://github.com/tc39/proposal-pattern-matching)# 서로소 유니온 타입을 사용한 안전한 데이터 모델링
+* [서로소 유니온 타입의 사용을 훨씬 편리하게 만들어 줄 pattern matching 프로포절](https://github.com/tc39/proposal-pattern-matching)

@@ -383,4 +383,4 @@ type Programmer =
 # 부록 2: 읽을거리
 * [서로소 유니온 타입(태그된 유니온)의 위키피디아 항목](https://en.wikipedia.org/wiki/Tagged_union)
 *  [서로소 유니온 타입(합 타입)을 포함하는 대수 타입의 위키피디아 항목](https://en.wikipedia.org/wiki/Algebraic_data_type)
-* [서로소 유니온 타입의 사용을 훨씬 편리하게 만들어 줄 pattern matching 프로포절](https://github.com/tc39/proposal-pattern-matching)# 서로소 유니온 타입을 사용한 안전한 데이터 모델링
+* [서로소 유니온 타입의 사용을 훨씬 편리하게 만들어 줄 pattern matching 프로포절](https://github.com/tc39/proposal-pattern-matching)

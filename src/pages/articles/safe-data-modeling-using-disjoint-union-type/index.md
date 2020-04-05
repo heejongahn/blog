@@ -349,6 +349,7 @@ type Programmer =
   | { type: ‘willLoveDisjointUnion, from: Date };
 ```
 
+
 뱀발: 글을 적기 시작할 무렵, 문득 ‘서로소 유니온 타입이 상속과 어떻게 다르지?’ 라는 궁금증이 들어 트위터에 올렸다. 친절하게 답변해주신 분들이 계셔서 어느정도 정리가 되었는데, 궁금한 분들은 [타래](https://twitter.com/heejongahn/status/1234444534471221248)를 보시길.
 
 뱀발2: [한국어 위키피디아 항목](https://ko.wikipedia.org/wiki/%EB%B6%84%EB%A6%AC_%ED%95%A9%EC%A7%91%ED%95%A9)은 “Disjoint Union”을 “분리 합집합” 또는 "서로소 합집합"으로 지칭한다. 하지만 프로그래밍의 맥락에서는 “Union Type”의 번역어로 "합집합 타입" 보다는 "유니온 타입”이 훨씬 흔하게 쓰인다고 판단해, “서로소 합집합 타입" 대신 "서로소 유니온 타입" 이라는 번역어를 사용했다.

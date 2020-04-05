@@ -64,7 +64,7 @@ interface PaymentMethod {
 const creditCardPaymentMethod: PaymentMethod = {
   type: PaymentMethodType.CreditCard,
   creditCardInformation: {
-    cardNumber: ‘1234123412341234’,
+    cardNumber: '1234123412341234',
     providerCode: 42,
   },
 };
@@ -74,7 +74,7 @@ const bankAccountPaymentMethod: PaymentMethod = {
   bankAccountInformation: [
     {
       bankCode: 42,
-      bankAccount: ‘1234123412341234’,
+      bankAccount: '1234123412341234',
     },
   ],
 };
@@ -88,13 +88,13 @@ const bankAccountPaymentMethod: PaymentMethod = {
 const weirdPaymentMethod: PaymentMethod = {
   type: PaymentMethodType.CreditCard,
   creditCardInformation: {
-    cardNumber: ‘1234123412341234’,
+    cardNumber: '1234123412341234',
     providerCode: 42,
   },
   bankAccountInformation: [
     {
       providerCode: 42,
-      cardNumber: ‘1234123412341234’,
+      cardNumber: '1234123412341234',
     },
   ],
 };
@@ -198,7 +198,7 @@ type PaymentMethod =
 const creditCardPaymentMethod: PaymentMethod = {
   type: PaymentMethodType.CreditCard,
   creditCardInformation: {
-    cardNumber: ‘1234123412341234’,
+    cardNumber: '1234123412341234',
     providerCode: 42,
   },
 };
@@ -227,13 +227,13 @@ const bankAccountPaymentMethod: PaymentMethod = {
 const weirdPaymentMethod: PaymentMethod = {
   type: PaymentMethodType.CreditCard,
   creditCardInformation: {
-    cardNumber: ‘1234123412341234’,
+    cardNumber: '1234123412341234',
     providerCode: 42,
   },
   bankAccountInformation: [
     {
       providerCode: 42,
-      cardNumber: ‘1234123412341234’,
+      cardNumber: '1234123412341234',
     },
   ],
 };
@@ -297,11 +297,11 @@ function getFormattedDisplayName(paymentMethod: PaymentMethod) {
 
 ```ts
 type FetchStatus<Data, Error> =
-  | { type: ‘idle’ }
-  | { type: ‘pending’ }
-  | { type: ‘fulfilled’, data: Data }
-  | { type: ‘rejected’, error: Error }
-  | { type: ‘cancelled’ };
+  | { type: 'idle' }
+  | { type: 'pending' }
+  | { type: 'fulfilled', data: Data }
+  | { type: 'rejected', error: Error }
+  | { type: 'cancelled' };
 ```
 
 쇼핑몰의 쿠폰 데이터:
@@ -315,17 +315,17 @@ type CommonCouponData = {
 }
 
 type FixedAmountDiscountCoupon = CommonCouponData & {
-  type: ‘fixedAmountDiscount’;
+  type: 'fixedAmountDiscount';
   discountAmount: Currency;
 };
 
 type RateDiscountCoupont = CommonCouponData & {
-  type: ‘rateDiscount’;
+  type: 'rateDiscount';
   discountRate: number;
 };
 
 type: FreeDeliveryCoupon = CommonCouponData & {
-  type: ‘freeDelivery’;
+  type: 'freeDelivery';
 };
 
 type Coupon =
@@ -348,8 +348,8 @@ type Coupon =
 
 ```ts
 type Programmer =
-  | { type: ‘lovesDisjointUnion }
-  | { type: ‘willLoveDisjointUnion, from: Date };
+  | { type: 'lovesDisjointUnion' }
+  | { type: 'willLoveDisjointUnion', from: Date };
 ```
 
 뱀발: 글을 적기 시작할 무렵, 문득 ‘서로소 유니온 타입이 상속과 어떻게 다르지?’ 라는 궁금증이 들어 트위터에 올렸다. 친절하게 답변해주신 분들이 계셔서 어느정도 정리가 되었는데, 궁금한 분들은 [타래](https://twitter.com/heejongahn/status/1234444534471221248)를 보시길.
@@ -364,9 +364,9 @@ type Programmer =
 
 > 이러한 타입은 ‘서로소 유니온 타입’ 이외에도 여러가지 다른 이름을 갖고 있다.
 >
-> 먼저 위의 type 속성처럼, 특정 속성을 통해 값이 속하는 브랜치를 식별할 수 있다는 이유로 *식별 가능한 유니온*(discriminated union type)또는 *태그된 유니온*(tagged union)이라는 이름을 갖는다. 브랜치를 식별하기 위해 쓰이는 type 속성은 식별자(discriminator) 또는 태그(tag)라 불린다.
+> 먼저 위의 type 속성처럼, 특정 속성을 통해 값이 속하는 브랜치를 식별할 수 있다는 이유로 **식별 가능한 유니온**(discriminated union type)또는 **태그된 유니온**(tagged union)이라는 이름을 갖는다. 브랜치를 식별하기 위해 쓰이는 type 속성은 식별자(discriminator) 또는 태그(tag)라 불린다.
 >
-> 서로소 유니온 타입의 또 다른 이름으로는 *합 타입*(sum type)이 있다. 다음 코드를 보자. `Bool` 타입은 2개의 값, `Num` 타입은 3개의 값을 갖는다.
+> 서로소 유니온 타입의 또 다른 이름으로는 **합 타입**(sum type)이 있다. 다음 코드를 보자. `Bool` 타입은 2개의 값, `Num` 타입은 3개의 값을 갖는다.
 >
 > ```ts
 > type Bool = true | false;

@@ -214,7 +214,7 @@ const bankAccountPaymentMethod: PaymentMethod = {
 };
 ```
 
-하지만, 첫 번째 시도와는 달리, **이제 `PaymentMethod`에 올바르지 않은 값을 할당할 수 없다**. 만약 이상한 값을 할당하려 하면, TypeScript 컴파일러가 빨간펜을 들고 아래와 같이 경고해 줄 것이다.
+하지만, 첫 번째 시도와는 달리, **이제 `PaymentMethod` 타입 변에 올바르지 않은 값을 할당할 수 없다**. 만약 이상한 값을 할당하려 하면, TypeScript 컴파일러가 빨간펜을 들고 아래와 같이 경고해 줄 것이다.
 
 ```ts
 // 해석: `type` 필드를 보니 `CardPaymentMethod` 가지일 수 밖에 없는데,

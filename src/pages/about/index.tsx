@@ -163,9 +163,9 @@ export class AboutPage extends React.Component<Props, State> {
                     const pre = accm.length === 0 ? [] : [...accm, ", "];
                     return [...pre, curr];
                   }, [])}
-                에서 프론트엔드 프로그래머로 일했습니다.
+                에서 일했습니다.
                 {lineBreak}
-                2019년 가을은 졸업을 위해 학교에서 마지막 학기를 보냅니다.
+                지금은 초기 단계 스타트업에서 일하고 있습니다.
                 {lineBreak}
                 강력한 타입 시스템을 가진 언어로 작업하는 것을 선호합니다.
                 {lineBreak}
@@ -237,11 +237,9 @@ export class AboutPage extends React.Component<Props, State> {
                               : ", "
                           ];
                     return [...pre, curr];
-                  }, [])}{" "}
-                as a web frontend developer.
-                {lineBreak}
-                i'm spending 2019 fall at KAIST, which will be my final
-                semester.
+                  }, [])}
+                .{lineBreak}
+                i'm currently working at an early stage startup.
                 {lineBreak}i prefer languages which are powered by a smart type
                 system.
                 {lineBreak}

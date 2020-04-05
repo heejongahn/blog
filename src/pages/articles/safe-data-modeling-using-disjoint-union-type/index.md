@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 서로소 유니온 타입을 사용한 안전한 데이터 모델링
 date: 2020-04-05T04:56:50.757Z
-description: 이것이거나 저것이거나 그것인 데이터를 어떻게 모델링할까?
+description: 이것이거나 저것이거나 그것인 데이터를 어떻게 다룰까?
 tags:
   - 타입스크립트
   - 타입

@@ -182,7 +182,7 @@ type TossPaymentMethod = {
 // 계좌이체 결제수단이거나
 // 토스 결제수단이다.
 type PaymentMethod =
-	| CardPaymentMethod
+  | CardPaymentMethod
   | BankPaymentMethod
   | TossPaymentMethod;
 ```

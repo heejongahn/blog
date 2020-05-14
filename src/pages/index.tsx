@@ -33,6 +33,11 @@ export default class IndexPage extends React.Component<Props> {
           url="https://ahnheejong.name/"
         />
         <section className="section">
+          <GalpiAd href="https://web.galpi.world" target="_blank">
+            광고 : 독후감 관리 앱 “갈피” 를 만들었습니다. 제가 쓰려고 만들기
+            시작했는데, 이제서야 제가 쓰고 싶은 수준까지 왔습니다. 많이 써
+            보시고 의견 주시면 감사하겠습니다.
+          </GalpiAd>
           <Summary>
             <Intro>
               <IntroTitle>환영합니다!</IntroTitle>
@@ -40,8 +45,8 @@ export default class IndexPage extends React.Component<Props> {
               <small>
                 <i>ahn heejong</i>
               </small>
-              의 블로그에 잘 오셨습니다. 프로그래밍과 삶에 대한 생각을 이 곳에 기록으로 남기고 있습니다. {today}{" "}
-              총 {posts.length}
+              의 블로그에 잘 오셨습니다. 프로그래밍과 삶에 대한 생각을 이 곳에
+              기록으로 남기고 있습니다. {today} 총 {posts.length}
               편의 글이 올라와 있습니다.
               <LineBreak />
               <LineBreak />
@@ -88,6 +93,18 @@ export const pageQuery = graphql`
       }
     }
   }
+`;
+
+const GalpiAd = styled.a`
+  display: block;
+
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px dashed #888888;
+  line-height: 1.6;
+
+  font-weight: bold;
+  margin-bottom: 24px;
 `;
 
 const Summary = styled.section`

@@ -34,9 +34,9 @@ export default class IndexPage extends React.Component<Props> {
         />
         <section className="section">
           <GalpiAd href="https://web.galpi.world" target="_blank">
-            광고 : 독후감 관리 앱 “갈피” 를 만들었습니다. 제가 쓰려고 만들기
-            시작했는데, 이제서야 제가 쓰고 싶은 수준까지 왔습니다. 많이 써
-            보시고 의견 주시면 감사하겠습니다.
+            광고 : 독후감 관리 앱 “갈피” 를 만들었습니다. 제가 쓰려고 만들었는데
+            다른 분들께도 유용하게 쓰이면 기쁠 것 같아요. 많이 써 보시고 의견
+            주시면 감사하겠습니다.
           </GalpiAd>
           <Summary>
             <Intro>

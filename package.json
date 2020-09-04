@@ -23,7 +23,7 @@
     "gatsby-transformer-remark": "^2.8.19",
     "gatsby-transformer-sharp": "^2.1.1",
     "netlify-cms": "2.10.3-beta.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.13.1",
     "normalize.css": "^8.0.0",
     "open-color": "^1.6.3",
     "parcel-bundler": "^1.9.4",

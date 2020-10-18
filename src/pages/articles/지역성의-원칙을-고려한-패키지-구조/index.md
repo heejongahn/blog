@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 지역성의 원칙을 고려한 패키지 구조
+title: '지역성의 원칙을 고려한 패키지 구조: 기능별로 나누기'
 date: 2020-10-18T08:11:37.498Z
 description: 보다 효율적이고 견고한 패키지 구조에 대한 고민
 tags:

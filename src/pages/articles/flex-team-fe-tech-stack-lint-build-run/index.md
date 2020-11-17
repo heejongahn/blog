@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: flex-team-fe-tech-stack-lint-build-run
+title: '「플렉스팀 프론트엔드 기술 스택의 이해: `lint`, `build`, `run`」 발표자료 공개'
 date: 2020-11-17T14:12:21.081Z
 description: 2020년 11월 17일 플렉스팀 엔지니어링 챕터 프론트엔드 위클리에서 발표한 자료를 공유합니다.
 tags:
@@ -13,4 +13,10 @@ tags:
   - next.js
   - swr
 ---
-gg
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/8qMcR0AESPryYB" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/HeejongAhn/lint-build-run-239299778" title="플렉스팀 프론트엔드 기술 스택의 이해: `lint`, `build`, `run`" target="_blank">플렉스팀 프론트엔드 기술 스택의 이해: \`lint\`, \`build\`, \`run\`</a> </strong> from <strong><a href="https://www.slideshare.net/HeejongAhn" target="_blank">Heejong Ahn</a></strong> </div>
+
+1. 작년 말부터 [사람과 조직에 대한 문제를 해결하는 flex라는 제품](https://flex.team)을 만드는 플렉스팀에서 일하고 있습니다. 우리 팀 프론트엔드 개발자들은 매주 근황을 나누고 컨센서스를 맞추고 고민과 지식을 공유하는 위클리 미팅을 하는데, 서로 관심 있는 기술을 공유하는 테크 톡도 한 코너로 존재합니다. 그 곳에서 우리 제품을 이루는 기술들에 대해 다루는 발표를 했는데요. 일단 팀 내부 구성원 대상으로 만든 자료기도 하고 준비에 쓴 시간도 많지 않다보니 부족한 부분이 많지만, 그래도 시간 들여 만든 자료가 다른 분들께도 도움이 될까 싶어 공유합니다. 너그러운 마음으로 봐 주시고, 오류가 보인다면 제보해 주시면 감사하겠습니다.
+
+2. 흔히 플랫폼 내지는 데브옵스라 부르는 이런 류의 영역은, 냅두면 일단은 잘 돌아가고 건드리긴 무섭습니다. 그러다보니 - 특히 작은 조직일수록 - 상대적으로 잘 아는 한두 명이 일단 셋업을 마친 후엔 잘 안 보게 되는 경향이 있는 듯 합니다. 그들에게만 관련 업무가 몰리는 경우도 잦고요. 하지만 **오히려 팀원 모두가 영향을 받는 이런 영역이야말로 팀의 누구나 알고 또 고칠 수 있을 때 그 영향력이 극대화되지 않을까?** 라는 생각, 또 그런 팀을 만들고 싶다는 생각을 한지가 좀 되었습니다. 이러나 저러나, 프로젝트를 구성하는 모든 영역에 친숙해지는 건 구성원 각각에게도 좋은 일이고요. 그 첫 걸음이 될 수 있다면 좋겠다는 마음으로 발표를 준비했습니다.
+
+3. 사실 앞서 말씀드린 FE 개발자 위클리 미팅은 지지난 주에, 테크 톡은 이번 주에 구성원들의 제안으로 처음으로 시작했습니다. FE 개발자 수는 이제 막 6명이 되어 팀으로서 더 시너지를 내고 함께 성장할 다양한 방법을 하나둘 고민하고 찾아나가기 시작한 단계이며, 다른 직군도 대부분 비슷한 단계에 놓여 있습니다. 저희는 저희 팀과 제품이 아주 멀리 갈 것이라 보고 있는데요. 지금 오시면 그 멋진 여정을 시작부터 함께 하실 수 있습니다. 훌륭하고 친절한 동료들, 어렵고 풀었을 때 창출할 가치가 거대한 문제들, 매일 느끼는 갈증을 채워줄 제품을 애타게 찾는 온갖 분야의 고객들이 애타게 기다립니다. [최근 받은 투자](https://platum.kr/archives/151902https://platum.kr/archives/151902)에 힘입어 전 직군에서 좋은 동료 분들을 모시고 있습니다. 부디 [채용 페이지](https://bit.ly/flexteam_recruit)를 확인해보시고, 관심이 동하시거든 지원 부탁드립니다.

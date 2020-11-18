@@ -13,7 +13,7 @@ tags:
   - next.js
   - swr
 ---
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/8qMcR0AESPryYB" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> </div>
+**[발표 자료 링크 🔗](https://github.com/heejongahn/talks/blob/master/20201117-lint-build-run/20201117-lint-build-run.pdfhttps://github.com/heejongahn/talks/blob/master/20201117-lint-build-run/20201117-lint-build-run.pdf)**
 
 1. 작년 말부터 [사람과 조직에 대한 문제를 푸는 flex라는 제품](https://flex.team)을 만드는 플렉스팀에서 일하고 있습니다. 우리 팀 프론트엔드 개발자들은 매주 근황을 나누고, 여러 기술적인 주제에 대한 합의를 이루며, 고민과 지식을 공유하는 위클리 미팅을 합니다. 기술 관련 내용을 공유하는 테크 톡도 한 코너로 존재하는데, 저는 최근에 우리 제품을 구성하는 기술들에 대해 발표했습니다. 내부 구성원을 대상으로 살짝 급하게 만든 자료이다 보니 부족한 부분이 많아 고민했지만, 시간 들여 만든 게 다른 분들께도 도움이 될까 싶어 공유합니다. 혹 오류가 보인다면 제보해 주시면 감사하겠습니다.
 

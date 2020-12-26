@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 플렉스팀에서의 2020년
 date: 2020-12-26T07:05:52.973Z
-description: 합류 후 1년 간 플렉스팀에서 진행한 작업을 정리하고 돌아봅니다.
+description: 플렉스팀에 합류한 후 1년 간 진행한 작업을 정리하고 돌아봅니다.
 tags:
   - 플렉스팀
   - 회고

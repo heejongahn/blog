@@ -10,4 +10,4 @@ tags:
 ---
 .
 
-![](static/assets/{{slug}}/confused.jpg)
+![](/assets/a-case-for-understanding-webpack-config/confused.jpg)

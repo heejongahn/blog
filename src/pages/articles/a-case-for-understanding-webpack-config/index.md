@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: a-case-for-understanding-webpack-config
+title: Webpack 설정을 이해하는 일의 가치
 date: 2021-01-30T06:12:55.172Z
 description: Webpack이 뭔지 몰라도 읽는데 전혀 지장이 없습니다.
 tags:

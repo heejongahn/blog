@@ -13,8 +13,8 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/index"
-    media_folder: ""
-    public_folder: ""
+    media_folder: "/static/assets/{{slug}}"
+    public_folder: "/assets/{{slug}}"
     fields:
       - {
           label: "Template Key",

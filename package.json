@@ -54,7 +54,7 @@
     "@types/query-string": "5",
     "@types/react": "^16.9.11",
     "@types/react-helmet": "^5.0.7",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "mz": "^2.7.0",
     "prettier": "^1.7.4",
     "rimraf": "^2.6.2",

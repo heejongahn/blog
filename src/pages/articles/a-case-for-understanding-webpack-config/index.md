@@ -10,4 +10,4 @@ tags:
 ---
 .
 
-![](confused.jpg)
+![](static/assets/{{slug}}/confused.jpg)

@@ -1,5 +1,4 @@
 import React from "react";
-import { DiscussionEmbed } from "disqus-react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
@@ -20,7 +19,7 @@ export const BlogPostTemplate: React.SFC<Props> = ({
   contentComponent,
   description,
   tags,
-  title
+  title,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -29,7 +28,7 @@ export const BlogPostTemplate: React.SFC<Props> = ({
       <Title>{title}</Title>
       <Description>{description}</Description>
       <TagList>
-        {tags.map(tag => (
+        {tags.map((tag) => (
           <Tag key={tag + `tag`}>
             <Link to={`/tags/${tag}/`}>{`#${tag}`}</Link>
           </Tag>
@@ -91,7 +90,7 @@ const BlogPost: React.SFC<{
   const disqusConfig = {
     url,
     identifier: post.id,
-    title: post.frontmatter.title
+    title: post.frontmatter.title,
   };
 
   return (
@@ -125,7 +124,6 @@ const BlogPost: React.SFC<{
           ) : null
         )}
       </AdjacentArticles>
-      <DiscussionEmbed shortname="ahnheejong" disqusConfig={disqusConfig} />
     </Layout>
   );
 };

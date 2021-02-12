@@ -66,37 +66,37 @@ const previousCompanies = [
     href: "https://toss.im/",
     title: {
       ko: "비바리퍼블리카",
-      en: "Viva Republica"
-    }
+      en: "Viva Republica",
+    },
   },
   {
     href: "https://hyperconnect.com/",
     title: {
       ko: "하이퍼커넥트",
-      en: "HyperConnect"
-    }
+      en: "HyperConnect",
+    },
   },
   {
     href: "https://www.spoqa.com",
     title: {
       ko: "스포카",
-      en: "Spoqa"
-    }
-  }
+      en: "Spoqa",
+    },
+  },
 ];
 
 export class AboutPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      language: "ko"
+      language: "ko",
     };
   }
 
   componentDidMount() {
     const lang = (parse(this.props.location.search).lang || "").toLowerCase();
     this.setState({
-      language: languages.indexOf(lang) !== -1 ? lang : "ko"
+      language: languages.indexOf(lang) !== -1 ? lang : "ko",
     });
   }
 
@@ -111,7 +111,7 @@ export class AboutPage extends React.Component<Props, State> {
           url="https://ahnheejong.name/about/"
         />
         <LanguageSelectors>
-          {languages.map(lang => (
+          {languages.map((lang) => (
             <LanguageSelector
               key={lang}
               onClick={() => this.setState({ language: lang })}
@@ -165,7 +165,11 @@ export class AboutPage extends React.Component<Props, State> {
                   }, [])}
                 에서 일했습니다.
                 {lineBreak}
-                지금은 초기 단계 스타트업에서 일하고 있습니다.
+                지금은{" "}
+                <a href="https://flex.team" target="_blank">
+                  플렉스팀
+                </a>
+                에서 일합니다.
                 {lineBreak}
                 강력한 타입 시스템을 가진 언어로 작업하는 것을 선호합니다.
                 {lineBreak}
@@ -234,13 +238,16 @@ export class AboutPage extends React.Component<Props, State> {
                             ...accm,
                             accm.length + 1 === previousCompanies.length
                               ? ", and "
-                              : ", "
+                              : ", ",
                           ];
                     return [...pre, curr];
                   }, [])}
                 .{lineBreak}
-                i'm currently working at an early stage startup.
-                {lineBreak}i prefer languages which are powered by a smart type
+                i'm currently working at{" "}
+                <a href="https://flex.team" target="_blank">
+                  flex team
+                </a>
+                .{lineBreak}i prefer languages which are powered by a smart type
                 system.
                 {lineBreak}
                 nowadays, i'm deeply into bridging two worlds: programming and

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { uesMemo } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 

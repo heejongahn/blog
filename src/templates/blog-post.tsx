@@ -86,12 +86,13 @@ const BlogPost: React.SFC<{
   data: { markdownRemark: Post; previous: Post | null; next: Post | null };
 }> = ({ data }) => {
   const { markdownRemark: post, previous, next } = data;
+
+  const shareTitle = encodeURIComponent(`「${post.frontmatter.title}」`);
+
   const url = `https://ahnheejong.name${post.fields.slug}`;
-  const disqusConfig = {
-    url,
-    identifier: post.id,
-    title: post.frontmatter.title,
-  };
+  const encodedUrl = encodeURIComponent(url);
+
+  console.log(data);
 
   return (
     <Layout>
@@ -104,9 +105,22 @@ const BlogPost: React.SFC<{
         content={post.html}
         contentComponent={StyledHTMLContent}
         description={post.frontmatter.description}
+        ㅍ
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
+      <ShareLinks>
+        <ShareLink
+          href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${encodedUrl}`}
+        >
+          Twitter에 공유하기
+        </ShareLink>
+        <ShareLink
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+        >
+          Facebook에 공유하기
+        </ShareLink>
+      </ShareLinks>
       <AdjacentArticles>
         {[previous, next].map((adjacentArticle, i) =>
           adjacentArticle != null ? (
@@ -472,6 +486,33 @@ const StyledHTMLContent = styled(HTMLContent)`
         left: -18px;
         top: 0;
       }
+    }
+  }
+`;
+
+const ShareLinks = styled.div`
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 60px 0;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+const ShareLink = styled.a.attrs({ target: "_blank" })`
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-right: 24px;
+
+    @media screen and (max-width: 800px) {
+      margin-right: 0;
+      margin-bottom: 12px;
     }
   }
 `;

@@ -71,7 +71,7 @@ const Footer: React.SFC = () => (
       <MadeWithComponent target="_blank" href="https://www.netlify.com/">
         Netlify
       </MadeWithComponent>
-      + 🍷 (
+      (
       <a target="_blank" href="https://github.com/heejongahn/blog">
         source code
       </a>

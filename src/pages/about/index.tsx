@@ -126,7 +126,8 @@ export class AboutPage extends React.Component<Props, State> {
             <Section>
               <SectionTitle>반갑습니다</SectionTitle>
               <SectionContent>
-                한국에 살며 웹사이트를 만드는 안희종입니다.
+                환영합니다! 저는 안희종입니다.
+                {lineBreak}기술을 통해 가치를 만듭니다.
                 {lineBreak}
                 아름다운 것에 반하는 이들에게 반합니다.
                 {lineBreak}
@@ -153,6 +154,13 @@ export class AboutPage extends React.Component<Props, State> {
             <Section>
               <SectionTitle>일</SectionTitle>
               <SectionContent>
+                임팩트에 의해 동기부여되는 소프트웨어 엔지니어입니다.
+                {lineBreak}
+                <a href="https://flex.team" target="_blank">
+                  플렉스팀
+                </a>
+                에서 일합니다.
+                {lineBreak}
                 {previousCompanies
                   .map(({ href, title }) => (
                     <Anchor key={title.ko} target="_blank" href={href}>
@@ -160,20 +168,9 @@ export class AboutPage extends React.Component<Props, State> {
                     </Anchor>
                   ))
                   .reduce((accm, curr) => {
-                    const pre = accm.length === 0 ? [] : [...accm, ", "];
-                    return [...pre, curr];
+                    return accm.length === 0 ? [curr] : [...accm, ", ", curr];
                   }, [])}
                 에서 일했습니다.
-                {lineBreak}
-                지금은{" "}
-                <a href="https://flex.team" target="_blank">
-                  플렉스팀
-                </a>
-                에서 일합니다.
-                {lineBreak}
-                강력한 타입 시스템을 가진 언어로 작업하는 것을 선호합니다.
-                {lineBreak}
-                요즘은 개발과 디자인, 두 세계를 잇는 데에 관심이 많습니다.
                 {lineBreak}더 자세한 내용은{" "}
                 <Anchor href="/resume" target="_blank">
                   이력서
@@ -182,15 +179,9 @@ export class AboutPage extends React.Component<Props, State> {
               </SectionContent>
             </Section>
             <Section>
-              <SectionTitle>관심사</SectionTitle>
+              <SectionTitle>질문</SectionTitle>
               <SectionContent>
-                일을 안 할 때는 술을 마시거나, 책을 읽거나, 글을 씁니다.
-                {lineBreak}술 중에서도 맥주, 맥주 중에서도 스타우트를 가장
-                좋아합니다.
-                {lineBreak}
-                책은 가리지 않고 읽으려 노력하지만 읽는 책 열 권 중 아홉 권은
-                문학입니다.
-                {lineBreak}
+                무엇이 사람을 진정 자유롭게 만드는 걸까?
               </SectionContent>
             </Section>
           </Main>
@@ -199,8 +190,8 @@ export class AboutPage extends React.Component<Props, State> {
             <Section>
               <SectionTitle>welcome</SectionTitle>
               <SectionContent>
-                good to see you! i'm ahn heejong. {lineBreak}i live in south
-                korea and i make websites. i am:
+                good to see you! i'm ahn heejong.{lineBreak}i live in south
+                korea and i create value with technology.{lineBreak}i am:
                 <ul>
                   <li>admirer of those who admire beautiful things.</li>
                   <li>beer, book and triple double u enthusiast.</li>
@@ -223,7 +214,14 @@ export class AboutPage extends React.Component<Props, State> {
             <Section>
               <SectionTitle>work</SectionTitle>
               <SectionContent>
-                i worked at{" "}
+                i define myself as an impact-driven software engineer.
+                {lineBreak}
+                i'm currently working at{" "}
+                <a href="https://flex.team" target="_blank">
+                  flex team
+                </a>
+                .{lineBreak}
+                previousely, i worked at{" "}
                 {previousCompanies
                   .map(({ href, title }) => (
                     <Anchor key={title.en} target="_blank" href={href}>
@@ -231,29 +229,10 @@ export class AboutPage extends React.Component<Props, State> {
                     </Anchor>
                   ))
                   .reduce((accm, curr) => {
-                    const pre =
-                      accm.length === 0
-                        ? []
-                        : [
-                            ...accm,
-                            accm.length + 1 === previousCompanies.length
-                              ? ", and "
-                              : ", ",
-                          ];
-                    return [...pre, curr];
+                    return accm.length === 0 ? [curr] : [...accm, ", ", curr];
                   }, [])}
                 .{lineBreak}
-                i'm currently working at{" "}
-                <a href="https://flex.team" target="_blank">
-                  flex team
-                </a>
-                .{lineBreak}i prefer languages which are powered by a smart type
-                system.
-                {lineBreak}
-                nowadays, i'm deeply into bridging two worlds: programming and
-                design.
-                {lineBreak}
-                See{" "}
+                see{" "}
                 <Anchor href="/resume" target="_blank">
                   resume
                 </Anchor>{" "}
@@ -261,14 +240,8 @@ export class AboutPage extends React.Component<Props, State> {
               </SectionContent>
             </Section>
             <Section>
-              <SectionTitle>interests</SectionTitle>
-              <SectionContent>
-                i drink, read, listen to music or write during my free time.
-                {lineBreak}i prefer beer among all alcoholic drinks, and stout
-                among all beers.
-                {lineBreak}i try not to be picky on genres, but mostly end up
-                with novels somehow.
-              </SectionContent>
+              <SectionTitle>question</SectionTitle>
+              <SectionContent>what makes a person truly free?</SectionContent>
             </Section>
           </Main>
         )}

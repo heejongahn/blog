@@ -22,8 +22,6 @@ export default class IndexPage extends React.Component<Props> {
     const { edges: posts } = data.allMarkdownRemark;
 
     const now = new Date();
-    const today = `${now.getFullYear()}년 ${now.getMonth() +
-      1}월 ${now.getDate()}일 현재`;
 
     return (
       <Layout>
@@ -33,11 +31,6 @@ export default class IndexPage extends React.Component<Props> {
           url="https://ahnheejong.name/"
         />
         <section className="section">
-          <GalpiAd href="https://web.galpi.world" target="_blank">
-            광고 : 독후감 관리 앱 “갈피” 를 만들었습니다. 제가 쓰려고 만들었는데
-            다른 분들께도 유용하게 쓰이면 기쁠 것 같아요. 많이 써 보시고 의견
-            주시면 감사하겠습니다.
-          </GalpiAd>
           <Summary>
             <Intro>
               <IntroTitle>환영합니다!</IntroTitle>
@@ -46,11 +39,7 @@ export default class IndexPage extends React.Component<Props> {
                 <i>ahn heejong</i>
               </small>
               의 블로그에 잘 오셨습니다. 프로그래밍과 삶에 대한 생각을 이 곳에
-              기록으로 남기고 있습니다. {today} 총 {posts.length}
-              편의 글이 올라와 있습니다.
-              <LineBreak />
-              <LineBreak />
-              새로 올라오는 글을 받아보고 싶으시다면{" "}
+              기록으로 남깁니다. 새로 올라오는 글을 받아보고 싶으시다면{" "}
               <a href="/feed.xml" target="_blank">
                 RSS 피드
               </a>

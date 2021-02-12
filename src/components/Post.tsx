@@ -30,7 +30,7 @@ const PostItem: React.SFC<Props> = ({ post }) => {
         </PostTop>
         <Description>{post.frontmatter.description}</Description>
         <TagList>
-          {post.frontmatter.tags.map(tag => (
+          {post.frontmatter.tags.map((tag) => (
             <Tag key={tag}>{`#${tag}`}</Tag>
           ))}
         </TagList>
@@ -52,7 +52,7 @@ const Wrapper = styled.li`
   }
 
   &:nth-child(n + 2) {
-    margin-top: 12px;
+    margin-top: 36px;
   }
 
   @media screen and (max-width: 800px) {

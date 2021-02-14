@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: ‘경제적 자유’를 얻으면 정말 자유로워질까?
 date: 2021-02-14T07:00:24.459Z
-description: 무엇이 사람을 진정 자유롭게 만드는 걸까?
+description: 그 다음엔 뭐가 있을까?
 tags:
   - 에세이
   - 생각

@@ -221,7 +221,7 @@ export class AboutPage extends React.Component<Props, State> {
                   flex team
                 </a>
                 .{lineBreak}
-                previousely, i worked at{" "}
+                previously, i worked at{" "}
                 {previousCompanies
                   .map(({ href, title }) => (
                     <Anchor key={title.en} target="_blank" href={href}>

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: “제가 틀렸네요” 테스트
 date: 2021-05-02T06:36:49.151Z
-description: 꾸준한 성장을 위한 질문 하나.
+description: 꾸준한 성장을 위해 스스로 물어야 할 질문 하나.
 tags:
   - 에세이
   - 단상

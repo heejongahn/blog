@@ -7,6 +7,8 @@ tags:
   - 에세이
   - 생각
 ---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zqEdNOvCCX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 적절한 때 유효한 피드백을 주는 요령의 필요성을 요즘 들어 자주 느낀다. 공부를 하긴 해야지– 생각만 하다가, 예전에 좋게 읽은 『실리콘밸리의 팀장들』이 문득 떠올랐다. 핵심 개념를 제외하곤 기억이 흐릿해, 다시 읽으면 또 새롭게 얻는 게 있을 것 같아 이번 주에 다시 펼쳤다.
 
 책 초반에는 성장 궤도에 따라 나뉘어지는 직원에 두 분류에 관한 내용이 나온다.

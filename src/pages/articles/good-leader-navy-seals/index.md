@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: good-leader-navy-seals
+title: 좋은 리더는 항상 경계선 위를 걷는다
 date: 2021-08-31T00:16:34.182Z
 description: 정말이지 쉽지 않네
 ---

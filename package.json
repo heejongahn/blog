@@ -26,7 +26,7 @@
     "normalize.css": "^8.0.0",
     "open-color": "^1.6.3",
     "parcel-bundler": "^1.9.4",
-    "prismjs": "^1.15.0",
+    "prismjs": "^1.25.0",
     "prop-types": "^15.6.0",
     "query-string": "5",
     "react": "^16.11.0",

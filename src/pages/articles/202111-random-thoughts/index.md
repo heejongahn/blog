@@ -8,7 +8,8 @@ tags:
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eJzXph-LO5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Unplugged
+# Unplugged
+
 지난 주말엔 트위터, 인스타그램, 페이스북 앱을 지웠다. 몇 달 전부터 의미없이 계속 피드 속에 파묻혀 살아가는 데서 오는 피로감과 허무함이 쌓인 상태긴 했다. 다만 결정적인 계기는 뒤늦게 돌아보니 한 영상이었다.
 
 지난 주말, 대전에 내려갔다. 애인 집 앞 색색으로 단풍 든 거리가 예뻐서 자전거를 타고 가며 머리 위를 영상으로 찍었다. 인스타그램에 올리려는데 용량이 너무 커서 그런지 색이 날아갔다. 다양한 방법으로 우회해보려다 계속 실패해서 ‘이 색이 아니라고!’ 하면서 성질이 나던 차였다.
@@ -45,7 +46,7 @@ tags:
 
 어떤 계기를 집어내긴 어렵지만 살아가며 서서히 결함을 사랑하는, 아니 사랑은 아니어도 나름대로 재미를 찾고 함께 살아가는 법을 배웠다. 그러면서 삶에서 멋진 점을 훨씬 많이 찾을 수 있게 된 것 같다. 일상이 완벽하지 않은 게 당연하다면, 음정 박자 나간 노래에도 즐겁게 춤 출 수 있는 자의 삶이 더 풍요로울 것이다. 지금의 내가 좋다.
 
-# downwithtyou
+# downwithyou
 
 얼마 전 유튜브 알고리즘이 들려줘 간만에 듣고 또 꽂혔다. 이센스의 노래는 내 삶의 각 시기마다 다르게 와닿는 게 신기하다.
 

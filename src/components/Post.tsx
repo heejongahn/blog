@@ -1,4 +1,4 @@
-import React, { uesMemo } from "react";
+import { uesMemo } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
@@ -20,7 +20,7 @@ interface Props {
   post: Post;
 }
 
-const PostItem: React.SFC<Props> = ({ post }) => {
+const PostItem = ({ post }: Props) => {
   return (
     <Wrapper key={post.id}>
       <PostWrapper to={post.fields.slug}>

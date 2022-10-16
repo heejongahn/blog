@@ -1,4 +1,3 @@
-import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import Layout from "../components/Layout";
@@ -16,48 +15,47 @@ interface Props {
   };
 }
 
-export default class IndexPage extends React.Component<Props> {
-  render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+const IndexPage = ({ data }: Props) => {
+  const { edges: posts } = data.allMarkdownRemark;
 
-    const now = new Date();
+  const now = new Date();
 
-    return (
-      <Layout>
-        <PageHelmet
-          title="ahn.heejong"
-          description="한국에 살며 웹사이트를 만드는 안희종입니다."
-          url="https://ahnheejong.name/"
-        />
-        <section className="section">
-          <Summary>
-            <Intro>
-              <IntroTitle>환영합니다!</IntroTitle>
-              안희종
-              <small>
-                <i>ahn heejong</i>
-              </small>
-              의 블로그에 잘 오셨습니다. 프로그래밍과 삶에 대한 생각을 이 곳에
-              기록으로 남깁니다. 새로 올라오는 글을 받아보고 싶으시다면{" "}
-              <a href="/feed.xml" target="_blank">
-                RSS 피드
-              </a>
-              를 구독하세요. 저에 대해 궁금하시다면{" "}
-              <GatsbyLink to="/about">소개 페이지</GatsbyLink>에 들러보세요.
-            </Intro>
-          </Summary>
-          {/* TODO: 카테고리 */}
-          <PostList>
-            {posts.map(({ node: post }) => (
-              <PostItem key={post.id} post={post} />
-            ))}
-          </PostList>
-        </section>
-      </Layout>
-    );
-  }
-}
+  return (
+    <Layout>
+      <PageHelmet
+        title="ahn.heejong"
+        description="한국에 살며 웹사이트를 만드는 안희종입니다."
+        url="https://ahnheejong.name/"
+      />
+      <section className="section">
+        <Summary>
+          <Intro>
+            <IntroTitle>환영합니다!</IntroTitle>
+            안희종
+            <small>
+              <i>ahn heejong</i>
+            </small>
+            의 블로그에 잘 오셨습니다. 프로그래밍과 삶에 대한 생각을 이 곳에
+            기록으로 남깁니다. 새로 올라오는 글을 받아보고 싶으시다면{" "}
+            <a href="/feed.xml" target="_blank">
+              RSS 피드
+            </a>
+            를 구독하세요. 저에 대해 궁금하시다면{" "}
+            <GatsbyLink to="/about">소개 페이지</GatsbyLink>에 들러보세요.
+          </Intro>
+        </Summary>
+        {/* TODO: 카테고리 */}
+        <PostList>
+          {posts.map(({ node: post }) => (
+            <PostItem key={post.id} post={post} />
+          ))}
+        </PostList>
+      </section>
+    </Layout>
+  );
+};
+
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {

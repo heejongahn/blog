@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.footer`
@@ -45,7 +44,7 @@ const MadeWithComponent = styled.a`
   margin: 0 4px;
 `;
 
-const Footer: React.SFC = () => (
+const Footer = () => (
   <Wrapper>
     <Contact>
       <ContactItem>

@@ -1,15 +1,13 @@
-import React from "react";
-
 interface Props {
   content: string;
   className: string;
 }
 
-export const HTMLContent: React.SFC<Props> = ({ content, className }) => (
+export const HTMLContent = ({ content, className }: Props) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
 );
 
-const Content: React.SFC<Props> = ({ content, className }) => (
+const Content = ({ content, className }: Props) => (
   <div className={className}>{content}</div>
 );
 

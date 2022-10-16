@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "ahn.heejong",
     description: "한국에 살며 웹사이트를 만드는 안희종입니다.",
-    siteUrl: "https://ahnheejong.name"
+    siteUrl: "https://ahnheejong.name",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -24,22 +24,22 @@ module.exports = {
         `,
         feeds: [
           {
-            setup: locals => {
+            setup: (locals) => {
               return {
                 ...locals,
                 ...locals.query.site.siteMetadata,
                 site_url: "https://ahnheejong.name/",
-                feed_url: "https://ahnheejong.name/feed.xml"
+                feed_url: "https://ahnheejong.name/feed.xml",
               };
             },
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 const articleUrl = `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`;
 
                 return {
                   ...edge.node.frontmatter,
                   url: articleUrl,
-                  guid: articleUrl
+                  guid: articleUrl,
                 };
               });
             },
@@ -62,21 +62,22 @@ module.exports = {
                 }
               }
             `,
-            output: "/feed.xml"
-          }
-        ]
-      }
+            output: "/feed.xml",
+            title: "ahnheejong.name RSS 피드",
+          },
+        ],
+      },
     },
     {
       resolve: "gatsby-plugin-styled-components",
-      options: {}
+      options: {},
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
+        name: "pages",
+      },
     },
     {
       resolve: "gatsby-transformer-remark",
@@ -84,34 +85,27 @@ module.exports = {
         plugins: [
           `gatsby-remark-autolink-headers`,
           {
-            resolve: "gatsby-remark-prismjs"
-          }
-        ]
-      }
+            resolve: "gatsby-remark-prismjs",
+          },
+        ],
+      },
     },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     path: `${__dirname}/src/img`,
-    //     name: "images"
-    //   }
-    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-102906433-1",
         respectDNT: true,
-        exclude: ["/public/**", "/admin/**"]
-      }
+        exclude: ["/public/**", "/admin/**"],
+      },
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
     },
-    "gatsby-plugin-netlify" // make sure to keep it last in the array
-  ]
+    "gatsby-plugin-netlify", // make sure to keep it last in the array
+  ],
 };

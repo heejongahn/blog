@@ -2,7 +2,12 @@ const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+
+  createRedirect({
+    fromPath: `/articles`,
+    toPath: `/`,
+  });
 
   return graphql(`
     {
@@ -30,15 +35,15 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()));
+      result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }
 
     const posts = result.data.allMarkdownRemark.edges;
 
-    posts.forEach(edge => {
+    posts.forEach((edge) => {
       const { node, previous, next } = edge;
       const id = node.id;
 
@@ -54,15 +59,15 @@ exports.createPages = ({ actions, graphql }) => {
           previousId: previous != null ? previous.id : null,
           hasPrevious: previous != null,
           nextId: next != null ? next.id : null,
-          hasNext: next != null
-        }
+          hasNext: next != null,
+        },
       });
     });
 
     // Tag pages:
     let tags = [];
     // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(edge => {
+    posts.forEach((edge) => {
       if (edge.node.frontmatter.tags) {
         tags = tags.concat(edge.node.frontmatter.tags);
       }
@@ -71,15 +76,15 @@ exports.createPages = ({ actions, graphql }) => {
     tags = [...new Set(tags)];
 
     // Make tag pages
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       const tagPath = `/tags/${tag}/`;
 
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tags.tsx`),
         context: {
-          tag
-        }
+          tag,
+        },
       });
     });
   });
@@ -93,7 +98,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
+};
+
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPreset({
+    name: "babel-preset-gatsby",
+    options: {
+      reactRuntime: "automatic",
+    },
+  });
 };

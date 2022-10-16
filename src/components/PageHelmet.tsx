@@ -1,4 +1,3 @@
-import * as React from "react";
 import Helmet from "react-helmet";
 
 interface Props {
@@ -7,11 +6,7 @@ interface Props {
   description?: string;
 }
 
-const PageHelmet: React.SFC<Props> = ({
-  title,
-  url,
-  description = "ahnheejong.name"
-}) => (
+const PageHelmet = ({ title, url, description = "ahnheejong.name" }: Props) => (
   <Helmet title={title}>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 

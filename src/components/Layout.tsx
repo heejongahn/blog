@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 import Navbar from "./Navbar";
@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 import "./all.scss";
 
-const TemplateWrapper: React.SFC = ({ children }) => (
+const TemplateWrapper = ({ children }: { children: ReactNode }) => (
   <Wrapper>
     <Navbar />
     <Content>{children}</Content>

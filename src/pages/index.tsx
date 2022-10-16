@@ -1,9 +1,8 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import PostItem, { Post, PostList } from "../components/Post";
 import PageHelmet from "../components/PageHelmet";
-import GatsbyLink from "gatsby-link";
 
 interface Props {
   data: {
@@ -41,7 +40,7 @@ const IndexPage = ({ data }: Props) => {
               RSS 피드
             </a>
             를 구독하세요. 저에 대해 궁금하시다면{" "}
-            <GatsbyLink to="/about">소개 페이지</GatsbyLink>에 들러보세요.
+            <Link to="/about">소개 페이지</Link>에 들러보세요.
           </Intro>
         </Summary>
         {/* TODO: 카테고리 */}
@@ -72,7 +71,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date
             description
             tags
           }

@@ -1,6 +1,6 @@
-import { uesMemo } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { formatDate } from "../utils";
 
 export interface Post {
   id: string;
@@ -26,7 +26,7 @@ const PostItem = ({ post }: Props) => {
       <PostWrapper to={post.fields.slug}>
         <PostTop>
           <PostTitle>{post.frontmatter.title}</PostTitle>
-          <PublishedDate>{post.frontmatter.date}</PublishedDate>
+          <PublishedDate>{formatDate(post.frontmatter.date)}</PublishedDate>
         </PostTop>
         <Description>{post.frontmatter.description}</Description>
         <TagList>
@@ -78,7 +78,9 @@ const PostTitle = styled.h2`
   overflow-wrap: break-word;
 `;
 
-const PublishedDate = styled.small``;
+const PublishedDate = styled.time`
+  font-size: 12px;
+`;
 
 const Description = styled.div`
   word-break: keep-all;

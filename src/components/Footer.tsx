@@ -62,19 +62,9 @@ const Footer = () => (
       </ContactItem>
     </Contact>
     <MadeWith>
-      made with
-      <MadeWithComponent target="_blank" href="https://www.gatsbyjs.org/">
-        Gatsby
-      </MadeWithComponent>
-      +
-      <MadeWithComponent target="_blank" href="https://www.netlify.com/">
-        Netlify
-      </MadeWithComponent>
-      (
       <a target="_blank" href="https://github.com/heejongahn/blog">
         source code
       </a>
-      )
     </MadeWith>
   </Wrapper>
 );

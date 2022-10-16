@@ -1,39 +1,44 @@
-import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import styled from "styled-components";
 import PageHelmet from "../components/PageHelmet";
-import GatsbyLink from "gatsby-link";
+import { formatDate } from "../utils";
 
 interface Props {
   content: any;
   contentComponent: any;
   description: string;
   title: string;
+  date: string;
   tags: string[];
 }
 
-export const BlogPostTemplate: React.SFC<Props> = ({
+export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
   tags,
   title,
-}) => {
+  date,
+}: Props) => {
   const PostContent = contentComponent || Content;
 
   return (
     <Wrapper>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <TagList>
-        {tags.map((tag) => (
-          <Tag key={tag + `tag`}>
-            <Link to={`/tags/${tag}/`}>{`#${tag}`}</Link>
-          </Tag>
-        ))}
-      </TagList>
+      <Extra>
+        <PublishedDate>{date}</PublishedDate>
+        <ExtraDivider aria-hidden>·</ExtraDivider>
+        <TagList>
+          {tags.map((tag) => (
+            <Tag key={tag + `tag`}>
+              <Link to={`/tags/${tag}/`}>{`#${tag}`}</Link>
+            </Tag>
+          ))}
+        </TagList>
+      </Extra>
       <PostContent content={content} />
     </Wrapper>
   );
@@ -51,11 +56,26 @@ const Title = styled.h1`
 const Description = styled.div`
   word-break: keep-all;
   overflow-wrap: break-word;
-  margin-top: 1em;
+  margin-top: 12px;
+`;
+
+const Extra = styled.div`
+  margin: 16px 0;
+
+  display: flex;
+  align-items: center;
+  font-size: 0.75em;
+`;
+
+const PublishedDate = styled.time`
+  display: block;
+`;
+
+const ExtraDivider = styled.div`
+  margin: 0 6px;
 `;
 
 const TagList = styled.ul`
-  margin-top: 0.5em;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -63,8 +83,6 @@ const TagList = styled.ul`
 
 const Tag = styled.li`
   list-style-type: none;
-  font-size: 0.75em;
-  margin-bottom: 4px;
 
   &:not(:last-child) {
     margin-right: 8px;
@@ -82,17 +100,17 @@ interface Post {
   };
 }
 
-const BlogPost: React.SFC<{
+const BlogPost = ({
+  data,
+}: {
   data: { markdownRemark: Post; previous: Post | null; next: Post | null };
-}> = ({ data }) => {
+}) => {
   const { markdownRemark: post, previous, next } = data;
 
   const shareTitle = encodeURIComponent(`「${post.frontmatter.title}」`);
 
   const url = `https://ahnheejong.name${post.fields.slug}`;
   const encodedUrl = encodeURIComponent(url);
-
-  console.log(data);
 
   return (
     <Layout>
@@ -105,7 +123,7 @@ const BlogPost: React.SFC<{
         content={post.html}
         contentComponent={StyledHTMLContent}
         description={post.frontmatter.description}
-        ㅍ
+        date={formatDate(post.frontmatter.date)}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
@@ -159,7 +177,7 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         title
         description
         tags
@@ -196,7 +214,7 @@ const AdjacentArticles = styled.div`
   }
 `;
 
-const AdjacentArticle = styled(GatsbyLink)`
+const AdjacentArticle = styled(Link)`
   flex: 1 1 50%;
 
   display: flex;
@@ -222,7 +240,11 @@ const AdjacentArticle = styled(GatsbyLink)`
 
   @media screen and (max-width: 800px) {
     flex-basis: 100%;
-    margin: 6px 0;
+
+    &:first-child,
+    &:last-child {
+      margin: 6px 0;
+    }
   }
 `;
 

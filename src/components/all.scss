@@ -43,10 +43,10 @@ h6 {
 
 a {
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color 0.1s ease;
 
   &:hover {
-    color: red;
+    color: $oc-orange-7;
   }
 }
 
@@ -54,4 +54,10 @@ ol,
 ul {
   margin: 0;
   padding: 0;
+}
+
+hr {
+  margin: 48px 0;
+  border: 0;
+  border-top: 1px solid $oc-gray-5;
 }

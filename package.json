@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "babel-preset-gatsby": "^2.24.0",
+    "date-fns": "^2.29.3",
     "gatsby": "^4.24.4",
     "gatsby-plugin-feed": "^4.24.0",
     "gatsby-plugin-google-analytics": "^4.24.0",

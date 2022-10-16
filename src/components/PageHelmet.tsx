@@ -8,6 +8,13 @@ interface Props {
 
 const PageHelmet = ({ title, url, description = "ahnheejong.name" }: Props) => (
   <Helmet title={title}>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossOrigin="anonymous"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
+
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <meta name="description" content={description} />

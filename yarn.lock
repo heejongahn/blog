@@ -5663,6 +5663,7 @@ __metadata:
     gatsby-transformer-remark: ^5.24.0
     gatsby-transformer-sharp: ^4.24.0
     mz: ^2.7.0
+    node-gyp: ^9.3.0
     normalize.css: ^8.0.0
     open-color: ^1.6.3
     parcel-bundler: ^1.9.4
@@ -14543,7 +14544,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-gyp@npm:latest":
+"node-gyp@npm:^9.3.0, node-gyp@npm:latest":
   version: 9.3.0
   resolution: "node-gyp@npm:9.3.0"
   dependencies:

@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: transition-to-product-manager
+title: Product Manager로의 직무 전환 이야기
 date: 2022-12-25T07:53:26.167Z
 description: 6년의 Product Engineer 커리어를 마무리하고 Product Manager로 일하게 된 이야기.
 tags:

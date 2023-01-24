@@ -6,4 +6,12 @@ node_modules
 public/
 static/admin/*.bundle.*
 .DS_Store
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 yarn-error.log

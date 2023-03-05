@@ -62,7 +62,7 @@
     "@types/react-helmet": "^6.1.5",
     "@types/styled-components": "^5.1.26",
     "airtable": "^0.11.6",
-    "axios": "^0.18.0",
+    "axios": "^0.21.2",
     "dotenv": "^16.0.3",
     "mz": "^2.7.0",
     "prettier": "^1.7.4",

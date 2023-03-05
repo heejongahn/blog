@@ -1,8 +1,7 @@
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import { Post } from "../types";
 import Layout from "../components/Layout";
-import PostItem, { PostList } from "../components/Post";
 import PageHelmet from "../components/PageHelmet";
 
 interface Props {
@@ -16,10 +15,6 @@ interface Props {
 }
 
 const IndexPage = ({ data }: Props) => {
-  const { edges: posts } = data.allMarkdownRemark;
-
-  const now = new Date();
-
   return (
     <Layout>
       <PageHelmet
@@ -35,64 +30,38 @@ const IndexPage = ({ data }: Props) => {
             <small>
               <i>ahn heejong</i>
             </small>
-            의 블로그에 잘 오셨습니다. 프로그래밍과 삶에 대한 생각을 이 곳에
-            기록으로 남깁니다. 새로 올라오는 글을 받아보고 싶으시다면{" "}
+            의 블로그에 잘 오셨습니다. 대문을 어떻게 새로 단장할지 고민하고
+            있습니다. 아이디어가 있으시다면{" "}
+            <a href="mailto:heejongahn@gmail.com" target="_blank">
+              메일
+            </a>{" "}
+            보내주시면 감사하겠습니다.
+            <br />
+            <br />
+            새로 올라오는 글을 받아보고 싶으시다면{" "}
             <a href="/feed.xml" target="_blank">
               RSS 피드
             </a>
-            를 구독하세요. 저에 대해 궁금하시다면{" "}
-            <Link to="/about">소개 페이지</Link>에 들러보세요.
+            를 구독하세요.
           </Intro>
         </Summary>
-        {/* TODO: 카테고리 */}
-        <PostList>
-          {posts.map(({ node: post }) => (
-            <PostItem key={post.id} post={post} />
-          ))}
-        </PostList>
+        <MenuList>
+          <MenuListItem>
+            <Link to="/articles">길고 짧은 글 읽기</Link>
+          </MenuListItem>
+          <MenuListItem>
+            <Link to="/reviews">리뷰 읽기</Link>
+          </MenuListItem>
+          <MenuListItem>
+            <Link to="/about">소개 읽기</Link>
+          </MenuListItem>
+        </MenuList>
       </section>
     </Layout>
   );
 };
 
 export default IndexPage;
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date
-            description
-            tags
-          }
-        }
-      }
-    }
-  }
-`;
-
-const GalpiAd = styled.a`
-  display: block;
-
-  padding: 12px;
-  border-radius: 4px;
-  border: 2px dashed #888888;
-  line-height: 1.6;
-
-  font-weight: bold;
-  margin-bottom: 24px;
-`;
 
 const Summary = styled.section`
   display: flex;
@@ -120,6 +89,11 @@ const IntroTitle = styled.div`
   font-size: 1.2em;
 `;
 
-const LineBreak = styled.br`
+const MenuList = styled.ul`
+  margin: 12px 0;
+  list-style-position: inside;
+`;
+
+const MenuListItem = styled.li`
   margin: 12px 0;
 `;

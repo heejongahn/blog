@@ -1,15 +1,58 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage, createRedirect } = actions;
+function buildPostPage(post, createPage) {
+  const { node, previous, next } = post;
+  const id = node.id;
 
-  createRedirect({
-    fromPath: `/articles`,
-    toPath: `/`,
+  createPage({
+    path: node.fields.slug,
+    tags: node.frontmatter.tags,
+    component: path.resolve(
+      `src/templates/${String(node.frontmatter.templateKey)}.tsx`
+    ),
+    // additional data can be passed via context
+    context: {
+      id,
+      previousId: previous != null ? previous.id : null,
+      hasPrevious: previous != null,
+      nextId: next != null ? next.id : null,
+      hasNext: next != null,
+    },
   });
+}
 
-  return graphql(`
+function buildTagPage(tag, createPage) {
+  const tagPath = `/tags/${tag}/`;
+
+  createPage({
+    path: tagPath,
+    component: path.resolve(`src/templates/tags.tsx`),
+    context: {
+      tag,
+    },
+  });
+}
+
+function buildReviewPage(review, createPage) {
+  const { node } = review;
+  const id = node.id;
+
+  createPage({
+    path: node.fields.slug,
+    component: path.resolve(
+      `src/templates/${String(node.frontmatter.templateKey)}.tsx`
+    ),
+    context: {
+      id,
+    },
+  });
+}
+
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+
+  const postResult = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: ASC, fields: [frontmatter___date] }
@@ -35,59 +78,61 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then((result) => {
-    if (result.errors) {
-      result.errors.forEach((e) => console.error(e.toString()));
-      return Promise.reject(result.errors);
-    }
+  `);
 
-    const posts = result.data.allMarkdownRemark.edges;
-
-    posts.forEach((edge) => {
-      const { node, previous, next } = edge;
-      const id = node.id;
-
-      createPage({
-        path: node.fields.slug,
-        tags: node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}.tsx`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-          previousId: previous != null ? previous.id : null,
-          hasPrevious: previous != null,
-          nextId: next != null ? next.id : null,
-          hasNext: next != null,
-        },
-      });
-    });
-
-    // Tag pages:
-    let tags = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach((edge) => {
-      if (edge.node.frontmatter.tags) {
-        tags = tags.concat(edge.node.frontmatter.tags);
+  const reviewResults = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { order: ASC, fields: [frontmatter___date] }
+        filter: { frontmatter: { templateKey: { eq: "review" } } }
+      ) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              type
+              name
+              title
+              date
+              stars
+              link
+              image
+              templateKey
+              date
+            }
+          }
+        }
       }
-    });
-    // Eliminate duplicate tags
-    tags = [...new Set(tags)];
+    }
+  `);
 
-    // Make tag pages
-    tags.forEach((tag) => {
-      const tagPath = `/tags/${tag}/`;
+  if (postResult.errors) {
+    postResult.errors.forEach((e) => console.error(e.toString()));
+    return Promise.reject(postResult.errors);
+  }
 
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.tsx`),
-        context: {
-          tag,
-        },
-      });
-    });
-  });
+  if (reviewResults.errors) {
+    reviewResults.errors.forEach((e) => console.error(e.toString()));
+    return Promise.reject(reviewResults.errors);
+  }
+
+  const posts = postResult.data.allMarkdownRemark.edges;
+  posts.forEach((post) => buildPostPage(post, createPage));
+
+  const tags = new Set(
+    posts.reduce((accm, curr) => {
+      const { tags } = curr.node.frontmatter;
+      return tags ? accm.concat(tags) : acmm;
+    }, [])
+  );
+
+  tags.forEach((tag) => buildTagPage(tag, createPage));
+
+  const reviews = reviewResults.data.allMarkdownRemark.edges;
+  reviews.forEach((review) => buildReviewPage(review, createPage));
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

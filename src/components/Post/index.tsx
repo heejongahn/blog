@@ -38,10 +38,6 @@ const Wrapper = styled.li`
     background-color: rgba(0, 0, 0, 0.02);
   }
 
-  &:nth-child(n + 2) {
-    margin-top: 36px;
-  }
-
   @media screen and (max-width: 800px) {
     padding: 12px;
   }
@@ -97,5 +93,9 @@ export const PostList = styled.ol`
 
   @media screen and (max-width: 800px) {
     margin: 0 -12px;
+  }
+
+  & > *:not(:first-child) {
+    margin-top: 36px;
   }
 `;

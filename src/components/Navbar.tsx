@@ -1,16 +1,46 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+import {
+  faInfo,
+  faCommentDots,
+  faNewspaper,
+} from "@fortawesome/free-solid-svg-icons";
+import Icon from "./Icon";
 
-const Navbar = () => (
-  <Wrapper>
-    <NavItem to="/" style={{ fontWeight: "bold" }} activeClassName="nav-active">
-      ahn.heejong
-    </NavItem>
-    <NavItem to="/about" activeClassName="nav-active">
-      about
-    </NavItem>
-  </Wrapper>
-);
+const Navbar = () => {
+  return (
+    <Wrapper>
+      <NavItem
+        to="/"
+        style={{ fontWeight: "bold", opacity: 1 }}
+        activeClassName="nav-active"
+      >
+        ahn.heejong
+      </NavItem>
+      <Right>
+        <NavItem
+          to="/articles"
+          activeClassName="nav-active"
+          partiallyActive
+          aria-label="블로그"
+        >
+          <Icon icon={faNewspaper} />
+        </NavItem>
+        <NavItem
+          to="/reviews"
+          activeClassName="nav-active"
+          partiallyActive
+          aria-label="리뷰"
+        >
+          <Icon icon={faCommentDots} />
+        </NavItem>
+        <NavItem to="/about" activeClassName="nav-active" aria-label="소개글">
+          <Icon icon={faInfo} />
+        </NavItem>
+      </Right>
+    </Wrapper>
+  );
+};
 
 export default Navbar;
 
@@ -36,13 +66,31 @@ const Wrapper = styled.nav`
 const NavItem = styled(Link)`
   text-decoration: none;
   font-size: 1.25rem;
+  opacity: 0.6;
 
   &:active,
   &:focus {
     color: initial;
   }
 
+  &:hover {
+    opacity: 1;
+  }
+
+  &.nav-active {
+    opacity: 1;
+  }
+
   &.nav-active:hover {
     color: initial;
+  }
+`;
+
+const Right = styled.div`
+  display: flex;
+  align-items: center;
+
+  & > *:not(:first-child) {
+    margin-left: 24px;
   }
 `;

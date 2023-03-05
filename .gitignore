@@ -15,3 +15,5 @@ static/admin/*.bundle.*
 !.yarn/sdks
 !.yarn/versions
 yarn-error.log
+
+.env

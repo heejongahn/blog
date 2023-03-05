@@ -2589,6 +2589,52 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/fontawesome-common-types@npm:6.3.0":
+  version: 6.3.0
+  resolution: "@fortawesome/fontawesome-common-types@npm:6.3.0"
+  checksum: ece71539190abb17144861c58d65b6cd818d38a28cc3c9694325f5dca13739b2d78655e7bc1cba58cc13947f5ca80659e87c5c8bee7beb77d7f991e508312146
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-svg-core@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@fortawesome/fontawesome-svg-core@npm:6.3.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": 6.3.0
+  checksum: 2479d4b0dc45bba2638b05ba816df91fad6331cd3254d846705a0c342dc12259724706066c71461809804b4f41f15425439cfbabc42d7918e6c26b2b467b4b59
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-regular-svg-icons@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@fortawesome/free-regular-svg-icons@npm:6.3.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": 6.3.0
+  checksum: 5efc11add7c312839625f2e25a82ed22c328b3fdc10ae2cccb865526728d388ddf23682a8ef68b1cc4b595e6c4a183e8cbe54a95ed99b750932412cf5967c0f5
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@fortawesome/free-solid-svg-icons@npm:6.3.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": 6.3.0
+  checksum: 5cffcdb954f9ea8d48c6872118f21840f206d6279a6b803a31563e48fee34fbf5bc05848f5dedf07fc16f60910712c6bd0dc83f7a4e408cf062153a48022525d
+  languageName: node
+  linkType: hard
+
+"@fortawesome/react-fontawesome@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@fortawesome/react-fontawesome@npm:0.2.0"
+  dependencies:
+    prop-types: ^15.8.1
+  peerDependencies:
+    "@fortawesome/fontawesome-svg-core": ~1 || ~6
+    react: ">=16.3"
+  checksum: f652a0c2172e7b209e2d9e7e511f9b8c17abad85f55e0bd09bb1175ea1927693215da47eb6cd95b1f3a23bd124368553c677907fa76cb17c5093afc1fcffe338
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -4107,6 +4153,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:>=8.0.0 <15":
+  version: 14.18.37
+  resolution: "@types/node@npm:14.18.37"
+  checksum: d21e8c58ddd01ae069b196c2a4eaf9c9749e6666565349667334c60cfc119c1fa280234a8001157dd7ffe73501ce4f4940ca05f9d5c402c5abe78c8dca8376a6
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^8.5.7":
   version: 8.10.66
   resolution: "@types/node@npm:8.10.66"
@@ -4553,7 +4606,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"abortcontroller-polyfill@npm:^1.1.9":
+"abort-controller@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "abort-controller@npm:3.0.0"
+  dependencies:
+    event-target-shim: ^5.0.0
+  checksum: 170bdba9b47b7e65906a28c8ce4f38a7a369d78e2271706f020849c1bfe0ee2067d4261df8bbb66eb84f79208fd5b710df759d64191db58cfba7ce8ef9c54b75
+  languageName: node
+  linkType: hard
+
+"abortcontroller-polyfill@npm:^1.1.9, abortcontroller-polyfill@npm:^1.4.0":
   version: 1.7.5
   resolution: "abortcontroller-polyfill@npm:1.7.5"
   checksum: daf4169f4228ae0e4f4dbcfa782e501b923667f2666b7c55bd3b7664e5d6b100e333a93371173985fdf21f65d7dfba15bdb2e6031bdc9e57e4ce0297147da3aa
@@ -4699,6 +4761,19 @@ __metadata:
     clean-stack: ^2.0.0
     indent-string: ^4.0.0
   checksum: 1101a33f21baa27a2fa8e04b698271e64616b886795fd43c31068c07533c7b3facfcaf4e9e0cab3624bd88f729a592f1c901a1a229c9e490eafce411a8644b79
+  languageName: node
+  linkType: hard
+
+"airtable@npm:^0.11.6":
+  version: 0.11.6
+  resolution: "airtable@npm:0.11.6"
+  dependencies:
+    "@types/node": ">=8.0.0 <15"
+    abort-controller: ^3.0.0
+    abortcontroller-polyfill: ^1.4.0
+    lodash: ^4.17.21
+    node-fetch: ^2.6.7
+  checksum: 758d3109914b09d2216645d10b7cff3a2a7f1821184e71dc012407b034174a1b3ada26206ea4a9eaf586a5da05178ee4ca0c76b71630c858e998e4f4d1208942
   languageName: node
   linkType: hard
 
@@ -5639,14 +5714,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog@workspace:."
   dependencies:
+    "@fortawesome/fontawesome-svg-core": ^6.3.0
+    "@fortawesome/free-regular-svg-icons": ^6.3.0
+    "@fortawesome/free-solid-svg-icons": ^6.3.0
+    "@fortawesome/react-fontawesome": ^0.2.0
     "@types/query-string": 5
     "@types/react": ^18.0.21
     "@types/react-helmet": ^6.1.5
     "@types/styled-components": ^5.1.26
+    airtable: ^0.11.6
     axios: ^0.18.0
     babel-plugin-styled-components: ^2.0.7
     babel-preset-gatsby: ^2.24.0
     date-fns: ^2.29.3
+    dotenv: ^16.0.3
     gatsby: ^4.24.4
     gatsby-plugin-feed: ^4.24.0
     gatsby-plugin-google-analytics: ^4.24.0
@@ -8240,6 +8321,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.0.3":
+  version: 16.0.3
+  resolution: "dotenv@npm:16.0.3"
+  checksum: afcf03f373d7a6d62c7e9afea6328e62851d627a4e73f2e12d0a8deae1cd375892004f3021883f8aec85932cd2834b091f568ced92b4774625b321db83b827f8
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:^5.0.0":
   version: 5.0.1
   resolution: "dotenv@npm:5.0.1"
@@ -9124,6 +9212,13 @@ __metadata:
   version: 1.0.25
   resolution: "event-source-polyfill@npm:1.0.25"
   checksum: ed30428cc80eadfd693d267ba4a72dceaae938174cd116081ce38ad62bfd95f199430be7e8341e6f8f1e29489bbd5cfd4b3f6c8d6d463435623f7f91ae5f71b1
+  languageName: node
+  linkType: hard
+
+"event-target-shim@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "event-target-shim@npm:5.0.1"
+  checksum: 1ffe3bb22a6d51bdeb6bf6f7cf97d2ff4a74b017ad12284cc9e6a279e727dc30a5de6bb613e5596ff4dc3e517841339ad09a7eec44266eccb1aa201a30448166
   languageName: node
   linkType: hard
 

@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "author": "Ahn Heejong",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "babel-plugin-styled-components": "^2.0.7",
     "babel-preset-gatsby": "^2.24.0",
     "date-fns": "^2.29.3",
@@ -47,6 +51,7 @@
     "clean": "yarn rimraf .cache public",
     "build": "yarn clean && gatsby build",
     "develop": "yarn clean && gatsby develop",
+    "get-data": "yarn node scripts/get-data.js",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -56,7 +61,9 @@
     "@types/react": "^18.0.21",
     "@types/react-helmet": "^6.1.5",
     "@types/styled-components": "^5.1.26",
+    "airtable": "^0.11.6",
     "axios": "^0.18.0",
+    "dotenv": "^16.0.3",
     "mz": "^2.7.0",
     "prettier": "^1.7.4",
     "rimraf": "^2.6.2",

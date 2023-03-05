@@ -6,7 +6,7 @@ title: "모두 함께 갈 수 없다면 결국 누구도 갈 수 없을지 몰�
 date: "2021-04-04"
 stars: 7
 link: "https://product.kyobobook.co.kr/detail/S000001826105"
-image: "/assets/review/book/the-tyranny-of-merit.jpg"
+image: "/assets/reviews/book/the-tyranny-of-merit.jpg"
 ---
 명제와 논리에 대해 가장 처음 배우는 것 하나가 어떤 명제와 그 대우, 즉 가정과 결론의 위치를 뒤집고 둘 다 부정한 명제는 동치(同値)라는 사실이다. 즉, 둘 중 하나가 참이면 다른 하나도 참이고, 둘 중 하나가 거짓이면 다른 하나도 거짓이다.
 

@@ -1,7 +1,8 @@
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
+import { Post } from "../types";
 import Layout from "../components/Layout";
-import PostItem, { Post, PostList } from "../components/Post";
+import PostItem, { PostList } from "../components/Post";
 import PageHelmet from "../components/PageHelmet";
 
 interface Props {

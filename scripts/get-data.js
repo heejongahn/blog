@@ -11,6 +11,7 @@ const REVIEW_TABLE_ID = "Review";
 
 const DATA_LIB_BASEPATH = path.join(__dirname, "..", "data");
 const ASSET_BASEPATH = path.join(__dirname, "..", "static", "assets");
+const REVIEWS_FOLDER_NAME = "reviews";
 
 function init() {
   Airtable.configure({ apiKey: process.env.AIRTABLE_TOKEN });
@@ -30,12 +31,16 @@ async function writeReviewFile({
 }) {
   const markdownFilePath = path.join(
     DATA_LIB_BASEPATH,
-    "review",
+    REVIEWS_FOLDER_NAME,
     type.toLowerCase(),
     `${slug}.md`
   );
 
-  const imagePath = path.join("review", type.toLowerCase(), `${slug}.jpg`); // FIXME: 확장자 파일에서 추출해서 사용
+  const imagePath = path.join(
+    REVIEWS_FOLDER_NAME,
+    type.toLowerCase(),
+    `${slug}.jpg`
+  ); // FIXME: 확장자 파일에서 추출해서 사용
 
   const imageFilePath = path.join(ASSET_BASEPATH, imagePath);
 

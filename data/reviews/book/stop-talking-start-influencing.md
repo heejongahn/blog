@@ -6,7 +6,7 @@ title: "다음 발표는 다를거야"
 date: "2020-09-27"
 stars: 7
 link: "https://product.kyobobook.co.kr/detail/S000001767943"
-image: "/assets/review/book/stop-talking-start-influencing.jpg"
+image: "/assets/reviews/book/stop-talking-start-influencing.jpg"
 ---
 제목을 보고는 뇌의 일반적인 동작 원리를 다루는 교양서를 예상했지만, 막상 읽어보니 그렇지 않았다. 이 책은 ‘어떻게 사람들에게 정보, 또 아이디어를 잘 전달할 수 있을까’ 라는 꽤나 구체적, 실용적인 질문에 답하고자 뇌과학의 다양한 발견을 차례로 소개하는 식으로 구성되어 있다. 목표가 명확한 덕분에 적지 않은 개념을 소개함에도 산만하지 않고, 책의 여러 부분이 자연스레 연결된다. 책 어디서든 고개를 들어 바라볼 수 있는 명확한 랜드마크가 존재하는 느낌!
 

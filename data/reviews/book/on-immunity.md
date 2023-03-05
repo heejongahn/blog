@@ -6,7 +6,7 @@ title: "우린 모두 이어져 있는거야"
 date: "2021-01-02"
 stars: 9
 link: "https://product.kyobobook.co.kr/detail/S000000581896"
-image: "/assets/review/book/on-immunity.jpg"
+image: "/assets/reviews/book/on-immunity.jpg"
 ---
 산업기능요원 기초군사훈련을 받을 때 훈련소에 가져가서 이 책을 처음 읽었다. ‘집단 면역이라는 개념 등 신기한 사실을 많이 배웠다’, ‘에세이도 이렇게 재미있게 쓸 수 있구나’, 또 ‘나도 이런 에세이를 쓸 수 있는 사람이 되고 싶다’ 등의 생각을 했던 것 같다. 최근 [두고두고](https://twitter.com/doogodoogobooks)에서 함께 읽을 책으로 선정되어 다시 한 번 읽게 되었다.
 

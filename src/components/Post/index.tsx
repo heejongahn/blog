@@ -1,20 +1,7 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { formatDate } from "../utils";
-
-export interface Post {
-  id: string;
-  fields: {
-    slug: string;
-  };
-  frontmatter: {
-    title: string;
-    date: Date;
-    description: string;
-    body: string;
-    tags: string[];
-  };
-}
+import { formatDate } from "../../utils";
+import { Post } from "../../types";
 
 interface Props {
   post: Post;

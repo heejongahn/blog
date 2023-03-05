@@ -6,7 +6,7 @@ title: "계약서는 꼼꼼히 읽고 사인합시다"
 date: "2020-05-17"
 stars: 10
 link: "https://product.kyobobook.co.kr/detail/S000001032954"
-image: "/assets/review/book/are-your-lights-on.jpg"
+image: "/assets/reviews/book/are-your-lights-on.jpg"
 ---
 언젠가부터 온갖 리소스가 죄다 일 더 잘하기 위한 힌트로 보인다.
 

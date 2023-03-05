@@ -6,7 +6,7 @@ title: "흥미로운 아이디어, 아쉬운 설득력"
 date: "2020-06-23"
 stars: 6
 link: "https://product.kyobobook.co.kr/detail/S000001029370"
-image: "/assets/review/book/loonshots.jpg"
+image: "/assets/reviews/book/loonshots.jpg"
 ---
 『룬샷』은 – 표지의 문구를 빌리자면 – “전쟁, 질병, 불황의 위기를 승리로 이끄는 설계의 힘”을 소개하는 책이다. 저자에 따르면 그 비밀 소스(“부시–베일 법칙”)는 다음과 같다.
 

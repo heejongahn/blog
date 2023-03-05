@@ -6,7 +6,7 @@ title: "셔츠 앞 이름을 위해 경기하라, 셔츠 뒤 이름이 기억될
 date: "2020-07-20"
 stars: 7
 link: "https://product.kyobobook.co.kr/detail/S000001029288"
-image: "/assets/review/book/ego-is-the-enemy.jpg"
+image: "/assets/reviews/book/ego-is-the-enemy.jpg"
 ---
 『에고라는 적』은 열망, 성공, 실패라는 세 단계로 이루어진 삶의 반복되는 고리에서 자의식이 어떻게 해를 끼칠 수 있는지, 그리고 어떻게 에고라는 적을 이겨내고 더 나은 사람이 될 수 있는지에 대해 이야기하는 책이다.
 

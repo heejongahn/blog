@@ -9974,6 +9974,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
+        ["npm:4.12.0", {\
+          "packageLocation": "./.yarn/cache/bn.js-npm-4.12.0-3ec6c884f6-39afb4f15f.zip/node_modules/bn.js/",\
+          "packageDependencies": [\
+            ["bn.js", "npm:4.12.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:5.1.3", {\
           "packageLocation": "./.yarn/cache/bn.js-npm-5.1.3-f8c9aed796-6a51cf4869.zip/node_modules/bn.js/",\
           "packageDependencies": [\
@@ -10179,7 +10186,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browserify-rsa", "npm:4.1.0"],\
             ["create-hash", "npm:1.2.0"],\
             ["create-hmac", "npm:1.1.7"],\
-            ["elliptic", "npm:6.5.3"],\
+            ["elliptic", "npm:6.5.4"],\
             ["inherits", "npm:2.0.4"],\
             ["parse-asn1", "npm:5.1.6"],\
             ["readable-stream", "npm:3.6.0"],\
@@ -11523,7 +11530,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["create-ecdh", "npm:4.0.4"],\
             ["bn.js", "npm:4.11.9"],\
-            ["elliptic", "npm:6.5.3"]\
+            ["elliptic", "npm:6.5.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12940,11 +12947,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["elliptic", [\
-        ["npm:6.5.3", {\
-          "packageLocation": "./.yarn/cache/elliptic-npm-6.5.3-783c509c01-fe1e546ed3.zip/node_modules/elliptic/",\
+        ["npm:6.5.4", {\
+          "packageLocation": "./.yarn/cache/elliptic-npm-6.5.4-0ca8204a86-d56d21fd04.zip/node_modules/elliptic/",\
           "packageDependencies": [\
-            ["elliptic", "npm:6.5.3"],\
-            ["bn.js", "npm:4.11.9"],\
+            ["elliptic", "npm:6.5.4"],\
+            ["bn.js", "npm:4.12.0"],\
             ["brorand", "npm:1.1.0"],\
             ["hash.js", "npm:1.1.7"],\
             ["hmac-drbg", "npm:1.0.1"],\

@@ -63,7 +63,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["open-color", "npm:1.8.0"],\
             ["parcel-bundler", "npm:1.12.4"],\
             ["prettier", "npm:1.19.1"],\
-            ["prismjs", "npm:1.23.0"],\
+            ["prismjs", "npm:1.29.0"],\
             ["prop-types", "npm:15.7.2"],\
             ["query-string", "npm:5.1.1"],\
             ["react", "npm:18.2.0"],\
@@ -9941,7 +9941,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["open-color", "npm:1.8.0"],\
             ["parcel-bundler", "npm:1.12.4"],\
             ["prettier", "npm:1.19.1"],\
-            ["prismjs", "npm:1.23.0"],\
+            ["prismjs", "npm:1.29.0"],\
             ["prop-types", "npm:15.7.2"],\
             ["query-string", "npm:5.1.1"],\
             ["react", "npm:18.2.0"],\
@@ -10897,18 +10897,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/cli-width-npm-3.0.0-387b3f68f9-4c94af3769.zip/node_modules/cli-width/",\
           "packageDependencies": [\
             ["cli-width", "npm:3.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["clipboard", [\
-        ["npm:2.0.6", {\
-          "packageLocation": "./.yarn/cache/clipboard-npm-2.0.6-3d616039e3-e0eeef5363.zip/node_modules/clipboard/",\
-          "packageDependencies": [\
-            ["clipboard", "npm:2.0.6"],\
-            ["good-listener", "npm:1.2.2"],\
-            ["select", "npm:1.1.2"],\
-            ["tiny-emitter", "npm:2.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12472,15 +12460,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/delayed-stream-npm-1.0.0-c5a4c4cc02-46fe6e83e2.zip/node_modules/delayed-stream/",\
           "packageDependencies": [\
             ["delayed-stream", "npm:1.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["delegate", [\
-        ["npm:3.2.0", {\
-          "packageLocation": "./.yarn/cache/delegate-npm-3.2.0-d3f849ea99-d943058fe0.zip/node_modules/delegate/",\
-          "packageDependencies": [\
-            ["delegate", "npm:3.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -15715,7 +15694,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prismjs", null],\
             ["gatsby", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.24.4"],\
             ["parse-numeric-range", "npm:1.3.0"],\
-            ["prismjs", "npm:1.23.0"],\
+            ["prismjs", "npm:1.29.0"],\
             ["unist-util-visit", "npm:2.0.3"]\
           ],\
           "packagePeers": [\
@@ -16205,16 +16184,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ignore", "npm:5.2.0"],\
             ["merge2", "npm:1.4.1"],\
             ["slash", "npm:3.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["good-listener", [\
-        ["npm:1.2.2", {\
-          "packageLocation": "./.yarn/cache/good-listener-npm-1.2.2-e7865da849-f39fb82c4e.zip/node_modules/good-listener/",\
-          "packageDependencies": [\
-            ["good-listener", "npm:1.2.2"],\
-            ["delegate", "npm:3.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -22875,11 +22844,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prismjs", [\
-        ["npm:1.23.0", {\
-          "packageLocation": "./.yarn/cache/prismjs-npm-1.23.0-3781560845-8c3cf69150.zip/node_modules/prismjs/",\
+        ["npm:1.29.0", {\
+          "packageLocation": "./.yarn/cache/prismjs-npm-1.29.0-6faa5b04b8-007a8869d4.zip/node_modules/prismjs/",\
           "packageDependencies": [\
-            ["prismjs", "npm:1.23.0"],\
-            ["clipboard", "npm:2.0.6"]\
+            ["prismjs", "npm:1.29.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -24546,15 +24514,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["select", [\
-        ["npm:1.1.2", {\
-          "packageLocation": "./.yarn/cache/select-npm-1.1.2-13cd366fa2-4346151e94.zip/node_modules/select/",\
-          "packageDependencies": [\
-            ["select", "npm:1.1.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["semver", [\
         ["npm:5.7.1", {\
           "packageLocation": "./.yarn/cache/semver-npm-5.7.1-40bcea106b-57fd0acfd0.zip/node_modules/semver/",\
@@ -26160,15 +26119,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/timsort-npm-0.3.0-868a28166c-1a66cb897d.zip/node_modules/timsort/",\
           "packageDependencies": [\
             ["timsort", "npm:0.3.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["tiny-emitter", [\
-        ["npm:2.1.0", {\
-          "packageLocation": "./.yarn/cache/tiny-emitter-npm-2.1.0-2a4d94f487-fbcfb51457.zip/node_modules/tiny-emitter/",\
-          "packageDependencies": [\
-            ["tiny-emitter", "npm:2.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\

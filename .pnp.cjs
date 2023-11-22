@@ -22813,7 +22813,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-abi", "npm:3.26.0"],\
             ["pump", "npm:3.0.0"],\
             ["rc", "npm:1.2.8"],\
-            ["simple-get", "npm:4.0.0"],\
+            ["simple-get", "npm:4.0.1"],\
             ["tar-fs", "npm:2.1.1"],\
             ["tunnel-agent", "npm:0.6.0"]\
           ],\
@@ -24881,16 +24881,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["simple-get", [\
-        ["npm:4.0.0", {\
-          "packageLocation": "./.yarn/cache/simple-get-npm-4.0.0-14ed0bd6c2-8af4fb788b.zip/node_modules/simple-get/",\
-          "packageDependencies": [\
-            ["simple-get", "npm:4.0.0"],\
-            ["decompress-response", "npm:6.0.0"],\
-            ["once", "npm:1.4.0"],\
-            ["simple-concat", "npm:1.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:4.0.1", {\
           "packageLocation": "./.yarn/cache/simple-get-npm-4.0.1-fa2a97645d-e4132fd27c.zip/node_modules/simple-get/",\
           "packageDependencies": [\

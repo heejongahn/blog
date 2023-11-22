@@ -338,7 +338,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.12.10"],\
             ["@babel/helper-validator-option", "npm:7.12.11"],\
             ["@types/babel__core", null],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["semver", "npm:5.7.1"]\
           ],\
           "packagePeers": [\
@@ -10199,18 +10199,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["browserslist", [\
-        ["npm:4.16.1", {\
-          "packageLocation": "./.yarn/cache/browserslist-npm-4.16.1-37866cfd90-aa4367989d.zip/node_modules/browserslist/",\
-          "packageDependencies": [\
-            ["browserslist", "npm:4.16.1"],\
-            ["caniuse-lite", "npm:1.0.30001181"],\
-            ["colorette", "npm:1.2.1"],\
-            ["electron-to-chromium", "npm:1.3.649"],\
-            ["escalade", "npm:3.1.1"],\
-            ["node-releases", "npm:1.1.70"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:4.21.4", {\
           "packageLocation": "./.yarn/cache/browserslist-npm-4.21.4-7d64a96afc-4af3793704.zip/node_modules/browserslist/",\
           "packageDependencies": [\
@@ -10516,7 +10504,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/caniuse-api-npm-3.0.0-1272c2981e-db2a229383.zip/node_modules/caniuse-api/",\
           "packageDependencies": [\
             ["caniuse-api", "npm:3.0.0"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["caniuse-lite", "npm:1.0.30001181"],\
             ["lodash.memoize", "npm:4.1.2"],\
             ["lodash.uniq", "npm:4.5.0"]\
@@ -11091,13 +11079,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["colorette", [\
-        ["npm:1.2.1", {\
-          "packageLocation": "./.yarn/cache/colorette-npm-1.2.1-1d4664fcf6-06e2fcdb9e.zip/node_modules/colorette/",\
-          "packageDependencies": [\
-            ["colorette", "npm:1.2.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.4.0", {\
           "packageLocation": "./.yarn/cache/colorette-npm-1.4.0-7e94b44dc3-01c3c16058.zip/node_modules/colorette/",\
           "packageDependencies": [\
@@ -11429,7 +11410,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/core-js-compat-npm-3.8.3-44e6c8fc2c-63d389e7f6.zip/node_modules/core-js-compat/",\
           "packageDependencies": [\
             ["core-js-compat", "npm:3.8.3"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["semver", "npm:7.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -12924,13 +12905,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["electron-to-chromium", [\
-        ["npm:1.3.649", {\
-          "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.649-211f5c0447-11ccc3ef2c.zip/node_modules/electron-to-chromium/",\
-          "packageDependencies": [\
-            ["electron-to-chromium", "npm:1.3.649"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.4.283", {\
           "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.4.283-e2a6da26d9-b005cdac73.zip/node_modules/electron-to-chromium/",\
           "packageDependencies": [\
@@ -20328,13 +20302,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["node-releases", [\
-        ["npm:1.1.70", {\
-          "packageLocation": "./.yarn/cache/node-releases-npm-1.1.70-92703f2c34-44253a82e0.zip/node_modules/node-releases/",\
-          "packageDependencies": [\
-            ["node-releases", "npm:1.1.70"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:2.0.6", {\
           "packageLocation": "./.yarn/cache/node-releases-npm-2.0.6-8accb3fefb-e86a926dc9.zip/node_modules/node-releases/",\
           "packageDependencies": [\
@@ -21030,7 +20997,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@parcel/workers", "npm:1.11.0"],\
             ["ansi-to-html", "npm:0.6.14"],\
             ["babylon-walk", "npm:1.0.2"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["chalk", "npm:2.4.2"],\
             ["clone", "npm:2.1.2"],\
             ["command-exists", "npm:1.2.9"],\
@@ -21639,7 +21606,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/postcss-colormin-npm-4.0.3-21265de8f1-9b2eab73cd.zip/node_modules/postcss-colormin/",\
           "packageDependencies": [\
             ["postcss-colormin", "npm:4.0.3"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["color", "npm:3.1.3"],\
             ["has", "npm:1.0.3"],\
             ["postcss", "npm:7.0.35"],\
@@ -21916,7 +21883,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/postcss-merge-rules-npm-4.0.3-73bf0c183e-ed0f3880e1.zip/node_modules/postcss-merge-rules/",\
           "packageDependencies": [\
             ["postcss-merge-rules", "npm:4.0.3"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["caniuse-api", "npm:3.0.0"],\
             ["cssnano-util-same-parent", "npm:4.0.1"],\
             ["postcss", "npm:7.0.35"],\
@@ -22024,7 +21991,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-minify-params", "npm:4.0.2"],\
             ["alphanum-sort", "npm:1.0.2"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["cssnano-util-get-arguments", "npm:4.0.0"],\
             ["postcss", "npm:7.0.35"],\
             ["postcss-value-parser", "npm:3.3.1"],\
@@ -22420,7 +22387,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/postcss-normalize-unicode-npm-4.0.1-9cc5bfcb9d-2b1da17815.zip/node_modules/postcss-normalize-unicode/",\
           "packageDependencies": [\
             ["postcss-normalize-unicode", "npm:4.0.1"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["postcss", "npm:7.0.35"],\
             ["postcss-value-parser", "npm:3.3.1"]\
           ],\
@@ -22555,7 +22522,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/postcss-reduce-initial-npm-4.0.3-01cc02f1f4-5ad1a955cb.zip/node_modules/postcss-reduce-initial/",\
           "packageDependencies": [\
             ["postcss-reduce-initial", "npm:4.0.3"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["caniuse-api", "npm:3.0.0"],\
             ["has", "npm:1.0.3"],\
             ["postcss", "npm:7.0.35"]\
@@ -25779,7 +25746,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/stylehacks-npm-4.0.3-b704c3a5ab-8acf28ea60.zip/node_modules/stylehacks/",\
           "packageDependencies": [\
             ["stylehacks", "npm:4.0.3"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["postcss", "npm:7.0.35"],\
             ["postcss-selector-parser", "npm:3.1.2"]\
           ],\
@@ -27399,7 +27366,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/wasm-parser", "npm:1.11.1"],\
             ["acorn", "npm:8.8.0"],\
             ["acorn-import-assertions", "virtual:441922e28507bed8cde2fc6ca3e0215978b5c69303a67b7d72e6eb5041638775c1731c62f85943e45ce791290b49d80fa67f9461f37c647368661d5adc97ab63#npm:1.8.0"],\
-            ["browserslist", "npm:4.16.1"],\
+            ["browserslist", "npm:4.21.4"],\
             ["chrome-trace-event", "npm:1.0.2"],\
             ["enhanced-resolve", "npm:5.10.0"],\
             ["es-module-lexer", "npm:0.9.3"],\

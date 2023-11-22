@@ -55,7 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-remark-images", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:6.24.0"],\
             ["gatsby-remark-prismjs", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:6.24.0"],\
             ["gatsby-source-filesystem", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.24.0"],\
-            ["gatsby-transformer-remark", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.24.0"],\
+            ["gatsby-transformer-remark", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.25.1"],\
             ["gatsby-transformer-sharp", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.24.0"],\
             ["mz", "npm:2.7.0"],\
             ["node-gyp", "npm:9.3.0"],\
@@ -9933,7 +9933,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-remark-images", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:6.24.0"],\
             ["gatsby-remark-prismjs", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:6.24.0"],\
             ["gatsby-source-filesystem", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.24.0"],\
-            ["gatsby-transformer-remark", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.24.0"],\
+            ["gatsby-transformer-remark", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.25.1"],\
             ["gatsby-transformer-sharp", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.24.0"],\
             ["mz", "npm:2.7.0"],\
             ["node-gyp", "npm:9.3.0"],\
@@ -15127,6 +15127,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["xdg-basedir", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:3.25.0", {\
+          "packageLocation": "./.yarn/cache/gatsby-core-utils-npm-3.25.0-fb424449bd-d67e1b56b3.zip/node_modules/gatsby-core-utils/",\
+          "packageDependencies": [\
+            ["gatsby-core-utils", "npm:3.25.0"],\
+            ["@babel/runtime", "npm:7.19.4"],\
+            ["ci-info", "npm:2.0.0"],\
+            ["configstore", "npm:5.0.1"],\
+            ["fastq", "npm:1.13.0"],\
+            ["file-type", "npm:16.5.4"],\
+            ["fs-extra", "npm:10.1.0"],\
+            ["got", "npm:11.8.5"],\
+            ["import-from", "npm:4.0.0"],\
+            ["lmdb", "npm:2.5.3"],\
+            ["lock", "npm:1.1.0"],\
+            ["node-object-hash", "npm:2.3.10"],\
+            ["proper-lockfile", "npm:4.1.2"],\
+            ["resolve-from", "npm:5.0.0"],\
+            ["tmp", "npm:0.2.1"],\
+            ["xdg-basedir", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["gatsby-graphiql-explorer", [\
@@ -15822,21 +15844,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["gatsby-transformer-remark", [\
-        ["npm:5.24.0", {\
-          "packageLocation": "./.yarn/cache/gatsby-transformer-remark-npm-5.24.0-127874532a-ea830b9743.zip/node_modules/gatsby-transformer-remark/",\
+        ["npm:5.25.1", {\
+          "packageLocation": "./.yarn/cache/gatsby-transformer-remark-npm-5.25.1-361b30dd8e-b7b8f67fea.zip/node_modules/gatsby-transformer-remark/",\
           "packageDependencies": [\
-            ["gatsby-transformer-remark", "npm:5.24.0"]\
+            ["gatsby-transformer-remark", "npm:5.25.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.24.0", {\
-          "packageLocation": "./.yarn/__virtual__/gatsby-transformer-remark-virtual-42493893f4/0/cache/gatsby-transformer-remark-npm-5.24.0-127874532a-ea830b9743.zip/node_modules/gatsby-transformer-remark/",\
+        ["virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.25.1", {\
+          "packageLocation": "./.yarn/__virtual__/gatsby-transformer-remark-virtual-fbc87b5f3d/0/cache/gatsby-transformer-remark-npm-5.25.1-361b30dd8e-b7b8f67fea.zip/node_modules/gatsby-transformer-remark/",\
           "packageDependencies": [\
-            ["gatsby-transformer-remark", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.24.0"],\
+            ["gatsby-transformer-remark", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:5.25.1"],\
             ["@babel/runtime", "npm:7.19.4"],\
             ["@types/gatsby", null],\
             ["gatsby", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.24.4"],\
-            ["gatsby-core-utils", "npm:3.24.0"],\
+            ["gatsby-core-utils", "npm:3.25.0"],\
             ["gray-matter", "npm:4.0.3"],\
             ["hast-util-raw", "npm:6.1.0"],\
             ["hast-util-to-html", "npm:7.1.3"],\

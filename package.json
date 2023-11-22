@@ -24,7 +24,7 @@
     "gatsby-remark-images": "^6.24.0",
     "gatsby-remark-prismjs": "^6.24.0",
     "gatsby-source-filesystem": "^4.24.0",
-    "gatsby-transformer-remark": "^5.24.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.24.0",
     "node-gyp": "^9.3.0",
     "normalize.css": "^8.0.0",

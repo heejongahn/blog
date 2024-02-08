@@ -49,7 +49,7 @@ PM 리드를 하면서 들었던 조언 중 가장 귀중한, 동시에 구현�
 
 정답이 있는지 모르겠지만, 오답에 가까운 행동들은 있는 것 같다. 그 중 하나가 상대를 진심으로 알려는 마음과 태도 없이 쉽게 판단하고 내가 바라는 대로 끌어가려는 모습 아닐까.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3S16b-x5mRA?si=e81A8X0_7bYDBp2T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p8U_Nt0QNNo?si=YYuLObEbXiHgdXUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 『테드 래소』의 한 에피소드 속 다트 경기 장면에서는 “판단하지 말고 호기심을 가져라(Be curious, not judgmental)”라는 인용구가 소개된다. 스토리와 캐릭터에 기가 막히게 녹아드는 문구여서 정말 인상적이었다. 처음 _보고_ ‘꼭 저렇게 살아야겠다‘ 싶은 마음에 어딘가에 메모해 뒀던 기억이 든다.
 

@@ -51,7 +51,7 @@ PM 리드를 하면서 들었던 조언 중 가장 귀중한, 동시에 구현�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/p8U_Nt0QNNo?si=YYuLObEbXiHgdXUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-『테드 래소』의 한 에피소드 속 다트 경기 장면에서는 “판단하지 말고 호기심을 가져라(Be curious, not judgmental)”라는 인용구가 소개된다. 스토리와 캐릭터에 기가 막히게 녹아드는 문구여서 정말 인상적이었다. 처음 _보고_ ‘꼭 저렇게 살아야겠다‘ 싶은 마음에 어딘가에 메모해 뒀던 기억이 든다.
+『테드 래소』의 한 에피소드 속 다트 경기 장면에서는 “판단하지 말고 호기심을 가져라(Be curious, not judgmental)”라는 인용구가 소개된다. 스토리와 캐릭터에 기가 막히게 녹아드는 문구여서 정말 인상적이었다. 처음 보고 ‘꼭 저렇게 살아야겠다‘ 싶은 마음에 어딘가에 메모해 뒀던 기억이 든다.
 
 지난 반 년을 돌아보니, 해당 인용구를 진정으로 받아들였다면 하지 않았을 실수의 순간이 여럿 떠올라 입맛이 쓰다.
 
